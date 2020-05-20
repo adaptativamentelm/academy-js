@@ -43,12 +43,13 @@ function obtenerChecks() {
     return value;
 }
 
-function verificarNumero() {
+function permitoSoloNumeros() {
     const phone = document.getElementById('phone');
-    if (phone.value.charCodeAt(phone.value.length - 1) === 96) {
-        phone.value = phone.value.slice(0, phone.value.length - 2);
-    }
+    console.log('codigo:', phone.value.charCodeAt(phone.value.length - 1));
     if (phone.value.charCodeAt(phone.value.length - 1) < 48 || phone.value.charCodeAt(phone.value.length - 1) > 57) {
+        // phone.value = 9
+        // phone.value.length = 1
+        // phone.value.charCodeAt(0) = 57
         phone.value = phone.value.slice(0, phone.value.length - 1);
     }
 }
