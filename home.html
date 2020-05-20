@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Escuela España</li>
+                <li>Escuela José Miguel Carrera</li>
+                <li>Escuela Ecuador</li>
+            </ul>
+            <ul>
+                <li>Escuela Perú</li>
+                <li>Escuela Manuel Montt</li>
+                <li>Escuela Puente Alto</li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <h1 id="usuario">Nombre de usuario</h1>
+            <br>
+            <input type="text" placeholder="Usuario">
+            <br>
+            <input type="password" placeholder="Contraseña">
+            <br>
+            <input type="number" placeholder="1">
+            <br>
+            <div>
+                <input id="opcion1" type="radio" name="radio" class="radio" value="opcion1" checked>
+                <label for="opcion1">Opcion 1</label>
+                <input id="opcion2" type="radio" name="radio" class="radio" value="opcion2">
+                <label for="opcion2">Opcion 2</label>
+                <input id="opcion3" type="radio" name="radio" class="radio" value="opcion3">
+                <label for="opcion3">Opcion 3</label>
+                <button onclick="obtenerDataRadio()">Radio Data</button>
+            </div>
+            <br>
+            <div>
+                <input id="check1" type="checkbox" value="check1" class="check">
+                <label for="check1">Check 1</label>
+                <input id="check2" type="checkbox" value="check2" class="check">
+                <label for="check2">Check 2</label>
+                <input id="check3" type="checkbox" value="check3" class="check">
+                <label for="check3">Check 3</label>
+                <button onclick="obtenerChecks()">Check Data</button>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <a href="https://google.com">Google</a>
+        <a href="https://amazon.com">Amazon</a>
+        <a href="https://movistar.cl">Movistar</a>
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>
