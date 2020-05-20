@@ -51,6 +51,46 @@
                 <button onclick="obtenerChecks()">Check Data</button>
             </div>
         </section>
+        <hr>
+        <section style="background: #d6facf;">
+            <div>
+                <h1>Formulario</h1>
+                <input type="text" placeholder="Nombre" class="form">
+                <br>
+                <input type="text" placeholder="Apellido" class="form">
+                <br>
+                <input type="date" title="Nacimiento" class="form">
+                <br>
+                <input type="text" placeholder="Email" class="form">
+                <br>
+                <label for="phone">+56 9</label>
+                <input id="phone" type="text" placeholder="Teléfono" class="form" onkeyup="verificarNumero()" maxlength="8">
+                <div>
+                    <h4>Sexo</h4>
+                    <input id="radiof" name="radioform" type="radio" class="radioform" value="Femenino" checked>
+                    <label for="radiof">Femenino</label>
+                    <input id="radiom" name="radioform" type="radio" class="radioform" value="Masculino">
+                    <label for="radiom">Masculino</label>
+                </div>
+                <div>
+                    <h4>Intereses</h4>
+                    <input id="checkaca" type="checkbox" value="Académico" class="checkform">
+                    <label for="checkaca">Académico</label>
+                    <input id="checklab" type="checkbox" value="Laboral" class="checkform">
+                    <label for="checklab">Laboral</label>
+                    <input id="checktec" type="checkbox" value="Tecnología" class="checkform">
+                    <label for="checktec">Tecnología</label>
+                    <input id="checkdep" type="checkbox" value="Deportes" class="checkform">
+                    <label for="checkdep">Deportes</label>
+                    <input id="checkesp" type="checkbox" value="Espectáculos" class="checkform">
+                    <label for="checkesp">Espectáculos</label>
+                    <input id="checkcin" type="checkbox" value="Cine" class="checkform">
+                    <label for="checkcin">Cine</label>
+                </div>
+            </div>
+            <button onclick="printData()">Imprimir Data</button>
+            <div class="data"></div>
+        </section>
     </main>
     <hr>
     <footer>

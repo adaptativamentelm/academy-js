@@ -43,14 +43,34 @@ function obtenerChecks() {
     return value;
 }
 
-[
-    <input type="radio" value="opcion1"></input>,
-    <input type="radio" value="opcion1"></input>,
-    <input type="radio" value="opcion1"></input>
-]
+function verificarNumero() {
+    const phone = document.getElementById('phone');
+    if (phone.value.charCodeAt(phone.value.length - 1) === 96) {
+        phone.value = phone.value.slice(0, phone.value.length - 2);
+    }
+    if (phone.value.charCodeAt(phone.value.length - 1) < 48 || phone.value.charCodeAt(phone.value.length - 1) > 57) {
+        phone.value = phone.value.slice(0, phone.value.length - 1);
+    }
+}
 
-let input = {
-    type: "radio",
-    value: "opcion1",
-    checked: false
-};
+function printData() {
+    const data = document.getElementsByClassName('form');
+    const radioform = document.getElementsByClassName('radioform');
+    const checkform = document.getElementsByClassName('checkform');
+    for (let x = 0; x < data.length; x++) {
+        data[x].id === 'phone' ? console.log(`+56 9 ${data[x].value}`) : console.log(data[x].value);
+    }
+    for (let x = 0; x < radioform.length; x++) {
+        if (radioform[x].checked) {
+            console.log(radioform[x].value);
+            break;
+        }
+    }
+    let intereses = [];
+    for (let x = 0; x < checkform.length; x++) {
+        if (checkform[x].checked) {
+            intereses.push(checkform[x].value);
+        }
+    }
+    console.log('Intereses:', intereses);
+}
