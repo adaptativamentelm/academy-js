@@ -48,6 +48,7 @@ function verificarNumero() {
     if (phone.value.charCodeAt(phone.value.length - 1) === 96) {
         phone.value = phone.value.slice(0, phone.value.length - 2);
     }
+    // la función chartCodeAt retorna un codigo ascii, el -1 es para que retorne el ultimo elemento, esto debido  que el lenght cuenta las weas como posiciones desde el 0, entonces si es menor a 48 (0) o mayor  a 57(9) hara la wea del slice, que borra el ultimo ele,ento escrito, recordar que esta función se ejecita cada vez qu escribo. si por el contrario no cumple estas condiciones no lo borra ya que es un numero y esto lo hemos validado con el chartCodeAt 
     if (phone.value.charCodeAt(phone.value.length - 1) < 48 || phone.value.charCodeAt(phone.value.length - 1) > 57) {
         phone.value = phone.value.slice(0, phone.value.length - 1);
     }
