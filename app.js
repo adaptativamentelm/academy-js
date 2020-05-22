@@ -45,13 +45,16 @@ function obtenerChecks() {
 
 function permitoSoloNumeros() {
     const phone = document.getElementById('phone');
-    console.log('codigo:', phone.value.charCodeAt(phone.value.length - 1));
+    // console.log('value:', phone.value);
+    // console.log('length - 1:', phone.value.length - 1);
+    // console.log('codigo:', phone.value.charCodeAt(phone.value.length - 1));
     if (phone.value.charCodeAt(phone.value.length - 1) < 48 || phone.value.charCodeAt(phone.value.length - 1) > 57) {
-        // phone.value = 9
+        // phone.value = "9"
         // phone.value.length = 1
         // phone.value.charCodeAt(0) = 57
         phone.value = phone.value.slice(0, phone.value.length - 1);
     }
+    console.log('***********');
 }
 
 function printData() {
