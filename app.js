@@ -45,8 +45,8 @@ function obtenerChecks() {
 
 function permitoSoloNumeros() {
     const phone = document.getElementById('phone');
-    console.log('codigo:', phone.value.charCodeAt(phone.value.length - 1));
     if (phone.value.charCodeAt(phone.value.length - 1) < 48 || phone.value.charCodeAt(phone.value.length - 1) > 57) {
+        // En el input phone se escribe el número 9
         // phone.value = 9
         // phone.value.length = 1
         // phone.value.charCodeAt(0) = 57
@@ -75,3 +75,39 @@ function printData() {
     }
     console.log('Intereses:', intereses);
 }
+
+/* <input type="radio" id="input1" checked class="radioform"></input>
+<input type="radio" id="input2" class="radioform"></input> */
+// let input1 = {
+//     type: "radio",
+//     id: "input1",
+//     checked: true,
+//     class: "radioform"
+// };
+// let input2 = {
+//     type: "radio",
+//     id: "input2",
+//     checked: false,
+//     class: "radioform"
+// }
+// // ***************************
+// let porId = { // id = input1 -> getElementById("input1")
+//     type: "radio",
+//     id: "input1",
+//     checked: true,
+//     class: "radioform"
+// };
+// let porClass = [ // class = radioform -> getElementsByClassName("radioform")
+//     {
+//         type: "radio",
+//         id: "input1",
+//         checked: true,
+//         class: "radioform"
+//     },
+//     {
+//         type: "radio",
+//         id: "input2",
+//         checked: false,
+//         class: "radioform"
+//     }
+// ];
