@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinchilla</title>
+</head>
+<body>
+    <header>
+        <div>
+          <ul>
+            <li style="display: inline-block; padding-right: 10px;"><a href="#inicio">Inicio</a></li>
+            <li style="display: inline-block;"><a href="#contacto">Contacta a tu roedor</a></li>
+            <li style="display: inline" ><img style="float:right; width: 120px;" src="img/chinchilla.png" alt="logo" /></li>
+          </ul>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1 style="padding-top: 20px;">Regístrate para conversar con tu Roedor</h1>
+        </section>
+        <section>
+            <h3 id="usuario">Nombre </h3>
+            <input type="text" placeholder="Tu nombre">
+            <br>
+            <h3 id="usuario">Edad </h3>
+            <input type="text" placeholder="Edad">
+            <p style="color:#9C27B0;">Debes ser mayor de edad para conversar con un roedor!</p>
+            <br>
+            <h3 id="usuario">Contraseña </h3>
+            <input type="password" id="pass" maxlength="6" placeholder="Contraseña" onkeyup="soloNumeros()" >
+            <p style="color:#9C27B0;">Debe contener solo números.</p>    
+        </section>
+        <section>
+            <div>
+                <h4>Intereses</h4>
+                <input type="checkbox" value="Chinchillas" id="checkaca" class="checkform">
+                <label for="checkaca">Chinchillas</label>
+                <input type="checkbox" value="Ratas" id="checklab" class="checkform">
+                <label for="checklab">Ratas</label>
+                <input type="checkbox" value="Mapaches" id="checktec" class="checkform">
+                <label for="checktec">Mapaches</label>
+                <input type="checkbox" value="Hámsters" id="checkdep" class="checkform">
+                <label for="checkdep">Hámsters</label>
+                <input type="checkbox" value="Hurones" id="checkesp" class="checkform">
+                <label for="checkesp">Hurones</label>
+                <input type="checkbox" value="Todes" id="checkcin" class="checkform">
+                <label for="checkcin">Todes</label>
+                <br>
+            </div>
+            <br>
+        </section>
+        <section>
+            <div style="background-color: #f5b9ff; padding: 20px;">
+                <h4 style="color: #3F51B5;">Escoge tu roedor para conversar </h4>
+                <input type="radio" value="Chinchilla" id="chin" name="radioform" class="radioform" checked>
+                <label for="radiof">Chinchilla</label>
+                <input type="radio" value="Rata de ciudad" id="rat" name="radioform" class="radioform">
+                <label for="radiom">Rata de ciudad</label>
+                <input type="radio" value="Mapachito" id="map" name="radioform" class="radioform">
+                <label for="radiom">Mapachito</label>
+                <input type="radio" value="Ratoncito tierno" id="rat" name="radioform" class="radioform">
+                <label for="radiom">Ratoncito tierno</label>
+            </div>
+        </section>
+        <br>
+        <button style="background-color: #8355d3; padding: 15px; border-radius: 10px; color: #dde4ea;" onclick="printData()">Iniciar conversación</button>
+        <br>
+    </main>
+  
+
+    <footer>
+        <br>
+        <a href="https://google.com">Google</a>
+        <a href="https://amazon.com">Amazon</a>
+    </footer>
+</body>
+<script src="app2.js"></script>
+</html>
