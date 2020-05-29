@@ -7,8 +7,11 @@ function obtenerChecks() {
         }
     }
     console.log('value', value);
+    
     return value;
 }
+// var message = document.getElementById("message").value;
+// display_message.innerHTML= message;
 function soloNumeros() {
     const pass = document.getElementById('pass');
     if (pass.value.charCodeAt(pass.value.length - 1) < 48 || pass.value.charCodeAt(pass.value.length - 1) > 57) {
@@ -17,15 +20,17 @@ function soloNumeros() {
 }
 
 function printData() {
+    window.location.replace('tusdatos.html');
     const data = document.getElementsByClassName('form');
     const radioform = document.getElementsByClassName('radioform');
     const checkform = document.getElementsByClassName('checkform');
     for (let x = 0; x < data.length; x++) {
-        data[x].id === 'pass' ? console.log(`${data[x].value}`) : console.log(data[x].value);
+        data[x].id === 'pass' ? prints.innerHTML = (`${data[x].value}`) : console.log(data[x].value);
     }
+   
     for (let x = 0; x < radioform.length; x++) {
         if (radioform[x].checked) {
-            console.log(radioform[x].value);
+            prints.innerHTML = radioform[x].value;
             break;
         }
     }
@@ -36,4 +41,5 @@ function printData() {
         }
     }
     console.log('Intereses:', intereses);
+    prints.innerHTML = intereses;
 }
