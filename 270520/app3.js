@@ -12,6 +12,7 @@ function agregarTarea() {
         let check = document.createElement('input');
         check.type = "checkbox";
         check.id = `tarea_${contador}`;
+        checkis = check.id;
         check.value = toDoContenido.value;
         let label = document.createElement('label');
         label.setAttribute("for", `tarea_${contador}`);
@@ -21,18 +22,33 @@ function agregarTarea() {
         button.innerHTML = "Eliminar";
         button.onclick = function () {
             eliminarTarea(this.name);
+
         };
         li.appendChild(check);
         li.appendChild(label);
         li.appendChild(button);
-        ul.appendChild(li);
+        ul.appendChild(li);   
     } else {
         alert('Debe ingresar una tarea');
-    }
+    }  
 }
- 
+
 function eliminarTarea(name) {
-    ul.removeChild(document.getElementById(name));
+    const id = name.replace('li_', '');
+    let check = document.getElementById(`tarea_${id}`);
+    let conten = document.getElementById(`tarea_${id}`).value;
+    console.log(check);
+    
+    if (check.checked === false) {
+        alert(`Debes marcar ${conten} para eliminarla `);
+        console.log("no está seleccionado");
+        
+    }else{
+         let secure = confirm(`¿Estas segur@ de eliminar ${conten} `);
+        if (secure === true) {
+            ul.removeChild(document.getElementById(name));
+        }
+    }
 }
 
 // const eliminarTarea = () => {
