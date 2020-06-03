@@ -32,7 +32,12 @@ function agregarTarea() {
 }
  
 function eliminarTarea(name) {
-    ul.removeChild(document.getElementById(name));
+    const li = document.getElementById(name);
+    if (li.getElementsByTagName('input')[0].checked) {
+        ul.removeChild(li);
+    } else {
+        alert('Debes seleccionar el checkbox para poder eliminar la tarea');
+    }
 }
 
 // const eliminarTarea = () => {
