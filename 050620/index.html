@@ -8,7 +8,7 @@
 <body>
     <div>
         <h2>Título</h2>
-        <button>Mostrar un prompt y cambiar el título por lo que se escriba en él</button>
+        <button onclick="cambiarTitulo()">Mostrar un prompt y cambiar el título por lo que se escriba en él</button>
     </div>
     <hr>
     <div>
@@ -16,7 +16,7 @@
         <input type="checkbox" id="check" value="Seleccionado" checked>
         <label for="check">¿Está este input seleccionado?</label>
         <br>
-        <button>Imprimir en consola si este input está o no seleccionado</button>
+        <button onclick="isSeleccionado()">Imprimir en consola si este input está o no seleccionado</button>
     </div>
     <hr>
     <div>
@@ -32,20 +32,20 @@
         <input type="checkbox" id="five" class="inputc" value="seleccionado five">
         <label for="five">Five</label>
         <br>
-        <button>Imprimir en consola el valor de los inputs activos</button>
+        <button onclick="imprimeValorActivos()">Imprimir en consola el valor de los inputs activos</button>
         <br>
-        <button>Mostrar alerta si la cantidad de inputs activos es mayor a 3</button>
+        <button onclick="activosMayor3()">Mostrar alerta si la cantidad de inputs activos es mayor a 3</button>
         <br>
-        <button>Activar solamente los inputs pares</button>
+        <button onclick="activarPares()">Activar solamente los inputs pares</button>
         <br>
-        <button>Activar solamente los inputs impares</button>
+        <button onclick="activarImpares()">Activar solamente los inputs impares</button>
     </div>
     <hr>
     <div>
         <h3>Div con input y label dentro</h3>
         <div id="contenedor"></div>
         <br>
-        <button>Crear un input de tipo checkbox, un label enlazado al input y ponerlos dentro del div</button>
+        <button onclick="crearElementos()">Crear un input de tipo checkbox, un label enlazado al input y ponerlos dentro del div</button>
     </div>
 </body>
 <script src="app.js"></script>
