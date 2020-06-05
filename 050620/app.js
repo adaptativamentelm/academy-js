@@ -24,7 +24,6 @@ function imprimeValorActivos() {
         }
     }
     console.log('Los inputs activos son:', activos);
-    return activos;
 }
 
 function activosMayor3() {
