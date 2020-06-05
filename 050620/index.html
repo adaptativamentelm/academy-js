@@ -7,8 +7,9 @@
 </head>
 <body>
     <div>
-        <h2>Título</h2>
-        <button>Mostrar un prompt y cambiar el título por lo que se escriba en él</button>
+        <h2 id="titulo2">Título</h2>
+        <span>1.1</span>
+        <button onclick="cambiatitulo()">Mostrar un prompt y cambiar el título por lo que se escriba en él</button>
     </div>
     <hr>
     <div>
@@ -16,7 +17,8 @@
         <input type="checkbox" id="check" value="Seleccionado" checked>
         <label for="check">¿Está este input seleccionado?</label>
         <br>
-        <button>Imprimir en consola si este input está o no seleccionado</button>
+        <span>1.2</span>
+        <button onclick="check_checkeado()">Imprimir en consola si este input está o no seleccionado</button>
     </div>
     <hr>
     <div>
@@ -32,19 +34,24 @@
         <input type="checkbox" id="five" class="inputc" value="seleccionado five">
         <label for="five">Five</label>
         <br>
-        <button>Imprimir en consola el valor de los inputs activos</button>
+        <span>3.1</span>
+        <button onclick="los_activos()">Imprimir en consola el valor de los inputs activos</button>
         <br>
-        <button>Mostrar alerta si la cantidad de inputs activos es mayor a 3</button>
+        <span>3.2</span>
+        <button onclick="alerta_mas_3()">Mostrar alerta si la cantidad de inputs activos es mayor a 3</button>
         <br>
-        <button>Activar solamente los inputs pares</button>
+        <span>3.3</span>
+        <button onclick="activa_solo_pares()">Activar solamente los inputs pares</button>
         <br>
-        <button>Activar solamente los inputs impares</button>
+        <span>3.4</span>
+        <button onclick="activa_solo_impares()">Activar solamente los inputs impares</button>
     </div>
     <hr>
     <div>
         <h3>Div con input y label dentro</h3>
         <div id="contenedor"></div>
         <br>
+        <span>4.1</span>
         <button>Crear un input de tipo checkbox, un label enlazado al input y ponerlos dentro del div</button>
     </div>
 </body>
