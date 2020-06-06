@@ -24,6 +24,9 @@ function check_checkeado(){
 let activos = document.getElementsByClassName('inputc');
 let pares1 = document.getElementById('two'); // para prueba, no escalable
 let pares2 = document.getElementById('four'); // para prueba, no escalable
+let impares1 = document.getElementById('one');
+let impares2 = document.getElementById('three');
+let impares3 = document.getElementById('five');
 
 function los_activos() {
     // console.log('viendo los_activos');
@@ -45,40 +48,37 @@ function alerta_mas_3() {
     if (seleccionados2.length > 3)
     alert('tienes mas de 3 seleccionados!')
     else
-    console.log('tienes menos de 3 seleecionados')
+    console.log('tienes menos de 3 seleccionados')
 }
-
 function activa_solo_pares() {
-    //considerando pares por posicion [0,1,2,3,4]
-    //considerando pares por posicion [one,two,three,four,five]
-    //considerando pares por posicion [impar,par,impar,par,impar]
-    
-    console.log('para activar los pares');
+    // console.log('para activar los pares');
     if (pares1.id == "two" | pares1.id == "four")
-    console.log('tomando los pares');
-    
-    //     
-    //     if ( i%2 != 0 )
-    //     console.log('posicion',i);
-    //     //document.getElementById('two')
-    //     //document.getElementById('four')
-    
-    //     seleccionado
-    //     document.getElementById()
-    //     titulo2.innerHTML = prompt('ingresa nuevo titulo');
-    
-    //     console.log('es un par');
-    
+    // console.log('tomando los pares');
+    pares1.checked = true;
+    pares2.checked = true;
 }
-
-
-
-
-
-
-
-
 function activa_solo_impares() { 
     console.log('para activar los impares');
-    
+    if (impares1.id == "one" | impares2.id == "three" | impares3.id == "five")
+    impares1.checked = true;
+    impares2.checked = true;
+    impares3.checked = true;   
+}
+
+//-----------------------<[*]>-------------------------//
+
+let contador = 0
+function creaDiv(){
+    let check = document.createElement('input');
+    check.id = 'id_check'
+    check.type = "checkbox";
+    check.checked = true;
+    let label = document.createElement('label');
+    label.setAttribute("for", 'id_check');
+    label.innerHTML = prompt('Ingresa algo:');
+    let breaker = document.createElement('br');
+    let divcontenedor = document.getElementById('contenedor');
+    divcontenedor.appendChild(check);
+    divcontenedor.appendChild(label);
+    divcontenedor.appendChild(breaker);
 }
