@@ -22,11 +22,6 @@ function check_checkeado(){
 //-----------------------<[*]>-------------------------//
 
 let activos = document.getElementsByClassName('inputc');
-let pares1 = document.getElementById('two'); // para prueba, no escalable
-let pares2 = document.getElementById('four'); // para prueba, no escalable
-let impares1 = document.getElementById('one');
-let impares2 = document.getElementById('three');
-let impares3 = document.getElementById('five');
 
 function los_activos() {
     // console.log('viendo los_activos');
@@ -51,20 +46,20 @@ function alerta_mas_3() {
     console.log('tienes menos de 3 seleccionados')
 }
 function activa_solo_pares() {
-    // console.log('para activar los pares');
-    if (pares1.id == "two" | pares1.id == "four")
-    // console.log('tomando los pares');
-    pares1.checked = true;
-    pares2.checked = true;
+    for (let i = 0; i < activos.length; i++) {
+        const seleccionado = activos[i];
+        if (seleccionado.id == "two" | seleccionado.id == "four")
+        seleccionado.checked = true;
+    }
+   
 }
 function activa_solo_impares() { 
-    console.log('para activar los impares');
-    if (impares1.id == "one" | impares2.id == "three" | impares3.id == "five")
-    impares1.checked = true;
-    impares2.checked = true;
-    impares3.checked = true;   
+    for (let i = 0; i < activos.length; i++) {
+        const seleccionado = activos[i];
+        if (seleccionado.id == "one" | seleccionado.id == "three" | seleccionado.id == "five")
+        seleccionado.checked = true;
+    }
 }
-
 //-----------------------<[*]>-------------------------//
 
 let contador = 0
