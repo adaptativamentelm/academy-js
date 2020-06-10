@@ -45,22 +45,27 @@ function tooMuch() {
 }
 
 function evencheckeds() {
+    let evenArray = [];
     let inputElements3 = document.getElementsByClassName('inputc');
     for(let y=0; y < inputElements3.length; y++){
-        if(inputElements3[y].id == "two" || inputElements3[y].id == "four"){
+        if((y + 1) % 2 == 0){
+            evenArray.push(inputElements3[y]);
             inputElements3[y].checked = true;
         }
-    }  
+    }
 }
 
 function oddcheckeds() {
+    let oddArray = [];
     let inputElements4 = document.getElementsByClassName('inputc');
     for(let z=0; z < inputElements4.length; z++){
-        if(inputElements4[z].id == "one" || inputElements4[z].id == "three" || inputElements4[z].id == "five"){
+        if((z + 1) % 2 !== 0){
+            oddArray.push(inputElements4[z]);
             inputElements4[z].checked = true;
         }
     }  
 }
+
 let ids = 0;
 function createWeas() {
     ids++;
