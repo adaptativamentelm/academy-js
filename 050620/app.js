@@ -17,7 +17,7 @@ function isSeleccionado() {
 let inputs = document.getElementsByClassName('inputc');
 
 function imprimeValorActivos() {
-    let activos = [];    
+    let activos = [];
     for (let x = 0; x < inputs.length; x++) {
         if (inputs[x].checked) {
             activos.push(inputs[x].value);
@@ -32,9 +32,10 @@ function activosMayor3() {
         if (inputs[x].checked) {
             cantidadActivos++;
         }
-    }
-    if (cantidadActivos > 3) {
-        alert('La cantidad de activos es mayor a 3:', cantidadActivos.length);
+        if (cantidadActivos > 3) {
+            alert(`La cantidad de activos es mayor a 3: ${cantidadActivos}`);
+            break;
+        }
     }
 }
 
