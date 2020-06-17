@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentd</title>
+</head>
+<body>
+    <header>
+        <img id="header" src="img-1.jpg" alt="zelda">
+    </header>
+    <section>
+        <h1>Section 1</h1>
+        <div>
+            <label for="user">User</label>
+            <input type="text" placeholder="User" id="user" class="form">
+            <br>
+            <label for="pass">Password</label>
+            <input type="password" value="" id="pass"  maxlength="4">
+            <input type="checkbox" onclick="show()"><span>Show Password</span>
+        </div>
+        <br>
+        <div>
+            <button onclick="section1()">Valida que usuario sea inicial del nombre + apellido y contraseña los primeros 4 dígitos de tu rut</button>
+        </div>
+        <hr>
+    </section>
+    <section>
+        <h1>Section 2</h1>
+        <label for="fecha">Fecha de hoy</label>
+        <input type="date" title="fecha de hoy" id="fecha" class="form">
+        <br>
+        <h3>Elige</h3>
+        <input type="radio" value="Frontend" id="radiof" name="radioform" class="radioform" checked>
+        <label for="radiof">Frontend</label>
+        <input type="radio" value="Backend" id="radiob" name="radioform" class="radioform">
+        <label for="radiom">Backend</label>
+        <br>
+        <h3>¿Cuáles encuentras más interesantes?</h3>
+        <div>
+            <input type="checkbox" id="javascript" class="inputc" value="Javascript">
+            <label for="one">Javascript</label>
+            <input type="checkbox" id="html" class="inputc" value="html">
+            <label for="two">HTML</label>
+            <input type="checkbox" id="node" class="inputc" value="node">
+            <label for="three">Node</label>
+            <input type="checkbox" id="angular" class="inputc" value="angular">
+            <label for="four">Angular</label>
+            <input type="checkbox" id="css" class="inputc" value="css">
+            <label for="five">CSS</label>
+            <input type="checkbox" id="git" class="inputc" value="git">
+            <label for="five">Git</label>
+            <input type="checkbox" id="typescript" class="inputc" value="typescript">
+            <label for="five">TypeScript</label>
+        </div>
+        <br>
+        <div>
+            <button onclick="imprimeValores()">Obtener fecha, radio seleccionado y llistado de los checkboxs en on objeto JSON, imprimir en consola</button>
+        </div>
+    </section>   
+</body>
+<script src="app.js"></script>
+</html>
