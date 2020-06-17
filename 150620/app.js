@@ -3,7 +3,9 @@ const jsonObject = {
     lastName: "Psico",
     rut: "18122171-2"
 };
+
 document.getElementById('header').style.width = '100%';
+
 function show() {
     let pass = document.getElementById("pass");
     if (pass.type === "password") {
@@ -12,6 +14,7 @@ function show() {
       pass.type = "password";
     }
 }
+
 function section1() {
     let userGood = `${jsonObject.name[0]}`+`${jsonObject.lastName}`;
     let passGood = jsonObject.rut.substring(0,4);
@@ -22,4 +25,25 @@ function section1() {
     }else{
       console.log("usuario y/o contraseña incorrectos", userGood, passGood);
     } 
+}
+
+function section2() {
+  let date = document.getElementById('fecha').value;
+  console.log(date);
+  let elige = document.getElementsByClassName('elige');
+  let intereses = document.getElementsByClassName('intereses');
+  for (let i = 0; i < elige.length; i++) {
+    if (elige[i].checked) {
+        console.log(elige[i].value);
+        break;
+    }
+  }
+  let interesesArray = [];
+    for (let x = 0; x < intereses.length; x++) {
+        if (intereses[x].checked) {
+          interesesArray.push(intereses[x].value);
+        }
+    }
+  let interesesJson = JSON.stringify(interesesArray); 
+  console.log(interesesJson);
 }
