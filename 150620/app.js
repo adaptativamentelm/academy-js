@@ -44,6 +44,6 @@ function section2() {
           interesesArray.push(intereses[x].value);
         }
     }
-  let interesesJson = JSON.stringify(interesesArray); 
+  let interesesJson = JSON.stringify({...interesesArray}); 
   console.log(interesesJson);
 }
