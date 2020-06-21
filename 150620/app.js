@@ -1,5 +1,8 @@
 const jsonObject = {
-    name: "Luis",
-    lastName: "Miranda",
-    rut: "23745869-9"
+    name: "Andrea",
+    lastName: "Castro",
+    rut: "16361759-5"
 };
+
+// poner imagen mediante js width:100%
+
