@@ -5,4 +5,3 @@ const jsonObject = {
 };
 
 // poner imagen mediante js width:100%
-
