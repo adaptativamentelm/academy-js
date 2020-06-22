@@ -34,7 +34,7 @@ function section2() {
   let intereses = document.getElementsByClassName('intereses');
   for (let i = 0; i < elige.length; i++) {
     if (elige[i].checked) {
-        console.log(elige[i].value);
+        var eleccion = elige[i].value;
         break;
     }
   }
@@ -44,6 +44,6 @@ function section2() {
           interesesArray.push(intereses[x].value);
         }
     }
-  let interesesJson = JSON.stringify({...interesesArray}); 
+  let interesesJson = JSON.stringify({...interesesArray,date,eleccion}); 
   console.log(interesesJson);
 }
