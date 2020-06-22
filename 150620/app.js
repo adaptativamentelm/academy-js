@@ -29,7 +29,6 @@ function section1() {
 
 function section2() {
   let date = document.getElementById('fecha').value;
-  console.log(date);
   let elige = document.getElementsByClassName('elige');
   let intereses = document.getElementsByClassName('intereses');
   for (let i = 0; i < elige.length; i++) {
@@ -44,6 +43,6 @@ function section2() {
           interesesArray.push(intereses[x].value);
         }
     }
-  let interesesJson = JSON.stringify({...interesesArray,date,eleccion}); 
-  console.log(interesesJson);
+    let interesesJson = JSON.stringify({...[interesesArray],date,eleccion}); 
+    console.log(interesesJson);
 }
