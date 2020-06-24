@@ -43,6 +43,6 @@ function section2() {
           intereses.push(interesesElegir[x].value);
         }
     }
-    let interesesJson = JSON.stringify({intereses,date,eleccion}); 
+    let interesesJson = ({intereses,date,eleccion}); 
     console.log(interesesJson);
 }
