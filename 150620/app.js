@@ -30,19 +30,19 @@ function section1() {
 function section2() {
   let date = document.getElementById('fecha').value;
   let elige = document.getElementsByClassName('elige');
-  let intereses = document.getElementsByClassName('intereses');
+  let interesesElegir = document.getElementsByClassName('interesesElegir');
   for (let i = 0; i < elige.length; i++) {
     if (elige[i].checked) {
         var eleccion = elige[i].value;
         break;
     }
   }
-  let interesesArray = [];
-    for (let x = 0; x < intereses.length; x++) {
-        if (intereses[x].checked) {
-          interesesArray.push(intereses[x].value);
+  let intereses = [];
+    for (let x = 0; x < interesesElegir.length; x++) {
+        if (interesesElegir[x].checked) {
+          intereses.push(interesesElegir[x].value);
         }
     }
-    let interesesJson = JSON.stringify({...[interesesArray],date,eleccion}); 
+    let interesesJson = JSON.stringify({intereses,date,eleccion}); 
     console.log(interesesJson);
 }
