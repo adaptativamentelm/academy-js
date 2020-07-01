@@ -15,26 +15,31 @@ function showPass() {
     pass.type = pass.type === "text" ? pass.type = "password" : "text";
 }
 
-function validate() {
+function validate1() {
     if (user.value && pass.value) {
         if (user.value === removeDiacritics(`${jsonObject.name[0]}${jsonObject.lastName}`.toLowerCase()) && pass.value === `${jsonObject.rut.replace("-", "").substr(0, 4)}`) {
-            alert("Credenciales correctas!");
-            resetInputs();
+            okResetInputs();
         } else {
             alert("Credenciales incorrectas!");
         }
     } else {
-        alert("No se ingresaron credenciales");
+        alert("Falta ingresar usuario y/o contraseña")
     }
+}
+
+function validate2() {
+	user.value && pass.value ? user.value === removeDiacritics(`${jsonObject.name[0]}${jsonObject.lastName}`.toLowerCase()) && pass.value === `${jsonObject.rut.replace("-", "").substr(0, 4)}` ? okResetInputs() : alert("Credenciales incorrectas!") : alert("Falta ingresar usuario y/o contraseña");
 }
 
 function removeDiacritics(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-function resetInputs() {
+function okResetInputs() {
+	alert("Credenciales correctas!");
     user.value = "";
-    pass.value = "";
+	pass.value = "";
+	user.focus();
 }
 // SECTION 1
 
@@ -43,7 +48,7 @@ let date = document.getElementById("date");
 let inputsRadio = document.getElementsByClassName("radio");
 let inputsCheckbox = document.getElementsByClassName("checkbox");
 
-function getInformation() {
+function printInformation1() {
     let response = {};
     response.date = date.value;
     let choice = "";
@@ -61,15 +66,15 @@ function getInformation() {
         }
     }
     response.interests = interests;
-    console.log("Respuesta:", response);
+	response.date && response.choice && response.interests.length ? console.log("Respuesta:", response) : console.log("Faltan datos");
 }
 
-function getInformation2() {
+function printInformation2() {
     let response = {
         "date": date.value,
         "choice": Array.from(inputsRadio).filter(data => data.checked).map(data => data.value)[0],
         "interests": Array.from(inputsCheckbox).filter(data => data.checked).map(data => data.value)
     };
-    console.log("Respuesta:", response);
+    response.date && response.choice && response.interests.length ? console.log("Respuesta:", response) : console.log("Faltan datos");
 }
 // SECTION2
