@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200;1,300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="./wymmap.jpg" alt="" id="yourImgId">
+        <!-- <div id="imagen"></div> -->
+    </header>
+    <section>
+        <div class="container">
+            <h3>Section 1</h3>
+            <label for="input1"> User </label>
+            <input type="text" name="user" id="input1" class="section1" value="User">
+            <br>  
+            <label for="input2">Password</label>
+            <input type="password" name="password" id="input2" class="section1" onfocus="borrarTexto()">
+            <button onclick="pass()" id="boton1" class="boton">Show pass!</button>
+        </div>
+        <button onclick="validarUserPass()">validar el usuario sea la incial de tu nombre + tu apellido y la contraseña
+            sean los primeros 4 digitos de tu rut.</button>
+    </section>
+    <hr>
+
+    <section>    
+        <div class="fecha1">
+            <h3>Section 2</h3>
+            <label for="input3"> Fecha de hoy:</label>
+            <input type="date" name="fecha" id="input3" value="fecha de hoy:">
+        </div>
+
+        <div class="elegir1">
+            <h4>Elige:</h4>
+            <input type="radio" name="elegir" id="front" value="Frontend" class="fb">
+            <label for="front">Frontend</label>
+            <input type="radio" name="elegir" id="back" value="Backend" class="fb">
+            <label for="back">Backend</label>
+        </div>
+
+        <div class="interes">
+            <h4>¿Cuáles encuentras más interesantes?</h4>
+            <input type="checkbox" id="js" value="Javascript" class="checkboss">
+            <label for="js">Javascript</label>
+            <input type="checkbox" id="html1" value="HTML" class="checkboss">
+            <label for="html1">HTML</label>
+            <input type="checkbox" id="nodee" value="Node" class="checkboss">
+            <label for="nodee">Node</label>
+            <input type="checkbox" id="angularr" value="Angular" class="checkboss">
+            <label for="angularr">Angular</label>
+        </div>
+        <button onclick="intereses()">Obtener la fecha seleccionada, el radio de tu elección y el liastado de los
+            valores de los checkbox seleccionados en un objeto JSON e imprimirlos en la consola</button>    
+    </section>
+</body>
+<script src="app.js"></script>
+
+</html>
