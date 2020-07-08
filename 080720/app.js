@@ -1,26 +1,97 @@
-// let andrea = document.getElementById('andrea');
-// console.log('valor:', andrea.value);
-// console.log('1');
+// DEFER
+let andrea = document.getElementById('andrea');
+console.log('value:', andrea.value);
+
+// TRY CATCH
+function tryCatch () {
+    try {
+        newFunc();
+    } catch (e) {
+        console.log('e ->', e);
+    }
+}
+
+tryCatch();
+
+// Convenciones
+let name = 'Scar';
+let lastName = 'Pla';
+let fullName = `${name} ${lastName}`;
+let isBlack = true;
+const KEY_PASS = 'Holabb123!';
+let firstName = 'Luis';
+function lastName1(name) {
+    return `${name} Miranda`;
+}
+let lastName2 = (name) => {
+    return `${name} Miranda`;
+}
+console.log(lastName1(firstName));
+let students = [
+    { "id": 1, "name": 'Andrea' },
+    { "id": 2, "name": 'Igor' },
+    { "id": 3, "name": 'Chin' },
+    { "id": 4, "name": 'Miguel' },
+    { "id": 5, "name": 'Scar' }
+];
+
+// Sin puntos
+// [
+//     1,
+//     [
+//         { "id": 1, "name": 'Andrea' },
+//         { "id": 2, "name": 'Igor' },
+//         { "id": 3, "name": 'Chin' },
+//         { "id": 4, "name": 'Miguel' },
+//         { "id": 5, "name": 'Scar' }
+//     ]
+// ]
+
+// Con puntos
+// [
+//     1,
+//     { "id": 1, "name": 'Andrea' },
+//     { "id": 2, "name": 'Igor' },
+//     { "id": 3, "name": 'Chin' },
+//     { "id": 4, "name": 'Miguel' },
+//     { "id": 5, "name": 'Scar' }
+// ]
+
+// Programación normal
+let newAr = [];
+for (let x = 0; x < students.length; x++) {
+    if (students[x].id < 4) {
+        newAr.push(students[x]);
+    }
+}
+console.log('newAr ->', newAr);
+
+// Programación funcional callback
+let newAr2 = students.filter(function (data) {
+    return data.id < 4;
+});
+console.log('newAr2 ->', newAr2);
+
+// Programación funcional ES6
+let newAr3 = students.filter(data => data.id < 4);
+console.log('newAr3 ->', newAr3);
+
+let other1 = [1, students];
+let other2 = [1, ...students];
+console.log('other1', other1);
+console.log('other2', other2);
+
+// CALLBACK
 // function greeting(name) {
-//     console.log('greeting');
 //     alert('Hello ' + name);
 // }
-// console.log('2');
-// function processUserInput(callback) {
-//     console.log('pui');
-//     var name = prompt('Please enter your name.');
-//     console.log('pui1');
-//     callback(name);
-//     console.log('pui2');
-// }
-// console.log('3');
-// processUserInput(greeting);
-// console.log('4');
 
-// let cadena1 = 'Mañana va a llover';
-// let cadena2 = cadena1.replace(`Mañana`, `Hoy`);
-// console.log(cadena1);
-// console.log(cadena2);
+// function processUserInput(callback) {
+//     var name = prompt('Please enter your name.');
+//     callback(name);
+// }
+
+// processUserInput(greeting);
 
 // console.log('1');
 // setTimeout(() => {
@@ -28,6 +99,28 @@
 // }, 2000);
 // console.log('2');
 
+
+// const prom1 = new Promise((resolve, reject) => { resolve(true) });
+// const prom2 = new Promise((resolve, reject) => { resolve(true) });
+// const prom3 = new Promise((resolve, reject) => { resolve(true) });
+// const prom4 = new Promise((resolve, reject) => { resolve(true) });
+// const prom5 = new Promise((resolve, reject) => { resolve(true) });
+// const prom6 = new Promise((resolve, reject) => { resolve(true) });
+// const prom7 = new Promise((resolve, reject) => { resolve(true) });
+
+
+// const promise = new Promise((resolve, reject) => {
+//     const number = Math.floor(Math.random() * 10);
+//     setTimeout(() => number > 5 ? resolve(number) : reject(new Error('Menor a 5')), 1000);
+// });
+
+// promise
+//     .then(number => console.log(number))
+//     .catch(error => console.error(error));
+
+
+
+// COMPARE
 // let isAndrea = true;
 
 // function exProm() {
@@ -35,12 +128,6 @@
 //         isAndrea ? resolve(true) : reject(false);
 //     });
 // }
-
-// exProm().then(new1 => {
-//     console.log(new1);
-// }).catch(err => {
-//     console.log(err);
-// });
 
 // async function exec1() {
 //     try {
@@ -65,13 +152,6 @@
 //     }
 // }
 // exec1();
-
-// getId().then(id => {
-//     console.log('id:', id);
-//     getDataUsuarioById(id).then(dataUsuarioById => {
-//         console.log('dataUsuarioById:', dataUsuarioById);
-//     });
-// });
 
 // function exec2() {
 //     console.log('1');
@@ -139,18 +219,3 @@
 //     });
 // }
 // exec2();
-
-
-function anyFunc() {
-    
-}
-
-function exec () {
-    try {
-        console.log(anyFunc());
-    } catch (error) {
-        console.log('Imprimo el error:', error);
-    }
-}
-
-exec();
