@@ -1,85 +1,85 @@
 // DEFER
-let andrea = document.getElementById('andrea');
-console.log('value:', andrea.value);
+// let andrea = document.getElementById('andrea');
+// console.log('value:', andrea.value);
 
-// TRY CATCH
-function tryCatch () {
-    try {
-        newFunc();
-    } catch (e) {
-        console.log('e ->', e);
-    }
-}
+// // TRY CATCH
+// function tryCatch () {
+//     try {
+//         newFunc();
+//     } catch (e) {
+//         console.log('e ->', e);
+//     }
+// }
 
-tryCatch();
+// tryCatch();
 
-// Convenciones
-let name = 'Scar';
-let lastName = 'Pla';
-let fullName = `${name} ${lastName}`;
-let isBlack = true;
-const KEY_PASS = 'Holabb123!';
-let firstName = 'Luis';
-function lastName1(name) {
-    return `${name} Miranda`;
-}
-let lastName2 = (name) => {
-    return `${name} Miranda`;
-}
-console.log(lastName1(firstName));
-let students = [
-    { "id": 1, "name": 'Andrea' },
-    { "id": 2, "name": 'Igor' },
-    { "id": 3, "name": 'Chin' },
-    { "id": 4, "name": 'Miguel' },
-    { "id": 5, "name": 'Scar' }
-];
-
-// Sin puntos
-// [
-//     1,
-//     [
-//         { "id": 1, "name": 'Andrea' },
-//         { "id": 2, "name": 'Igor' },
-//         { "id": 3, "name": 'Chin' },
-//         { "id": 4, "name": 'Miguel' },
-//         { "id": 5, "name": 'Scar' }
-//     ]
-// ]
-
-// Con puntos
-// [
-//     1,
+// // Convenciones
+// let name = 'Scar';
+// let lastName = 'Pla';
+// let fullName = `${name} ${lastName}`;
+// let isBlack = true;
+// const KEY_PASS = 'Holabb123!';
+// let firstName = 'Luis';
+// function lastName1(name) {
+//     return `${name} Miranda`;
+// }
+// let lastName2 = (name) => {
+//     return `${name} Miranda`;
+// }
+// console.log(lastName1(firstName));
+// let students = [
 //     { "id": 1, "name": 'Andrea' },
 //     { "id": 2, "name": 'Igor' },
 //     { "id": 3, "name": 'Chin' },
 //     { "id": 4, "name": 'Miguel' },
 //     { "id": 5, "name": 'Scar' }
-// ]
+// ];
 
-// Programación normal
-let newAr = [];
-for (let x = 0; x < students.length; x++) {
-    if (students[x].id < 4) {
-        newAr.push(students[x]);
-    }
-}
-console.log('newAr ->', newAr);
+// // Sin puntos
+// // [
+// //     1,
+// //     [
+// //         { "id": 1, "name": 'Andrea' },
+// //         { "id": 2, "name": 'Igor' },
+// //         { "id": 3, "name": 'Chin' },
+// //         { "id": 4, "name": 'Miguel' },
+// //         { "id": 5, "name": 'Scar' }
+// //     ]
+// // ]
 
-// Programación funcional callback
-let newAr2 = students.filter(function (data) {
-    return data.id < 4;
-});
-console.log('newAr2 ->', newAr2);
+// // Con puntos
+// // [
+// //     1,
+// //     { "id": 1, "name": 'Andrea' },
+// //     { "id": 2, "name": 'Igor' },
+// //     { "id": 3, "name": 'Chin' },
+// //     { "id": 4, "name": 'Miguel' },
+// //     { "id": 5, "name": 'Scar' }
+// // ]
 
-// Programación funcional ES6
-let newAr3 = students.filter(data => data.id < 4);
-console.log('newAr3 ->', newAr3);
+// // Programación normal
+// let newAr = [];
+// for (let x = 0; x < students.length; x++) {
+//     if (students[x].id < 4) {
+//         newAr.push(students[x]);
+//     }
+// }
+// console.log('newAr ->', newAr);
 
-let other1 = [1, students];
-let other2 = [1, ...students];
-console.log('other1', other1);
-console.log('other2', other2);
+// // Programación funcional callback
+// let newAr2 = students.filter(function (data) {
+//     return data.id < 4;
+// });
+// console.log('newAr2 ->', newAr2);
+
+// // Programación funcional ES6
+// let newAr3 = students.filter(data => data.id < 4);
+// console.log('newAr3 ->', newAr3);
+
+// let other1 = [1, students];
+// let other2 = [1, ...students];
+// console.log('other1', other1);
+// console.log('other2', other2);
 
 // CALLBACK
 // function greeting(name) {
@@ -219,3 +219,44 @@ console.log('other2', other2);
 //     });
 // }
 // exec2();
+
+// function getElement() {
+//     let el = document.getElementById('andrea');
+//     if (!el) {
+//         throw 'Error al obtener elemento con id Andrea';
+//     }
+// }
+
+// function exec() {
+//     try {
+//         getElement();
+//     } catch (e) {
+//         console.log('Este es el error ->', e);
+//     }
+// }
+
+// exec();
+
+function promises() {
+    fetch('https://pokeapi.co/api/v2/pokemon/1').then((res) => {
+        res.json().then((data) => {
+            console.log(data.name);
+        }, (err) => {
+            console.log('err', err);
+        });
+    }, (error) => {
+        console.log('error', error);
+    });
+}
+
+async function promises2() {
+    try {
+        let res = await fetch('https://pokeapi.co/api/v2/pokemon/1');
+        let data = await res.json();
+        console.log('data', data.name);
+    } catch (e) {
+        console.log('e', e);
+    }
+}
+
+promises2();
