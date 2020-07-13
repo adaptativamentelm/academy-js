@@ -237,26 +237,163 @@
 
 // exec();
 
-function promises() {
-    fetch('https://pokeapi.co/api/v2/pokemon/1').then((res) => {
-        res.json().then((data) => {
-            console.log(data.name);
-        }, (err) => {
-            console.log('err', err);
-        });
-    }, (error) => {
-        console.log('error', error);
-    });
-}
+// function promises1() {
+//     fetch('https://pokeapi.co/api/v2ss/1').then(function (res) {
+//         res.json().then(function (data) {
+//             console.log(data.name);
+//         }).catch(function (err) {
+//             console.log('err', err);
+//         });
+//     }).catch(function (error) {
+//         console.log('error', error);
+//     });
+// }
 
-async function promises2() {
+// function promises2() {
+//     fetch('https://pokeapi.co/api/v2/ssa/1').then((res) => {
+//         res.json().then((data) => {
+//             console.log(data.name);
+//         }, (err) => {
+//             console.log('err', err);
+//         });
+//     }, (error) => {
+//         console.log('error', error);
+//     });
+// }
+
+// async function promises3() {
+//     try {
+//         let res = await fetch('https://pokeapi.co/api/v2/asas/1');
+//         let data = await res.json();
+//         console.log('data', data.name);
+//     } catch (error) {
+//         console.log('error', error);
+//     }
+// }
+
+// promises3();
+
+// let school = [
+//     {
+//         "name": 'Colegio 1',
+//         "id": '1'
+//     },
+//     {
+//         "name": 'Colegio 2',
+//         "id": '2'
+//     },
+//     {
+//         "name": 'Colegio 3',
+//         "id": '3'
+//     }
+// ];
+
+// let school = [
+//     {
+//         "name": "Colegio 1",
+//         "id": 1
+//     }
+// ]
+
+// let school = [ "Colegio 1" ];
+// let school = "Colegio 1";
+
+// function callBackend(id) {
+//     return new Promise((resolve, reject) => {
+//         let caught = '';
+//         for (let x = 0; x < school.length; x++) {
+//             if (id == school[0].id) {
+//                 caught = school[0].name;
+//             }
+//         }
+//         setTimeout(() => {
+//             caught ? resolve(caught) : reject(caught);
+//         }, 3000);
+//     });
+// }
+
+// numero = 3;
+
+// async function exec() {
+//     try {
+//         let input = document.getElementById('input');
+//         for (let x = 0; x < numero; x++) {
+//             await callProm(input.value);
+//         }
+//     } catch {
+//         console.log('error');
+//     }
+// }
+
+// function callProm(data) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             createTitle(data);
+//             resolve(true);
+//         }, 2000);
+//     });
+// }
+
+// function createTitle(data) {
+//     let h1 = document.createElement('h1');
+//     h1.innerHTML = data;
+//     document.getElementById('container').appendChild(h1);
+// }
+
+// function callProm(numero) {
+//     return new Promise((resolve, reject) => {
+//         if (typeof (numero) === 'number') {
+//             resolve(numero + 10);
+//         } else {
+//             reject('Las chicas superpoderosas');
+//         }
+//     });
+// }
+
+// async function exec() {
+//     try {
+//         let resultado = await callProm(num);
+//         console.log(resultado);
+//     } catch (e) {
+//         console.log(e);
+//     }
+// }
+// exec();
+
+///////
+
+numero = 3;
+
+async function exec() {
     try {
-        let res = await fetch('https://pokeapi.co/api/v2/pokemon/1');
-        let data = await res.json();
-        console.log('data', data.name);
+        let input = document.getElementById('input');
+        for (let x = numero; x >= 0; x--) {
+            await callProm(x, input.value);
+        }
     } catch (e) {
-        console.log('e', e);
+        console.log(e);
     }
 }
 
-promises2();
+function callProm(numero, data) {
+    return new Promise((resolve, reject) => {
+        if (data) {
+            setTimeout(() => {
+                if (numero > 0) {
+                    createTitle(numero);
+                    resolve(true);
+                } else {
+                    createTitle(data);
+                    resolve(true);
+                }
+            }, 2000);
+        } else {
+            reject('No hay valor en el input!!!');
+        }
+    });
+}
+
+function createTitle(data) {
+    let h1 = document.getElementById('texto');
+    h1.innerHTML = data;
+}
