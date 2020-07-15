@@ -362,38 +362,38 @@
 
 ///////
 
-numero = 3;
+// numero = 3;
 
-async function exec() {
-    try {
-        let input = document.getElementById('input');
-        for (let x = numero; x >= 0; x--) {
-            await callProm(x, input.value);
-        }
-    } catch (e) {
-        console.log(e);
-    }
-}
+// async function exec() {
+//     try {
+//         let input = document.getElementById('input');
+//         for (let x = numero; x >= 0; x--) {
+//             await callProm(x, input.value);
+//         }
+//     } catch (e) {
+//         console.log(e);
+//     }
+// }
 
-function callProm(numero, data) {
-    return new Promise((resolve, reject) => {
-        if (data) {
-            setTimeout(() => {
-                if (numero > 0) {
-                    createTitle(numero);
-                    resolve(true);
-                } else {
-                    createTitle(data);
-                    resolve(true);
-                }
-            }, 2000);
-        } else {
-            reject('No hay valor en el input!!!');
-        }
-    });
-}
+// function callProm(numero, data) {
+//     return new Promise((resolve, reject) => {
+//         if (data) {
+//             setTimeout(() => {
+//                 if (numero > 0) {
+//                     createTitle(numero);
+//                     resolve(true);
+//                 } else {
+//                     createTitle(data);
+//                     resolve(true);
+//                 }
+//             }, 2000);
+//         } else {
+//             reject('No hay valor en el input!!!');
+//         }
+//     });
+// }
 
-function createTitle(data) {
-    let h1 = document.getElementById('texto');
-    h1.innerHTML = data;
-}
+// function createTitle(data) {
+//     let h1 = document.getElementById('texto');
+//     h1.innerHTML = data;
+// }
