@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" onfocus="console.log('focus')" onblur="console.log('blur')">
-    <select name="" id="" onchange="myFunction()">
-        <option value="0">Opción 1</option>
-        <option value="1">Opción 2</option>
+    <select name="" id="selected" onchange="myFunction()" >
+        <option value="--" id="0">-- Elige opcion --</option>
+        <option value="1" id="1" class="selection">Opción 1</option>
+        <option value="2" id="2" class="selection">Opción 2</option>
     </select>
 </html>
