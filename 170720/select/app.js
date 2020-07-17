@@ -1,20 +1,11 @@
-let option1 = document.getElementById("1");
-let option2 = document.getElementById("2");
+// let option1 = document.getElementById("option1");
+// let option2 = document.getElementById("option2");
+// let option3 = document.getElementById("option3");
 
-// imprimir valor de input seleccionado
-
-// function myFunction() {
-//     if (option1.selected) {
-//         console.log(option1.value);        
-//     }
-//     if (option2.selected) {
-//         console.log(option2.value);        
-//     }
-// }
-
-let selected = document.getElementById('selected');
+let selectElement = document.getElementById('select');
+console.log('Elementos contenidos en el select:', selectElement.options);
 
 function myFunction() {
-    console.log(selected.options);
-    console.log(selected.selectedIndex);
+    console.log('Índice de la opción seleccionada:', selectElement.selectedIndex);
+    console.log('Valor de la opción seleccionada:', selectElement.options[selectElement.selectedIndex].value);
 }
