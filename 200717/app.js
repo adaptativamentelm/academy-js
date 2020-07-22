@@ -7,26 +7,25 @@ let bd_decimos = [10,20,30,40,50,60,70,80,90,100];
 function promiseResponse(selectElement) {
 	return new Promise((resolve, reject) => {
 		try {
-
-				if (selectElement) {
-					if (selectElement === 1) {
-						let response = {
-							"value": bd_enteros,
-							"success": true
-                        };
-                        console.log(response.value);
-						resolve(response);
-					} else {
-						let response = {
-							"value": bd_decimos,
-							"success": true
-                        };
-                        console.log(response.value);
-						resolve(response);
-					}
-				} else {
-					reject(false);
-				}
+            if (selectElement) {
+                if (selectElement === '1') {
+                    let response = {
+                        "value": bd_enteros,
+                        "success": true
+                    };
+                    console.log(response.value);
+                    resolve(response);
+                } else {
+                    let response = {
+                        "value": bd_decimos,
+                        "success": true
+                    };
+                    console.log(response.value);
+                    resolve(response);
+                }
+            } else {
+                reject(false);
+            }
 
 		} catch {
 			reject(false);
