@@ -15,5 +15,14 @@ async function selectOption() {
 function returnDataPromise(id) {
     return new Promise((resolve, reject) => {
         id ? id === 1 ? resolve(bd_enteros) : resolve(bd_decimos) : reject('Error: Id entregado no válido');
+        // if (id) {
+        //     if (id === 1) {
+        //         resolve(bd_enteros);
+        //     } else {
+        //         resolve(bd_decimos);
+        //     }
+        // } else {
+        //     reject('Error: Id entregado no válido');
+        // }
     });
 }
