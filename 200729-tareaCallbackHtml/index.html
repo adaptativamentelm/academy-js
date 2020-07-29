@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="app.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ingresa tus datos para el registro</h1>
+    <section>
+        <label for="name">Nombre</label>
+        <input id="name" type="text" maxlength="15">
+        <br>
+        <label for="phone">Teléfono</label>
+        <input id="phone" type="number" maxlength="10">
+        <br>
+        <label for="user">Usuario</label>
+        <input id="user" type="text" maxlength="10">
+        <br>
+        <label for="pass">Password</label>
+        <input id="pass" type="password" maxlength="4">
+        <button onclick="showPass2()"> ver👁️</button>
+        <!-- Mostrar/Ocultar contraseña -->
+        <br>
+        <label for="genero">Género</label>
+        <input type="radio" id="fem" name="radio" value="femenino" class="radio">
+        <label for="front">Femenino</label>
+        <input type="radio" id="hom" name="radio" value="masculino" class="radio">
+        <label for="back">Masculino</label>
+        <h4>Hobbies</h4>
+        <input type="checkbox" id="one" value="Deporte" class="checkbox">
+        <label for="one">Deporte</label>
+        <input type="checkbox" id="two" value="Lectura" class="checkbox">
+        <label for="two">Lectura</label>
+        <input type="checkbox" id="three" value="Entretenimiento" class="checkbox">
+        <label for="three">Entretenimiento</label>
+        <input type="checkbox" id="four" value="Lectura" class="checkbox">
+        <label for="four">Lectura</label>
+        <br>
+        <div>
+            <br>
+            <button style="background-color: pink;" id="save">Guardar Datos</button>
+        </div>
+        
+        <!-- Valida que el usuario sea la inicial de tu nombre + tu apellido y tu contraseña los primeros 4 dígitos de tu rut -->
+    </section>
+    <hr>
+    
+</body>
+</html>

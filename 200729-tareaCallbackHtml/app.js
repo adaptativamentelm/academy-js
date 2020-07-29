@@ -9,4 +9,7 @@ let checks = document.getElementsByClassName('checkbox');
 let hobbies = [];
 let save = document.getElementById('save');
 
-const getDataForm = () => { } // Esta función será llamada en el evento click del botón "Guardar datos"
+const getDataForm = () => { 
+    console.log('funciona');
+} // Esta función será llamada en el evento click del botón "Guardar datos"
+save.addEventListener('click', getDataForm)
