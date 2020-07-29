@@ -99,16 +99,32 @@ function greeting(nombre) {
     alert(`Hello ${nombre}`);
 }
 function processUserInput(output) {
-    console.log('inicio')
-    let promptNombre = prompt('Please enter your name.');
-    output(promptNombre);
+    let texto = prompt('Please enter your name.');
+    output(texto);
 }
 processUserInput(greeting);
 
 /***************************************/
 
+// let processUserInput = () => {
+//     ejemplo de cómo declarar una función de flecha(es la de abajo)
+// };
+
+// processUserInput((nombre) => {
+//     alert(`Hello ${nombre}`); ejemplo de declarar una funcion de flecha como parametro en otra funcion
+// });
+
 function processUserInput(output) {
-    let nombre = prompt('Please enter your name.');
-    output(nombre);
+    let texto = prompt('Please enter your name.');
+    output(texto);
 }
-processUserInput(function(nombre) { alert(`Hello ${nombre}`); });
+processUserInput(function (nombre) {
+    alert(`Hello ${nombre}`);
+});
+
+
+// function saludo(asd) {
+//     console.log(`Hola ${asd}`);
+// }
+
+// saludo('Scar');
