@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section name="form">
+            <h1>Ingresa tus datos para registro</h1>
+            <label for="name">Nombre</label>
+            <input type="text" id="name">
+            <br>
+            <label for="phone">Teléfono</label>
+            <input type="text" id="phone" maxlength="9">
+            <br>
+            <label for="user">Usuario</label>
+            <input type="text" id="user" maxlength="10">
+            <br>
+            <label for="pass">Contraseña</label>
+            <input type="password" id="pass" maxlength="4">
+            <button id="showpass">Ver</button>
+            <br>
+            <span>Género:</span>
+            <input type="radio" id="f" value="Femenino" name="radio">
+            <label for="f">Femenino</label>
+            <input type="radio" id="m" value="Masculino" name="radio">
+            <label for="m">Masculino</label>
+            <br>
+            <span>Hobbies:</span>
+            <input type="checkbox" id="de" value="Deporte" class="checkbox">
+            <label for="de">Deporte</label>
+            <input type="checkbox" id="le" value="Lectura" class="checkbox">
+            <label for="le">Lectura</label>
+            <input type="checkbox" id="en" value="Entretenimiento" class="checkbox">
+            <label for="en">Entretenimiento</label>
+            <input type="checkbox" id="co" value="Cocina" class="checkbox">
+            <label for="co">Cocina</label>
+            <br>
+            <button id="save">Guardar datos</button>
+        </section>
+    </main>
+</body>
+</html>
