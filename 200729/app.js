@@ -12,12 +12,13 @@ let save = document.getElementById('save');
 let user_data ={};
 let exit_way = document.getElementById('exit');
 
-//telefono
+//---------telefono: max9 & soloNum
 function phoneMaxLength() {
     phone.value = phone.value.slice(0,phone.maxLength);
 }
 phone.addEventListener('keyup', phoneMaxLength);
 
+//---------mostrar/ocultar password
 function showPassword() {
     if (pass.type === "password") {
         pass.type = "text";
@@ -27,6 +28,7 @@ function showPassword() {
 }
 showPass.addEventListener("click", showPassword); //showPassword pasa como parametro, por eso no va con ()
 
+//---------armar paquete de data 
 const getDataForm = () => { //nunca usar let!!! const imposibilita cambiar el valor de la funcion! let no!
     user_data.name = name.value;
     user_data.phone = phone.value;
@@ -46,10 +48,10 @@ const getDataForm = () => { //nunca usar let!!! const imposibilita cambiar el va
     user_data.hobbies = hobbies;
     localStorage.setItem('datos', JSON.stringify(user_data));
     console.log(user_data) //para ver
-    
 } 
 save.addEventListener("click", getDataForm);
 
+//---------borrar local storage
 const exitForm = () => {
     localStorage.clear();
 }
