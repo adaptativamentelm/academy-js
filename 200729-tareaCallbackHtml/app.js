@@ -8,7 +8,9 @@ let genero = '';
 let checks = document.getElementsByClassName('checkbox');
 let hobbies = [];
 let save = document.getElementById('save');
+
 showPass.addEventListener('click', showPassf);
+
 function showPassf() {
     pass.type = pass.type === "text" ? "password" : "text";
 }
@@ -37,9 +39,9 @@ const getDataForm = () => {
 
 } // Esta función será llamada en el evento click del botón "Guardar datos"
 
-
-
-
 save.addEventListener('click', getDataForm);
+
+
+
 
 

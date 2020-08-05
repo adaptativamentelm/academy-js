@@ -18,7 +18,7 @@ function showPass1() {
         pass.type = "text";
     }
 }
-
+f
 function showPass2() {
     pass.type = pass.type === "text" ? "password" : "text";
 }
