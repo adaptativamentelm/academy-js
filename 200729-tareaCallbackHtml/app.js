@@ -15,11 +15,12 @@ phone.addEventListener('keyup', () => {
     }
 });
 
-showPass.addEventListener('click',  () => {
+showPass.addEventListener('click', () => {
     pass.type = pass.type === 'password' ? 'text' : 'password';
 });
 
 const getDataForm = () => {
+    hobbies = [];
     for (let x = 0; x < radios.length; x++) {
         if (radios[x].checked) {
             genero = radios[x].value;
