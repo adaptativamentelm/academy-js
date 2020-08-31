@@ -8,6 +8,9 @@ let dividir = document.getElementById('dividir');
 let potencia = document.getElementById('potencia');
 let raiz = document.getElementById('raiz');
 
+res.style.border = '2px solid pink';
+res.style.padding = '3px';
+
 function sum() {
     try {
         if (num1.value && num2.value) {
