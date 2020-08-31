@@ -110,3 +110,4 @@ multiplicar.addEventListener('click', multi);
 dividir.addEventListener('click', div);
 potencia.addEventListener('click', pow);
 raiz.addEventListener('click', raiznums);
+// intentar una superfuncion para ahorrar codigo raiz.addEventListener('click', superFuncion(raiznums))
