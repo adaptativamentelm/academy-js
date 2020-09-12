@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="./img-1.jpg" alt="img" id="img" title="Ponerle a esta imagen mediante JS width: 100%">
+    </header>
+    <section>
+        <h3>Section 1</h3>
+        <label for="user">User</label>
+        <input id="user" type="text" maxlength="10">
+        <br>
+        <label for="pass">Password</label>
+        <input id="pass" type="password" maxlength="4">
+        <button onclick="showPass2()">👁️</button>
+        <!-- Mostrar/Ocultar contraseña -->
+        <br>
+        <button onclick="validate1()">Validate</button>
+        <!-- Valida que el usuario sea la inicial de tu nombre + tu apellido y tu contraseña los primeros 4 dígitos de tu rut -->
+    </section>
+    <hr>
+    <section>
+        <h3>Section 2</h3>
+        <label for="date">Date: </label>
+        <input type="date" id="date">
+        <h4>Pick:</h4>
+        <input type="radio" id="front" name="radio" value="Frontend" class="radio">
+        <label for="front">Frontend</label>
+        <input type="radio" id="back" name="radio" value="Backend" class="radio">
+        <label for="back">Backend</label>
+        <h4>Your interests:</h4>
+        <input type="checkbox" id="one" value="JavaScript" class="checkbox">
+        <label for="one">JavaScript</label>
+        <input type="checkbox" id="two" value="HTML" class="checkbox">
+        <label for="two">HTML</label>
+        <input type="checkbox" id="three" value="Node" class="checkbox">
+        <label for="three">Node</label>
+        <input type="checkbox" id="four" value="Angular" class="checkbox">
+        <label for="four">Angular</label>
+        <input type="checkbox" id="five" value="CSS" class="checkbox">
+        <label for="five">CSS</label>
+        <input type="checkbox" id="six" value="Git" class="checkbox">
+        <label for="six">Git</label>
+        <input type="checkbox" id="seven" value="TypeScript" class="checkbox">
+        <label for="seven">TypeScript</label>
+        <br>
+        <button onclick="printInformation2()">Print information</button>
+        <!-- Obtener la fecha seleccionada, el radio de tu elección y el listado de los valores de los checkbox seleccionados en un objeto JSON en imprimirlos en consola -->
+    </section>
+</body>
+</html>
