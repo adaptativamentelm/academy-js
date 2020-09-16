@@ -10,16 +10,21 @@ const func2 = async () => {
         let data = await response.json();
         for (let i = 0; i < 5; i++) {
             let img_url = data.photos[i].img_src;
-            let newImg = document.createElement('img');
-            newImg.style.maxWidth = '10em';
-            newImg.style.padding = '1em';
-            newImg.src = img_url;
-            div.appendChild(newImg);   
+            createImg(img_url);  
         }
         console.log('data', data);
     } catch (e) {
         console.log(e);
     }
 
+}
+
+function createImg(url) {
+    let newImg = document.createElement('img');
+    newImg.style.maxWidth = '10em';
+    newImg.style.padding = '1em';
+    newImg.src = url;
+    div.appendChild(newImg); 
+    
 }
 send.addEventListener('click', func2);
