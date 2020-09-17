@@ -63,5 +63,23 @@ const func2 = async () => {
     }
 
 }
+const func3 = async () => {
+    let payload = {
+        "usuario": usuario.value,
+        "passusuario": passusuario.value
+    };
+    try {
+        let response2 = await fetch(urlLogin,{
+            "method": 'POST',
+            "headers": { 'Content-Type': 'application/json' },
+            "body": JSON.stringify(payload)
+        });
+        console.log('fetchhhhhh', response2);
+        let data2 = await response2.json();
+        console.log(data2);      
+    } catch (e) {
+        console.log(e);
+    }
+}
 
-send.addEventListener('click', func);
+send.addEventListener('click', func3);
