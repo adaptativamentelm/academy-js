@@ -1,0 +1,12 @@
+.photo {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+}
+
+.photo:hover {-webkit-transform: scale(2);transform: scale(2);}
+  
+#root {
+    overflow:hidden;
+    display: flex;
+}
