@@ -20,8 +20,8 @@ const get_data = async () => {
 
 const print_data = (data) => {
     let all_photos = data.photos;
-    for ( let i = 0 ; i < 60 ; i++ ){
-        if (i == 10 | i == 20 | i == 30 | i == 40 | i == 50 ){
+    for ( let i = 0 ; i < 600 ; i++ ){
+        if (i == 100 || i == 150 || i == 300 || i == 350 || i == 550 ){
             // console.log(all_photos[i])
             print_on_html(all_photos[i].img_src);
             console.log(`photo ${i}`, all_photos[i].img_src);
