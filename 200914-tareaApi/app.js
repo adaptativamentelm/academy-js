@@ -19,7 +19,7 @@ const getData = async () => {
 const processing = () => {
     for (let x = 0; x < cant; x++) {
         console.log('data', data.photos[x]);
-        // drawing(data.photos[x].img_src);
+        drawing(data.photos[x].img_src);
     }
 };
 
