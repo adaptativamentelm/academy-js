@@ -41,11 +41,5 @@ const print_unpair = (got_unpair) => {
     let paragraph_unpair = document.createElement('p');
     paragraph_unpair.innerHTML = got_unpair;
     unpair.appendChild(paragraph_unpair);
-
 }
-
-
-
-//imprimir
-
 run.addEventListener('click', getData);
