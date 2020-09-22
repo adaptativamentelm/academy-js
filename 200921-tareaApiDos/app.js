@@ -13,19 +13,14 @@ const getData = async () => {
 
 const processing = () => {
     for (let x = 0; x < data.length; x++) {
-        let odd = data[x].id % 2 ? true : false;
-        drawing(data[x].name, odd);
+        drawing(data[x].name, data[x].id % 2 === 0);
     }
 };
 
 const drawing = (str, isOdd) => {
     let h2 = document.createElement('h2');
     h2.innerHTML = str;
-    if (isOdd) {
-        odds.appendChild(h2);
-    } else {
-        evens.appendChild(h2);
-    }
+    isOdd ? odds.appendChild(h2) : evens.appendChild(h2);
 };
 
 getData();
