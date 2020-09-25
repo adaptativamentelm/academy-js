@@ -17,10 +17,10 @@ const processing = () => {
     }
 };
 
-const drawing = (str, isOdd) => {
+const drawing = (str, isEven) => {
     let h2 = document.createElement('h2');
     h2.innerHTML = str;
-    isOdd ? odds.appendChild(h2) : evens.appendChild(h2);
+    isEven ? evens.appendChild(h2) : odds.appendChild(h2);
 };
 
 getData();
