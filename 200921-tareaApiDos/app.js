@@ -12,17 +12,16 @@ const funcPost = async () => {
         const req = { "method": 'POST', "headers": { 'Content-Type': 'application/json' }, "body": JSON.stringify(payload) };
         let response = await fetch(post, req);
         let data = await response.json();
-        createW("id", data[0].id);
-        createW("name", data[0].name);
-        createW("user", data[0].user);
+        createW("ID", data[0].id);
+        createW("NAME", data[0].name);
+        createW("USER", data[0].user);
     } catch (error) {
         console.log(error);
     }
 }
 const createW = (str, position) =>{
     let element = document.createElement('h2');
-    let title = str.toUpperCase();
-    element.innerHTML = `${title}: ${position}`;
+    element.innerHTML = `${str}: ${position}`;
     postResult.appendChild(element);
 }
 send.addEventListener('click', funcPost);
