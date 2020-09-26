@@ -35,10 +35,10 @@ const getDataByPost = async (id) => {
         };
         const req = { "method": 'POST', "headers": { 'Content-Type': 'application/json' }, "body": JSON.stringify(payload) };
         let response = await fetch(post, req);
-        let data = await response.json();
+        data = await response.json();
         // draw_user_info(data);
-        console.log(data);
-        draw_user_info(data);    
+        // console.log(data);
+        draw_user_info();    
     } catch (e) {
         console.log(e);
     }
@@ -50,20 +50,15 @@ const catchTheId = () => {
     getDataByPost(find_id);
 }
 
-
-const draw_user_info = (data) => {
+const draw_user_info = () => {
     // console.log(data[0].id);
     // console.log(data[0].user);
     let p1 = document.createElement('p');
     let p2 = document.createElement('p');
     let p3 = document.createElement('p');
-    p1.innerHTML = 'ID: ' + data[0].id;
-    p1.style.fontWeight = 'bold';
-    p2.innerHTML = 'NAME: '+ data[0].name;
-    p2.style.color = 'red';
-    p3.innerHTML = 'USER: ' + data[0].user;
-    p3.style.fontSize = '25px';
-    
+    p1.innerHTML = `ID: ${data[0].id}`;
+    p2.innerHTML = `NAME: ${data[0].name}`;
+    p3.innerHTML = `USER: ${data[0].user}`;
     finder_user.appendChild(p1);
     finder_user.appendChild(p2);
     finder_user.appendChild(p3);
