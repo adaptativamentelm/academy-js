@@ -3,61 +3,51 @@ let post = 'https://portal-be.adaptativamente.cl/reporteria/academy/user/id';
 let data = [];
 let odds = document.getElementById('odd');
 let evens = document.getElementById('even');
-
-const getData = async () => {
-    const response = await fetch(get);
-    data = await response.json();
-    console.log('data', data);
-    processing();
-};
-
-const processing = () => {
-    for (let x = 0; x < data.length; x++) {
-        drawing(data[x].name, data[x].id % 2 === 0);
-    }
-};
-
-const drawing = (str, isEven) => {
-    let h2 = document.createElement('h2');
-    h2.innerHTML = str;
-    isEven ? evens.appendChild(h2) : odds.appendChild(h2);
-};
-
-// getData();
-
 let user = document.getElementById('userid');
 let find = document.getElementById('find');
 let section = document.getElementById('data');
 
-const getDataPost = async () => {
-    try {
+const getData = async (url, isGet, payload) => {
+    const response = isGet ? await fetch(url) : await fetch(url, payload);
+    data = await response.json();
+    console.log('data', data);
+    processing(isGet);
+};
+
+const processing = (isGet) => {
+    if (isGet) {
+        for (let x = 0; x < data.length; x++) {
+            drawing(data[x].name, true, data[x].id % 2 === 0);
+        }
+    } else {
         clean();
-        const response = await fetch(post, {
-            "method": 'POST',
-            "headers": { 'Content-Type': 'application/json' },
-            "body": JSON.stringify({ "id": Number(user.value)
-        }) });
-        data = await response.json();
-        console.log('data', data);
-        drawingPost(`Id: ${data[0].id}`);
-        drawingPost(`Name: ${data[0].name}`);
-        drawingPost(`User: ${data[0].user}`);
-    } catch {
-        console.log('ha ocurrido un error');
+        drawing(`Id: ${data[0].id}`, isGet, false);
+        drawing(`Name: ${data[0].name}`, isGet, false);
+        drawing(`User: ${data[0].user}`, isGet, false);
     }
 };
 
-const drawingPost = (str) => {
-    let h3 = document.createElement('h3');
-    h3.innerHTML = str;
-    section.appendChild(h3);
+const drawing = (str, isGet, isEven) => {
+    let h2 = document.createElement('h2');
+    h2.innerHTML = str;
+    isGet ? isEven ? evens.appendChild(h2) : odds.appendChild(h2) : section.appendChild(h2);
 };
 
 const clean = () => {
-    let h3s = document.getElementsByTagName('h3');
+    let h3s = section.getElementsByTagName('h2');
     for (let x = h3s.length - 1; x >= 0; x--) {
         h3s[x].remove();
     }
 };
 
-find.addEventListener('click', getDataPost);
+const catchId = () => {
+    const payload = {
+        "method": 'POST',
+        "headers": { 'Content-Type': 'application/json' },
+        "body": JSON.stringify({ "id": Number(user.value) })
+    };
+    getData(post, false, payload);
+};
+
+getData(get, true, null);
+find.addEventListener('click', catchId);
