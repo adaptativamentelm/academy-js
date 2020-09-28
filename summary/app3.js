@@ -151,6 +151,12 @@ console.log('25. reverse:', arr_words.reverse());
 //__________________________________________________________
 // // Array.prototype.sort()
 console.log('29. sort:', arr_numbers_10.sort());
+
+let nuevo = [3, 21, 11, 1, 2, 54];
+nuevo.sort(); // 1, 11, 2, 21, 3, 54
+
+nuevo.sort((a, b) => a - b); // 1, 2, 3, 11, 21, 54
+
 // como ordena ???
 //__________________________________________________________
 // // Array.prototype.splice()
