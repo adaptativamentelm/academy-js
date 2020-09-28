@@ -8,17 +8,17 @@
 //___________________________________________
 
 
-setTimeout(() => {
-  console.log("ddddd")  
-}, 2000);
+// setTimeout(() => {
+//   console.log("ddddd")  
+// }, 2000);
 
-function myFunction() {
-    console.log('hola bebe2');
-}
+// function myFunction() {
+//     console.log('hola bebe2');
+// }
 
-let radiobut = document.getElementById("1");
-radiobut.onchange = function(){
-    console.log('saludo');
-}
+// let radiobut = document.getElementById("1");
+// radiobut.onchange = function(){
+//     console.log('saludo');
+// }
 
-radiobut.addEventListener("change", myFunction);
+// radiobut.addEventListener("change", myFunction);
