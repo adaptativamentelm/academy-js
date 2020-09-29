@@ -49,7 +49,7 @@ const getData2 = async () => {
     nameN.innerHTML = `Name: ${data2.name}`;
     section2.appendChild(nameN);
     let date = document.createElement('h2');
-    date.innerHTML = `Date: ${data2.year}-${data2.month}-${data2.day}`;
+    date.innerHTML = `Date: ${data2.year}-${data2.month >= 10 ? `${data2.month}` :`0${data2.month}`}-${data2.day}`;
     section2.appendChild(date);
     let image = document.createElement('img');
     image.src = data2.img;
