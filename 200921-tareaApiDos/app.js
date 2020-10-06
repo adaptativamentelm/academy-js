@@ -25,6 +25,8 @@ const drawing = (str, isEven) => {
     h2.innerHTML = str;
     isEven ? evens.appendChild(h2) : odds.appendChild(h2);
 };
+
+getData();
 //____________________________________________________________________
 
 const getDataByPost = async (id) => {
