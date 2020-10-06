@@ -31,6 +31,7 @@ const func = async () => {
     // }).then(data => {
     //     console.log('data', data);
     // });
+    
 
     // FETCH GET1
     // fetch(url).then(response => {
