@@ -2,9 +2,11 @@ const getData = async (url) => {
     const response = await fetch(url);
     let data = await response.text();
     let html = replacing(data);
-    console.log(html);
     build(html);
 };
+
+// let nombre = 'danida'.replace('da', 'ma'); // manida
+// let name = 'Fantasias animadas de ayer y hoy'.split('y').join('a'); // Fantasias animadas de aaer a hoa
 
 const replacing = (html) => {
     html = html.replace(`<!doctype html>`, '');
@@ -18,13 +20,13 @@ const replacing = (html) => {
     html = html.replace(`</body>`, `</div>`);
     html = html.replace(`</html>`, '');
     html = html.split(`../../../../imagenes_front/`).join(`https://desarrolloadaptatin.blob.core.windows.net/sistemaejercicios/ejercicios/Nivel-12/imagenes_front/`);
-    // let a = 'andrea'.split('a') // ['a', 'a'];
     return html;
 };
 
 const build = (html) => {
     document.body.innerHTML = html;
-    let head = document.getElementsByTagName('head')[0];
+    let head = document.head;
+    // let head = document.getElementsByTagName('head')[0];
     let script = document.createElement('script');
     script.defer = true;
     script.src = './assets/bundle.js';
