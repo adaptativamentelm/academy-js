@@ -32,9 +32,9 @@ const drawing = (option, data) => {
                 img.width = 100;
                 img.height = 100;
                 img.src = data[x].typeimg;
-                img.addEventListener('click', function () {
+                h3.addEventListener('click', function () {
                     let information = {
-                        "url": descUrl,
+                        "url": userByIdUrl,
                         "id": data[x].id
                     }
                     localStorage.setItem('information', JSON.stringify(information));
