@@ -32,6 +32,14 @@ const drawing = (option, data) => {
                 img.width = 100;
                 img.height = 100;
                 img.src = data[x].typeimg;
+                img.addEventListener('click', function () {
+                    let information = {
+                        "url": descUrl,
+                        "id": data[x].id
+                    }
+                    localStorage.setItem('information', JSON.stringify(information));
+                    location.href = 'profile.html';
+                });
                 li.appendChild(h3);
                 li.appendChild(img);
                 ul.appendChild(li);
