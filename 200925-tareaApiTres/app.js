@@ -14,8 +14,6 @@ const getData = async (url) => {
 const init = async () => {
     dataOne = await getData(listUrl);
     dataTwo = await getData(descUrl);
-    console.log('dataOne', dataOne);
-    console.log('dataTwo', dataTwo);
     drawing(1, dataOne);
     drawing(2, dataTwo);
 };
