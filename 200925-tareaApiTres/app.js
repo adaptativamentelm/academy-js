@@ -6,6 +6,7 @@ let info = document.getElementById('info');
 let dataOne;
 let dataTwo;
 
+
 const getData = async (url) => {
     const response1 = await fetch(url);
     return await response1.json();
@@ -23,21 +24,23 @@ const init = async () => {
 const drawing = (option, data) => {
     switch (option) {
         case 1:
-            let ul = document.createElement('ul');
-            for (let x = 0; x < data.length; x++) {
-                let li = document.createElement('li');
-                let h3 = document.createElement('h3');
-                h3.innerHTML = data[x].id;
-                let img = document.createElement('img');
-                img.width = 100;
-                img.height = 100;
-                img.src = data[x].typeimg;
-                li.appendChild(h3);
-                li.appendChild(img);
-                ul.appendChild(li);
-            }
-            nav.appendChild(ul);
-            break;
+        let ul = document.createElement('ul');
+        for (let x = 0; x < data.length; x++) {
+            let li = document.createElement('li');
+            li.id = data[x].id;
+            let h3 = document.createElement('h3');
+            h3.innerHTML = data[x].id;
+            let img = document.createElement('img');
+            img.width = 100;
+            img.height = 100;
+            img.src = data[x].typeimg;
+            li.appendChild(h3);
+            li.appendChild(img);
+            ul.appendChild(li);
+            li.addEventListener('click', function(){ capture_data('id', data[x].id)} );
+        }
+        nav.appendChild(ul);
+        break;
         case 2:
             let h21 = document.createElement('h2');
             h21.innerHTML = `Company: ${data.company}`;
@@ -45,15 +48,20 @@ const drawing = (option, data) => {
             h22.innerHTML = `Name: ${data.name}`;
             let h23 = document.createElement('h2');
             h23.innerHTML = `Date: ${data.year}-${data.month + 1 > 9 ? data.month + 1 : '0' + (data.month + 1)}-${data.day}`;
-            let img = document.createElement('img');
-            img.width = 400;
-            img.height = 400;
-            img.src = data.img;
-            info.appendChild(h21);
-            info.appendChild(h22);
-            info.appendChild(h23);
-            info.appendChild(img);
+        let img = document.createElement('img');
+        img.width = 400;
+        img.height = 400;
+        img.src = data.img;
+        info.appendChild(h21);
+        info.appendChild(h22);
+        info.appendChild(h23);
+        info.appendChild(img);
     }
+};
+const capture_data = (id,value) => {
+    localStorage.setItem(id,value);
+    location.assign('profile.html');
+
 };
 
 init();
