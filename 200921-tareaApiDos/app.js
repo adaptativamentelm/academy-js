@@ -6,13 +6,47 @@ let evens = document.getElementById('even');
 let catcher = document.getElementById('catcher');
 let input_get = document.getElementById('input_get');
 let finder_user = document.getElementById('finder_user');
+let run_all = document.getElementById('run_all');
+
+// seccion 1: llamado automatico por get, filtrado por condicion, impresion en 2 subsecciones
+// seccion 2: llamado por post, seleccion de 1 id, impresion
+
+const catchTheId = () => { //enviar seleccion
+    let find_id = Number(input_get.value);
+    // console.log(find_id);
+    getAllData(find_id);
+    // getDataByPost(find_id);
+}
+
+//_________________________________________________________________
 
 const getData = async () => {
     const response = await fetch(get);
-    data = await response.json();
-    console.log('data', data);
+    data = await response.json();  
     processing();
 };
+
+const getDataByPost = async (id) => {
+    try {
+        let payload = {
+            "id": id
+        };
+        let req = { "method": 'POST', "headers": { 'Content-Type': 'application/json' }, "body": JSON.stringify(payload) };
+        const response = await fetch(post, req);
+        data = await response.json();
+        draw_user_info();    
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+const getAllData = async () => {
+
+    // const response = await fetch(get) : await fetch(post,req);
+    
+};
+
+//___________________________________________________________________
 
 const processing = () => {
     for (let x = 0; x < data.length; x++) {
@@ -20,37 +54,13 @@ const processing = () => {
     }
 };
 
+//____________________________________________________________________
+
 const drawing = (str, isEven) => {
     let h2 = document.createElement('h2');
     h2.innerHTML = str;
     isEven ? evens.appendChild(h2) : odds.appendChild(h2);
 };
-
-getData();
-//____________________________________________________________________
-
-const getDataByPost = async (id) => {
-    // console.log(id)
-    try {
-        let payload = {
-            "id": id
-        };
-        const req = { "method": 'POST', "headers": { 'Content-Type': 'application/json' }, "body": JSON.stringify(payload) };
-        let response = await fetch(post, req);
-        data = await response.json();
-        // draw_user_info(data);
-        // console.log(data);
-        draw_user_info();    
-    } catch (e) {
-        console.log(e);
-    }
-}
-
-const catchTheId = () => {
-    let find_id = Number(input_get.value);
-    // console.log(find_id);
-    getDataByPost(find_id);
-}
 
 const draw_user_info = () => {
     // console.log(data[0].id);
