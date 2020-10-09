@@ -1,6 +1,5 @@
 const listUrl = 'https://portal-be.adaptativamente.cl/reporteria/academy/users-list'; // GET
 const descUrl = 'https://portal-be.adaptativamente.cl/reporteria/academy/description'; // GET
-const userByIdUrl = 'https://portal-be.adaptativamente.cl/reporteria/academy/user-complete/id'; // POST
 let nav = document.getElementsByTagName('nav')[0];
 let info = document.getElementById('info');
 
@@ -59,14 +58,11 @@ const drawing = (option, data) => {
             info.appendChild(img);
     }
 };
-const redirect = (id) =>{
-        localStorage.setItem('id', id);
-        let idSave = Number(localStorage.getItem('id'));
-        // console.log(idSave);
-        catchId(idSave);
-        window.location.replace('profile.html');           
-};
-
+function redirect (id) {
+    localStorage.setItem('id', id);
+    console.log('id', id);
+    window.location.replace('profile.html');    
+}
 
 
 init();

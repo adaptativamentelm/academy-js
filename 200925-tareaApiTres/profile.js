@@ -1,7 +1,10 @@
 
 let redirectPge = document.getElementById('redirectPage');
 let dataPost = [];
+const userByIdUrl = 'https://portal-be.adaptativamente.cl/reporteria/academy/user-complete/id'; // POST
+let idSave = Number(localStorage.getItem('id'));
 const catchId = (id) => {
+
     console.log(id);
     const payload = {
         "method": 'POST',
@@ -24,6 +27,5 @@ const getDataPost = async (url, payload, id) => {
     }catch(error){
         console.log(error);
     }
-    
-    
 };
+catchId(idSave);
