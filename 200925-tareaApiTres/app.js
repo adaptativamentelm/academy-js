@@ -3,8 +3,10 @@ const descUrl = 'https://portal-be.adaptativamente.cl/reporteria/academy/descrip
 const userByIdUrl = 'https://portal-be.adaptativamente.cl/reporteria/academy/user-complete/id'; // POST
 let nav = document.getElementsByTagName('nav')[0];
 let info = document.getElementById('info');
+
 let dataOne;
 let dataTwo;
+
 
 const getData = async (url) => {
     const response1 = await fetch(url);
@@ -25,16 +27,18 @@ const drawing = (option, data) => {
         case 1:
             let ul = document.createElement('ul');
             for (let x = 0; x < data.length; x++) {
-                let li = document.createElement('li');
-                let h3 = document.createElement('h3');
-                h3.innerHTML = data[x].id;
-                let img = document.createElement('img');
-                img.width = 100;
-                img.height = 100;
-                img.src = data[x].typeimg;
-                li.appendChild(h3);
-                li.appendChild(img);
-                ul.appendChild(li);
+                    let li = document.createElement('li');
+                    let h3 = document.createElement('h3');
+                    let id = data[x].id;
+                    h3.innerHTML = id;
+                    let img = document.createElement('img');
+                    img.width = 100;
+                    img.height = 100;
+                    img.src = data[x].typeimg;
+                    li.appendChild(h3);
+                    li.appendChild(img);
+                    ul.appendChild(li);
+                    h3.addEventListener('click', redirect.bind(null, id));
             }
             nav.appendChild(ul);
             break;
@@ -55,5 +59,14 @@ const drawing = (option, data) => {
             info.appendChild(img);
     }
 };
+const redirect = (id) =>{
+        localStorage.setItem('id', id);
+        let idSave = Number(localStorage.getItem('id'));
+        // console.log(idSave);
+        catchId(idSave);
+        window.location.replace('profile.html');           
+};
+
+
 
 init();
