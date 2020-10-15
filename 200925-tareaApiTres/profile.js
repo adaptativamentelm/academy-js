@@ -21,6 +21,11 @@ const drawInfo = (info) => {
     user.innerHTML = `User: ${info.user}`;
     let type = document.createElement('h1');
     type.innerHTML = info.typeid === 1 ? 'Rol: Estudiante' : 'Rol: Profesor';
+    // if (info.typeid === 1) {
+    //     type.innerHTML = 'Rol: Estudiante';
+    // } else {
+    //     type.innerHTML = 'Rol: Profesor';
+    // }
     sections[0].appendChild(id);
     sections[0].appendChild(name);
     sections[0].appendChild(user);
