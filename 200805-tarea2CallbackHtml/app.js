@@ -7,6 +7,7 @@ let reset = document.getElementById('reset');
 let resultPow = document.getElementById('resultPow');
 
 image[0].style.width = '100%';
+label.style.font-size = '30em';
 
 activateFs.addEventListener('click', () => {
     if (!document.fullscreenElement) {
