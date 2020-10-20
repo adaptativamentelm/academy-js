@@ -20,19 +20,29 @@ const draw_images = () => {
 }
 
 const make_post = async () => {
-    let id_data = { 
-        "user": user.value, 
-        "pass": Number(pass.value) 
+    try {
+        let id_data = { 
+            "user": user.value, 
+            "pass": Number(pass.value) 
+        }
+        const request_payload = {
+            "method": 'POST',
+            "headers": { 'Content-Type': 'application/json' },
+            "body": JSON.stringify(id_data)
+        }
+        let response = await fetch(login, request_payload);
+        let payload = await response.json();
+        console.info('aqui', payload);
+
+        localStorage.setItem('data', JSON.stringify(payload));
+        console.log(localStorage);
+        location.assign("one/one.html");
+    } catch (e) {
+        alert('naaaah!... wuiiu... wuiiiu... error en usuario o contraseña')
+        console.log(e);
     }
-    const request_payload = {
-        "method": 'POST',
-        "headers": { 'Content-Type': 'application/json' },
-        "body": JSON.stringify(id_data)
-    }
-    console.log(id_data);
-    let response = await fetch(login, request_payload);
-    let payload = await response.json();
-    console.log(payload);
+
+
 }
 
 button.addEventListener('click', make_post);
