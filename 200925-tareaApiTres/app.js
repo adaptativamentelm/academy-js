@@ -5,10 +5,13 @@ let nav = document.getElementsByTagName('nav')[0];
 let info = document.getElementById('info');
 let dataOne;
 let dataTwo;
+console.log(info);
+console.log(nav);
 
 const getData = async (url) => {
     const response1 = await fetch(url);
     return await response1.json();
+   
 };
 
 const init = async () => {
@@ -27,6 +30,7 @@ const drawing = (option, data) => {
                 let h3 = document.createElement('h3');
                 h3.innerHTML = data[x].id;
                 let img = document.createElement('img');
+                
                 img.width = 100;
                 img.height = 100;
                 img.src = data[x].typeimg;
@@ -34,6 +38,7 @@ const drawing = (option, data) => {
                     let information = {
                         "url": userByIdUrl,
                         "id": data[x].id
+                       
                     }
                     localStorage.setItem('information', JSON.stringify(information));
                     location.href = 'profile.html';
