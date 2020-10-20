@@ -3,6 +3,8 @@ let inputs = document.getElementsByTagName('input');
 let button = document.getElementById('button');
 let milk = document.getElementById('milk');
 let bar = document.getElementById('bar');
+let user = document.getElementById('user');
+let pass = document.getElementById('pass');
 
 const draw_images = () => {
     let img_section_1 = document.createElement('img'); 
@@ -17,8 +19,21 @@ const draw_images = () => {
     bar.appendChild(img_section_2);
 }
 
-const make_post = () => {
-
+const make_post = async () => {
+    let id_data = { 
+        "user": user.value, 
+        "pass": Number(pass.value) 
+    }
+    const request_payload = {
+        "method": 'POST',
+        "headers": { 'Content-Type': 'application/json' },
+        "body": JSON.stringify(id_data)
+    }
+    console.log(id_data);
+    let response = await fetch(login, request_payload);
+    let payload = await response.json();
+    console.log(payload);
 }
 
+button.addEventListener('click', make_post);
 draw_images();
