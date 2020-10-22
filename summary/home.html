@@ -6,111 +6,140 @@
     <title>Document</title>
 </head>
 <body>
-    <ol>
-        <li>Creación de elementos html y estructura.
-            <ul>
-                <li>main, section</li>
-                <li>generalidad: div > p > span</li> 
-                <li>button, input, input radio, etc</li>
-                <li>label con id </li>
-                <li>select</li>
-                <li>option</li>
-                <li>a</li>
-            </ul>
-        </li>
-        <hr>
-        <li>Obtencion de elementos html en javascript.</li>
-        <ul>
-            <li>Obtener desde html: <br> document.getElementById, <br> document.getElementsByClassName, <br> document.getElementsByTagName</li>
-            <li>Manejar elementos dentro de for </li>
-            <li>Usar nomenclatura de punto y de corchete</li>
-        </ul>
-        <hr>
-        <li>Promises, async y await.</li>
-        <ul>
-            <li>Saber reconocer cuando se necesita una promesa</li>
-            <li>Saber escribir una promesa</li>
-            <li>Llamar a una promesa con: async&await y .then</li>
-            <li>Capturar errores de las promesas</li>
-        </ul>
-        <hr>
-        <li>Uso de api rest.</li>
-        <ul>
-            <li>Importancia de la api-REST</li>
-            <li>Como hacer get</li>
-            <li>Como hacer post</li>        
-        </ul>
-        <hr>
-        <li>Creación y manipulación de elementos html en javascript.</li>
-        <ul>
-            <li>Como crear elementos del punto 1: document.createElement("tag");</li>      
-            <li>Como agregar atributos o propiedades a elementos creados (tag.name tag.value tag.id): elemento.setAttribute("for","valor_del_for")</li>
-            <li>Meter elementos dentro de otros elementos: appendChild, insertBefore, insertAfter</li>
-            <li>Eliminar elementos dentro de otros elementos: removeChild, replaceChild</li>
-        </ul>
-        <hr>
-        <li>Prototipo del array (funciones/metodos del arreglo).</li>
-        <ul>
-            <li>push</li>
-            <li>pop</li>
-            <li>filter</li>
-            <li>find</li>
-            <li>findIndex</li>
-            <li>forEach</li>
-            <li>includes</li>
-            <li>indexOf</li>
-            <li>join</li>
-            <li>map</li>
-            <li>reduce</li>
-            <li>reverse</li>
-            <li>unshift</li>
-            <li>slice</li>
-            <li>sort</li>
-            <li>splice</li>
-            <li>JSON Metodos
-                <ul> 
-                    <li>stringify</li>
-                    <li>parse</li>            
+    <main>
+        <ol>
+            <li>Creación de elementos html y estructura.
+                <ul>
+                    <li>html, head, body</li>
+                    <li>header, footer, main, section</li>
+                    <li>div, p, span, h1, nav, img, button</li>
+                    <li>input: text, radio, checkbox, password</li>
+                    <li>label for</li>
+                    <li>select, option, ul, li, ol</li>
+                    <li>a, href, link, src</li>
                 </ul>
             </li>
-        </ul>
-        <hr>
-        <li>Paradigmas de la programación</li>
-        <ul>
-            <li>CLASES!!!</li>
-            <li>¿Cuáles son los principales paradigmas de programación?
+            <hr>
+            <li>Obtención de elementos html en javascript.
                 <ul>
-                    <li>Imperativo. Los programas se componen de un conjunto de sentencias que cambian su estado. Son secuencias de comandos que ordenan acciones a la computadora.</li>
-                    <li>Declarativo. Opuesto al imperativo. Los programas describen los resultados esperados sin listar explícitamente los pasos a llevar a cabo para alcanzarlos.</li>
-                    <li>Lógico. El problema se modela con enunciados de lógica de primer orden.</li>
-                    <li>Funcional. Los programas se componen de funciones, es decir, implementaciones de comportamiento que reciben un conjunto de datos de entrada y devuelven un valor de salida.</li>
-                    <li>Orientado a objetos. El comportamiento del programa es llevado a cabo por objetos, entidades que representan elementos del problema a resolver y tienen atributos y comportamiento.</li>
-                </ul>    
+                    <li>Obtener desde html: getElementById, getElementsByClassName, getElementsByTagName</li>
+                    <li>Manejar elementos en cantidades</li>
+                    <li>Usar notación de punto y de corchete</li>
+                </ul>
             </li>
-            <li>POO: encapsulamiento</li>
-            <li>POO: herencia</li> 
-            <li>POO: polimorfismo</li>
-        </ul>
-        <hr>
-        <li>Lógica y flujos de control.</li>
-        <ul>
-            <li>if</li>
-            <li>switch</li>
-            <li>templates literales</li>
-            <li>conficiones ternarias</li>
-            <li>for vs prototipo del array</li>
-            <li>localStorage</li>
-            <li>juegos de logica: pares, impares, multiplos de, etc.</li>
-            <li>stacks: estructura de datos</li>
-        </ul>
-        <hr>
-        <li>CSS.</li>
-        <ul>
-            <li>metodo flexbox</li>
-            <li>conceptos clave: padding, margin, position, top, left, rigth, text-decoration, text-align, color, background</li>
-            <li>unidades de medida: px, rem, em, vh, vw, %, calc</li> 
-            <li>simbolos: +, >, ~</li>
-        </ul>
-    </ol>
+            <hr>
+            <li>Callback, async, await & promises.
+                <ul>
+                    <li>Saber reconocer cuando se necesita una promesa</li>
+                    <li>Saber escribir una promesa</li>
+                    <li>Llamar a una promesa con: async, await y then</li>
+                    <li>Capturar errores en las promesas</li>
+                    <li>Saber que hacer cuando se usa una promesa (nomenclatura)</li>
+                </ul>
+            </li>
+            <hr>
+            <li>Uso de api rest.
+                <ul>
+                    <li>Importancia de la api-REST</li>
+                    <li>Cómo hacer get</li>
+                    <li>Cómo hacer post</li>
+                </ul>
+            </li>
+            <hr>
+            <li>Creación y manipulación de elementos html en javascript.
+                <ul>
+                    <li>createElement('tag')</li>
+                    <li>Como agregar atributos o propiedades a elementos creados (notación de punto o corchete y la función setAttribute('for', 'valor_del_for')</li>
+                    <li>Elementos y sus scopes: appendChild, insertBefore, insertAfter</li>
+                    <li>Eliminar elementos: removeChild, replaceChild</li>
+                </ul>
+            </li>
+            <hr>
+            <li>Reutilización (Teoría básica).
+                <ul>
+                    <li>HTML iframe para crear componentes</li>
+                    <li>Servicios JS</li>
+                    <li>Librerías</li>
+                </ul>
+            </li>
+            <hr>
+            <li>Prototipo del array (funciones/métodos del arreglo).
+                <ul>
+                    <li>Push</li>
+                    <li>Pop</li>
+                    <li>Filter</li>
+                    <li>Find</li>
+                    <li>FindIndex</li>
+                    <li>ForEach</li>
+                    <li>Includes</li>
+                    <li>IndexOf</li>
+                    <li>Join</li>
+                    <li>Map</li>
+                    <li>Reduce</li>
+                    <li>Reverse</li>
+                    <li>Unshift</li>
+                    <li>Slice</li>
+                    <li>Sort</li>
+                    <li>Splice</li>
+                    <li>JSON Metodos
+                        <ul>
+                            <li>Stringify</li>
+                            <li>Parse</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <hr>
+            <li>Paradigmas de la programación.
+                <ul>
+                    <li>Clases en JS</li>
+                    <li>export, include, require</li>
+                    <li>¿Cuáles son los principales paradigmas de programación?
+                        <ul>
+                            <li>Imperativo. Los programas se componen de un conjunto de sentencias que cambian su
+                                estado. Son secuencias de comandos que ordenan acciones a la computadora.</li>
+                            <li>Declarativo. Opuesto al imperativo. Los programas describen los resultados esperados sin
+                                listar explícitamente los pasos a llevar a cabo para alcanzarlos.</li>
+                            <li>Lógico. El problema se modela con enunciados de lógica de primer orden.</li>
+                            <li>Funcional. Los programas se componen de funciones, es decir, implementaciones de
+                                comportamiento que reciben un conjunto de datos de entrada y devuelven un valor de
+                                salida.</li>
+                            <li>Orientado a objetos. El comportamiento del programa es llevado a cabo por objetos,
+                                entidades que representan elementos del problema a resolver y tienen atributos y
+                                comportamiento.</li>
+                        </ul>
+                    </li>
+                    <li>POO: encapsulamiento</li>
+                    <li>POO: herencia</li>
+                    <li>POO: polimorfismo</li>
+                </ul>
+            </li>
+            <hr>
+            <li>Lógica y flujos de control.
+                <ul>
+                    <li>If</li>
+                    <li>Switch</li>
+                    <li>Templates literales</li>
+                    <li>Condiciones ternarias</li>
+                    <li>For vs prototipo del array</li>
+                    <li>LocalStorage</li>
+                    <li>Juegos de logica: pares, impares, múltiplos, búsquedas, etc</li>
+                    <li>Stacks, pilas, estructura de datos</li>
+                </ul>
+            </li>
+            <hr>
+            <li>CSS.
+                <ul>
+                    <li>Flexbox</li>
+                    <li>Conceptos clave: padding, margin, position, top, left, rigth, text-decoration, text-align,
+                        color, background, etc</li>
+                    <li>Unidades de medida: px, rem, em, vh, vw, %, calc</li>
+                    <li>Símbolos: +, >, (espacio), ~</li>
+                    <li>Media query @</li>
+                    <li>Keyframes</li>
+                </ul>
+            </li>
+        </ol>
+    </main>
 </body>
 </html>

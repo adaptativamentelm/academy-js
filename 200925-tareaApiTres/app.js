@@ -14,8 +14,6 @@ const getData = async (url) => {
 const init = async () => {
     dataOne = await getData(listUrl);
     dataTwo = await getData(descUrl);
-    console.log('dataOne', dataOne);
-    console.log('dataTwo', dataTwo);
     drawing(1, dataOne);
     drawing(2, dataTwo);
 };
@@ -32,6 +30,14 @@ const drawing = (option, data) => {
                 img.width = 100;
                 img.height = 100;
                 img.src = data[x].typeimg;
+                h3.addEventListener('click', function () {
+                    let information = {
+                        "url": userByIdUrl,
+                        "id": data[x].id
+                    }
+                    localStorage.setItem('information', JSON.stringify(information));
+                    location.href = 'profile.html';
+                });
                 li.appendChild(h3);
                 li.appendChild(img);
                 ul.appendChild(li);
