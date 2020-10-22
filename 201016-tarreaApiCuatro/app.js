@@ -31,18 +31,26 @@ const make_post = async () => {
             "body": JSON.stringify(id_data)
         }
         let response = await fetch(login, request_payload);
+        console.log(response);
+        
         let payload = await response.json();
-        console.info('aqui', payload);
-
-        localStorage.setItem('data', JSON.stringify(payload));
-        console.log(localStorage);
-        location.assign("one/one.html");
+        console.log(payload);
+        
+        if (payload === []) {
+            console.log('nopo')
+            alert('no');
+        }else{
+            localStorage.setItem('data', JSON.stringify(payload));
+            // console.log(localStorage);
+            location.assign("one/one.html");
+        }
+        
+        
+        
     } catch (e) {
-        alert('naaaah!... wuiiu... wuiiiu... error en usuario o contraseña')
+        alert('nah-aaah!... wuiiu... wuiiiu... error en usuario o contraseña')
         console.log(e);
     }
-
-
 }
 
 button.addEventListener('click', make_post);
