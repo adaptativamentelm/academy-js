@@ -8,6 +8,7 @@ const print_title = () => {
     let json_data = JSON.parse(data);
     title.innerHTML = `Bienvenida bella ${json_data[0].name}`;
     section_title.appendChild(title);
+    console.log('bienvenido a one');
 }
 
 const goBack = () => {

@@ -30,25 +30,18 @@ const make_post = async () => {
             "headers": { 'Content-Type': 'application/json' },
             "body": JSON.stringify(id_data)
         }
-        let response = await fetch(login, request_payload);
-        console.log(response);
-        
+        let response = await fetch(login, request_payload);       
         let payload = await response.json();
-        console.log(payload);
-        
-        if (payload === []) {
-            console.log('nopo')
-            alert('no');
-        }else{
+        // console.log(payload.length);
+        if (payload.length) {
             localStorage.setItem('data', JSON.stringify(payload));
-            // console.log(localStorage);
             location.assign("one/one.html");
+            console.log('bienvenido');
+        }else{
+            alert('nah-aaah!... wuiiu... wuiiiu... error en usuario o contraseña');
+            console.log('te quedas aqui');    
         }
-        
-        
-        
     } catch (e) {
-        alert('nah-aaah!... wuiiu... wuiiiu... error en usuario o contraseña')
         console.log(e);
     }
 }
