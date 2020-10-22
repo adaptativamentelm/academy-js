@@ -5,10 +5,13 @@ let nav = document.getElementsByTagName('nav')[0];
 let info = document.getElementById('info');
 let dataOne;
 let dataTwo;
+let url = localStorage.setItem('userByUrl', userByIdUrl);
 
 const getData = async (url) => {
-    const response1 = await fetch(url);
-    return await response1.json();
+    const response
+     = await fetch(url);
+    // return para poder reutilizar el response.json
+    return await response.json();
 };
 
 const init = async () => {
@@ -32,6 +35,15 @@ const drawing = (option, data) => {
                 img.width = 100;
                 img.height = 100;
                 img.src = data[x].typeimg;
+                h3.addEventListener('click', function () {
+                    let information = {
+                        "url": userByIdUrl,
+                        "id": data[x].id
+                    }
+                    console.log(information);
+                    localStorage.setItem('information', JSON.stringify(information));
+                    location.href = 'profile.html';
+                })
                 li.appendChild(h3);
                 li.appendChild(img);
                 ul.appendChild(li);
