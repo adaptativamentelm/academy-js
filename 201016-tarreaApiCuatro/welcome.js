@@ -1,12 +1,10 @@
 let payloadSave = JSON.parse(localStorage.getItem('payload'));
-console.log(payloadSave);
 let userName = payloadSave[0].name;
 let userId = payloadSave[0].id;
-let sectionWelcome = document.getElementById('welcome');
+let sectionWelcome = document.getElementsByClassName('welcome')[0];
 let sectionBirthday = document.getElementById('birthday');
-let backButton = document.getElementById('back');
-let forwardButton  = document.getElementById('forward')
-
+let backButton4 = document.getElementById('back4');
+let forwardButton4  = document.getElementById('forward4');
 
 const drawing = (name, id) => {
     let h2Welcome = document.createElement('h2');
@@ -14,18 +12,19 @@ const drawing = (name, id) => {
     sectionWelcome.appendChild(h2Welcome);
 }
 
-const back = () => {
-    location.href = 'index.html';   
+const back4 = () => {
+    location.href = 'three.html';   
 }
-
-const forward = () => {
-    let h2Birthday = document.createElement('h2');
-    
+const forward4 = () => {
+    location.href = 'index.html';
+}
+const draw = () => {
+    let h2Birthday = document.createElement('h2');    
     h2Birthday.innerHTML = `Mi cumpleaños cae en el ${percentage(08,05)} % del año`;
-    sectionBirthday.appendChild(h2Birthday);
+    sectionBirthday.appendChild(h2Birthday); 
 }
 const percentage = (month, day) =>{
-    let array = []; //el año 2020 tien 366 dias
+    let array = []; //el año 2020 tiene 366 dias
     for(var  i = 1; i < month; i++) {
         let months = new Date(2020, i, 0).getDate();
         array.push(months);
@@ -37,12 +36,11 @@ const percentage = (month, day) =>{
     let percentage = Math.round(((sumMonths * 100)/ 366)*100)/100;
     console.log(sumMonths);
     console.log(percentage);
-    return percentage;
-    
+    return percentage;   
 }
 
+draw();
 drawing(userName, userId);
-backButton.addEventListener('click', back);
-forwardButton.addEventListener('click', forward);
-
+backButton4.addEventListener('click', back4);
+forwardButton4.addEventListener('click', forward4);
 

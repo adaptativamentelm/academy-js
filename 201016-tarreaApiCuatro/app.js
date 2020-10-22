@@ -18,8 +18,15 @@ const getPost = async () => {
         let response = await fetch(login, req);
         let data = await response.json();
         console.log('data', data);
-        localStorage.setItem('payload', JSON.stringify(data));
-        location.href = 'welcome.html';
+        if (inputs[1].value == 1234 && inputs[0].value == 'amiranda') {
+            localStorage.setItem('payload', JSON.stringify(data));
+            location.href = 'one.html';
+        }else{
+            alert('usuario o contraseña incorrecto :c');
+            inputs[1].value = '';
+            inputs[0].value = '';            
+        }
+        
         
     } catch (error) {
         console.log('payload', payload);
