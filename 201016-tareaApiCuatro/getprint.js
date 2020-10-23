@@ -30,9 +30,15 @@ const goTo = (option) => {
             break;
         case location.href.includes('four'):
             option === 1 ? location.assign('../three/three.html') : logout();
+            break;
+        default:
+            console.log('Ruta no encontrada');
+            logout();
     }
 };
 
 back.addEventListener('click', () => goTo(1));
+// back.addEventListener('click', () => { goTo(1) }); // lo mismo línea 36
+// back.addEventListener('click', function () { goTo(1) }); // lo mismo línea 36
 forward.addEventListener('click', () => goTo(2));
 init();
