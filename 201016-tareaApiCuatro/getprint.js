@@ -19,7 +19,7 @@ const logout = () => {
 
 const goTo = (option) => {
     switch (true) {
-        case location.href.includes('one'):
+        case location.href.includes('one'): // Devuelve true si en cuentra one en la ruta actual
             option === 1 ? logout() : location.assign('../two/two.html');
             break;
         case location.href.includes('two'):
