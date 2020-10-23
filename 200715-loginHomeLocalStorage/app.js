@@ -17,8 +17,7 @@ let credentials = {
 	"name": 'Andrea Paulina Castro Castellón'
 };
 
-let u = document.getElementById('user');
-let p = document.getElementById('pass');
+
 
 function validateCredentials(user, pass) {
 	return new Promise((resolve, reject) => {
@@ -47,6 +46,8 @@ function validateCredentials(user, pass) {
 	});
 }
 
+let u = document.getElementById('user');
+let p = document.getElementById('pass');
 async function login() {
 	try {
 		if (u.value && p.value) {
