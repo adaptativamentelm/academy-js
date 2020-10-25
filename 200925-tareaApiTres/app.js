@@ -1,59 +1,72 @@
 const listUrl = 'https://portal-be.adaptativamente.cl/reporteria/academy/users-list'; // GET
 const descUrl = 'https://portal-be.adaptativamente.cl/reporteria/academy/description'; // GET
 const userByIdUrl = 'https://portal-be.adaptativamente.cl/reporteria/academy/user-complete/id'; // POST
-let nav = document.getElementsByTagName('nav')[0];
+// let nav = document.getElementsByTagName('nav')[0];
 let info = document.getElementById('info');
-let dataOne;
-let dataTwo;
+let ul = document.getElementsByTagName('ul')[0];
 
-const getData = async (url) => {
-    const response1 = await fetch(url);
-    return await response1.json();
-};
+const firtsFunc = async () => {
+    try {
+        let response = await fetch(listUrl);
+        let data = await response.json();
+        // console.log(data);
+        drawing(data);
+    } catch {
+        console.log('error');
+    }
+}
+firtsFunc();
 
-const init = async () => {
-    dataOne = await getData(listUrl);
-    dataTwo = await getData(descUrl);
-    console.log('dataOne', dataOne);
-    console.log('dataTwo', dataTwo);
-    drawing(1, dataOne);
-    drawing(2, dataTwo);
-};
-
-const drawing = (option, data) => {
-    switch (option) {
-        case 1:
-            let ul = document.createElement('ul');
-            for (let x = 0; x < data.length; x++) {
-                let li = document.createElement('li');
-                let h3 = document.createElement('h3');
-                h3.innerHTML = data[x].id;
-                let img = document.createElement('img');
-                img.width = 100;
-                img.height = 100;
-                img.src = data[x].typeimg;
-                li.appendChild(h3);
-                li.appendChild(img);
-                ul.appendChild(li);
-            }
-            nav.appendChild(ul);
-            break;
-        case 2:
-            let h21 = document.createElement('h2');
-            h21.innerHTML = `Company: ${data.company}`;
-            let h22 = document.createElement('h2');
-            h22.innerHTML = `Name: ${data.name}`;
-            let h23 = document.createElement('h2');
-            h23.innerHTML = `Date: ${data.year}-${data.month + 1 > 9 ? data.month + 1 : '0' + (data.month + 1)}-${data.day}`;
-            let img = document.createElement('img');
-            img.width = 400;
-            img.height = 400;
-            img.src = data.img;
-            info.appendChild(h21);
-            info.appendChild(h22);
-            info.appendChild(h23);
-            info.appendChild(img);
+const drawing = (data) => {
+    // console.log(data);
+    for (let i = 0; i < data.length; i++) {
+        let list = document.createElement('li');        
+        let h1 = document.createElement('h1');        
+        let img = document.createElement('img');
+        h1.innerHTML = `${data[i].id} - ${data[i].name}`;
+        h1.addEventListener('click', function (){
+            console.log(data[i].id);
+            let jsons = {
+                "id": data[i].id,
+                "url": userByIdUrl 
+            };
+            localStorage.setItem('jsons', JSON.stringify(jsons));
+            location.assign('profile.html')
+        } );
+        img.src = data[i].typeimg;   
+        img.height = 50;
+        img.width = 50;
+        list.appendChild(h1);
+        list.appendChild(img);
+        ul.appendChild(list);
     }
 };
+// ------- segunda parte de la tarea
+const secondFunc = async () => {
+    try {
+        let response = await fetch(descUrl);
+        let data = await response.json();
+        console.log('++++++++', data);
+        secondDrawing(data);
+    } catch (e) {
+        console.log(e);
+    }
+};
+secondFunc();
 
-init();
+const secondDrawing = (data) => {
+    let p = document.createElement('p');    
+    let p1 = document.createElement('p');    
+    let p2 = document.createElement('p');
+    let img = document.createElement('img');
+    p.innerHTML = `Company: ${data.company}` ;
+    p1.innerHTML = `Name: ${data.name}` ;
+    p2.innerHTML = `Date: ${data.year} - ${data.month+1} - ${data.day}`;
+    img.src = data.img;
+    img.height = 100;
+    img.width = 100;
+    info.appendChild(p);
+    info.appendChild(p1);
+    info.appendChild(p2);
+    info.appendChild(img);
+}
