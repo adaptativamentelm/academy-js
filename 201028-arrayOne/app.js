@@ -1,1 +1,1 @@
-const postUrl = 'https://portal-be.adaptativamente.cl/reporteria/academy/users-list';
+const getUrl = 'https://portal-be.adaptativamente.cl/reporteria/academy/users-list';
