@@ -6,14 +6,17 @@ let data = [];
 const getData = async (url) => {
     const response = await fetch(url);
     data = await response.json();
-    console.log('data', data);
+    processing(data);
 };
 
 const finding = () => {
     deleteFromMain();
     let found = data.filter((el) => el.name.toLowerCase().includes(input.value.toLowerCase()));
-    found.forEach((data) => {
-        console.log('*');
+    processing(found);
+};
+
+const processing = (arr) => {
+    arr.forEach((data) => {
         drawing(data);
     });
 };
