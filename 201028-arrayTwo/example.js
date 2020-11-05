@@ -1,4 +1,4 @@
-// ************ JOIN ************** // Devuelve un string el cual es el resultado de la concatenación de los elementos del arreglo unidos mediante el parametro ingresado en la función
+// ************ JOIN ************** // Retorna un string el cual es el resultado de la concatenación de los elementos del arreglo unidos mediante el parámetro ingresado
 // let joinEx1 = [1, 2, 3, 4, 5];
 // let joinEx2 = joinEx1.join('');
 // let joinEx3 = joinEx1.join('*');
@@ -8,7 +8,7 @@
 
 
 
-// ************ MAP ************** // 
+// ************ MAP ************** // Retorna un nuevo arreglo con el resultado de la modificación de los elementos
 // let mapEx1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // let mapEx2 = mapEx1.map((data) => data * 2);
 // console.log('mapEx2', mapEx2);
@@ -24,12 +24,14 @@
 //   }
 // ];
 // let mapEx4 = mapEx3.map((data) => data.value);
+// let mapEx5 = mapEx3.map((data) => ({ "value": data.value }));
 // console.log('mapEx4', mapEx4);
+// console.log('mapEx5', mapEx5);
 // -------------------------------------------------
 
 
 
-// ************ REDUCE ************** // 
+// ************ REDUCE ************** // Devuelve un número que es el resultado de la operación que se ejecute usando el acumulador y el elemento actual del arreglo
 // let reduceEx1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // let accumulator = 0;
@@ -44,20 +46,20 @@
 
 
 
-// ************ REVERSE ************** // 
+// ************ REVERSE ************** // Revierte el arreglo
 // let reverseEx1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// let reverseEx2 = reverseEx1.reverse();
+// reverseEx1.reverse();
+// console.log('reverseEx1', reverseEx1);
+
+
+// let reverseEx2 = ['Buenos días', 'Buenas tardes', 'Buenas noches'];
+// reverseEx2.reverse();
 // console.log('reverseEx2', reverseEx2);
-
-
-// let reverseEx3 = ['Buenos días', 'Buenas tardes', 'Buenas noches'];
-// let reverseEx4 = reverseEx3.reverse();
-// console.log('reverseEx4', reverseEx4);
 // -------------------------------------------------
 
 
 
-// ************ SLICE ************** // 
+// ************ SLICE ************** // Edita el arreglo recortándolo por los índices que le ingreses por parámetro, toma un trozo de la torta
 // let sliceEx = ['ant', 'bison', 'camel', 'duck', 'elephant'];
 // console.log('sliceEx', sliceEx.slice(2));
 // console.log('sliceEx', sliceEx.slice(2, 4));
@@ -67,7 +69,7 @@
 
 
 
-// ************ SPLICE ************** // 
+// ************ SPLICE ************** // Edita el arreglo desde la posición ingresada como primer parámetro, eliminando la cantidad de elementos ingresados en el segundo parámetro y el valor a agregar es el indicado en el tercer parámetro
 // let spliceEx1 = ['Jan', 'March', 'April', 'May'];
 // spliceEx1.splice(1, 0, 'Feb');
 // console.log('spliceEx1', spliceEx1);
@@ -79,13 +81,13 @@
 
 
 
-// ************ SORT ************** // 
+// ************ SORT ************** // Modifica el arreglo ordenándolo, si no le ingresas parámetros lo ordena considerando los elementos como strings
 // let sortEx1 = [0, 22, -1, 30, 45, -10, 10, 100, 70];
-// sortEx1.sort((a, b) => a - b);
+// sortEx1.sort((a, b) => a - b); // Ascendente
 // console.log('sortEx1', sortEx1);
 
 // let sortEx2 = [0, 22, -1, 30, 45, -10, 10, 100, 70];
-// sortEx2.sort((a, b) => b - a);
+// sortEx2.sort((a, b) => b - a); // Descendente
 // console.log('sortEx2', sortEx2);
 
 // let sortEx3 = [0, 22, -1, 30, 45, -10, 10, 100, 70];
