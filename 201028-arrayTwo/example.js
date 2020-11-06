@@ -1,11 +1,11 @@
 // ************ JOIN ************** // Retorna un string el cual es el resultado de la concatenación de los elementos del arreglo unidos mediante el parámetro ingresado
-// let joinEx1 = [1, 2, 3, 4, 5];
-// let joinEx2 = joinEx1.join('');
-// let joinEx3 = joinEx1.join('*');
-// console.log('joinEx2', joinEx2);
-// console.log('joinEx3', joinEx3);
-// -------------------------------------------------
+/* let joinEx1 = [1, 2, 3, 4, 5];
+let joinEx2 = joinEx1.join('');
+ console.log('joinEx2', joinEx2);//example.js:5 joinEx2 12345
+ let joinEx3 = joinEx1.join('*');
+ console.log('joinEx3', joinEx3);//example.js:6 joinEx3 1*2*3*4*5
 
+ */
 
 
 // ************ MAP ************** // Retorna un nuevo arreglo con el resultado de la modificación de los elementos
