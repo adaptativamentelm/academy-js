@@ -1,0 +1,1 @@
+let urlGet = 'https://portal-be.adaptativamente.cl/reporteria/academy/get-user/id/1';
