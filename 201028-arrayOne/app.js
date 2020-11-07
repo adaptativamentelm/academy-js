@@ -31,7 +31,7 @@ const filterNames = (info, valueName) => {
     }
     let filterArray = names.filter(e => e.includes(valueName)===true );
     console.log('filter array', filterArray);
-    clear();
+     clear()
     for (let x = 0; x < filterArray.length; x++) {
         let div = document.createElement('div');
         div.innerHTML = filterArray[x];
@@ -43,10 +43,11 @@ const filterNames = (info, valueName) => {
 
 const clear = () => {
     let lies = document.getElementsByTagName('div');
-    for (let y = 0; y < lies.length; y++) {
+    for (let y = lies.length-1; y >= 0; y--) {
         lies[y].remove();   
     }
 }
+// lucho dice que lo haga alreves dios sabe KE
 
 
 inputNames.addEventListener('keyup', getData);
