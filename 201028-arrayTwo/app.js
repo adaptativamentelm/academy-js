@@ -10,7 +10,7 @@ let url6 ='https://portal-be.adaptativamente.cl/reporteria/academy/get-user/id/7
 let url7 ='https://portal-be.adaptativamente.cl/reporteria/academy/get-user/id/8';
 let url8 ='https://portal-be.adaptativamente.cl/reporteria/academy/get-user/id/9';
 
-/* let url=[url0,url1,url3,url4,url1,url5,url6,url7,url8] */
+
 
 let qty = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -44,17 +44,18 @@ const getData = async () => {
       const response8 = await fetch(url8);
       let data8 = await response8.json();
 
-      let data=[data0, data1, data2, data3, data4, data5, data6, data7, data8];
+     //concatemno los get
+      let data=data0.concat(data1,data2,data3,data4,data5,data6,data7,data8)
       console.log('data con todos los ids', data)
-     data.forEach((element, index)=>element.forEach(e=>{ 
-
-       console.log(e.name, index);
-     
-      }))
-   // hacer un nuevo arreglo
-   // let dataIntegrated=data.join(',');
-   // console.log('data integrado', dataIntegrated)
+      //genero un arreglo solo con los nombres
+      let dataNames =data.map((data) => data.name)
+      console.log(dataNames)
+      //junto los elementos con el espacio y guion
+      let dataPrint=dataNames.join(' - ') 
+      console.log(dataPrint)
+   
    // imprimir arreglo en pantalla con evenlistener
+
   } catch (e) {
       console.log(e);
   }
