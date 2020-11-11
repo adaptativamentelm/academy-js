@@ -4,15 +4,17 @@ let button = document.getElementsByTagName('button')[0];
 let sections = document.getElementsByTagName('section');
 let data = [];
 
-const init = async () => {
+const init = async() => {
     for (let x = 0; x < qty.length; x++) {
         let user = await getData(`${urlGet}${qty[x]}`);
+        console.log('user ->', user);
         data.push(user[0]);
     }
+    console.log('data ->', data);
     draw(data);
 };
 
-const getData = async (url) => {
+const getData = async(url) => {
     const response = await fetch(url);
     return await response.json();
 };

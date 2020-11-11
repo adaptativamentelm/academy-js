@@ -22,7 +22,7 @@
 //     },
 //     {
 //         "name": 'Andrea Miranda',
-//         "nickname": 'chinchilla',
+//         "nickname": 'Chinchilla',
 //         "energy": 5
 //     },
 //     {
