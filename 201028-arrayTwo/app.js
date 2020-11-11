@@ -7,10 +7,8 @@ let data = [];
 const init = async() => {
     for (let x = 0; x < qty.length; x++) {
         let user = await getData(`${urlGet}${qty[x]}`);
-        console.log('user ->', user);
         data.push(user[0]);
     }
-    console.log('data ->', data);
     draw(data);
 };
 

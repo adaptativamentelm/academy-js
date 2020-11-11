@@ -1,6 +1,5 @@
 // 1 Imprimir un arreglo con objetos que solamente tengan nickname y energy como propiedades
-// let data = [
-//     {
+// let data = [{
 //         "name": 'Luis Miranda',
 //         "nickname": 'root',
 //         "energy": 3
@@ -31,13 +30,14 @@
 //         "energy": 5
 //     }
 // ];
-
+// console.log('data', data);
+// let dataDos = data.map((el) => ({ "nickname": el.nickname, "energy": el.energy }));
+// console.log('dataDos', dataDos);
 
 
 
 // 2 Crear una función que solicite un arreglo como parámetro y lo retorne con "energy" incrementado en 2
-// let data = [
-//     {
+// let data = [{
 //         "name": 'Luis Miranda',
 //         "nickname": 'root',
 //         "energy": 3
@@ -68,21 +68,45 @@
 //         "energy": 5
 //     }
 // ];
-
+// let funcion_2 = (arr) => {
+//     let dataDos = arr.map((el) => ({ "name": el.name, "nickname": el.nickname, "energy": (el.energy + 2) }));
+//     return dataDos;
+// };
+// console.log(funcion_2(data));
 
 
 
 
 // 3 Solicitar un texto (prompt) e imprimir las coincidencias encontradas entre el texto y los textos en el arreglo
 // let data = ['Natalia Saavedra', 'Scarlett Platón', 'Andrea Castro', 'Andrea Miranda', 'Daniela Olivares', 'Luis Miranda'];
+// let text = prompt('escribe algo...');
+
+// for (let x = 0; x < data.length; x++) {
+//     if (data[x].toLowerCase().includes(text.toLowerCase())) {
+//         console.log(data[x])
+//     }
+// }
+
+// data.forEach(element => {
+//     if (element.toLowerCase().includes(text.toLowerCase())) {
+//         console.log(element);
+//     }
+// });
+
+// let filtered = data.filter((el) => el.toLowerCase().includes(text.toLowerCase()));
+// console.log('filtered', filtered);
 
 
 
 
 
 
-// 4 Imprimir arreglo con sin decimales
+// 4 Imprimir arreglo sin decimales (redondear a entero más cercano)
 // let data = [1.1, 2.76, 3.98766, 4.293887, 5.492727, 6.535277, 7.229, 8.8272672, 9.82611, 10.4241];
+
+// const datared = data.map((e) => Math.round(e));
+// console.log(datared);
+
 
 
 
@@ -96,6 +120,13 @@
 //     [6, 7, 8],
 //     [8, 9, 10]
 // ];
+// console.log('antes*', data);
+// data.forEach((e) => e.shift());
+// console.log('despues*', data);
+
+
+
+
 
 
 
