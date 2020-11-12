@@ -7,7 +7,8 @@ const getData = async (url) => { // Para obtener la información de la Api Rest
     const response = await fetch(url);
     data = await response.json();
     console.log('data', data);
-    processing(data);
+   processing(data);
+  
 };
 
 const finding = () => { // Filtra los objetos en el arreglo
@@ -33,7 +34,7 @@ const deleteFromMain = () => { // Elimina todos los h2 del documento
     for (let x = h2s.length - 1; x >= 0; x--) {
         h2s[x].remove();
     }
-};
+}; 
 
 getData(getUrl);
 input.addEventListener('keyup', finding);
