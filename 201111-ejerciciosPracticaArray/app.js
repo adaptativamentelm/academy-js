@@ -201,13 +201,14 @@ console.log(data.indexOf(7))
 
 // 9 Solicitar un texto (prompt) e imprimir true si está presente en alguno de los textos en el arreglo, de lo contrario false
 
-/* let data = ['Natalia Saavedra', 'Scarlett Platón', 'Andrea Castro', 'Andrea Miranda', 'Daniela Olivares', 'Luis Miranda'];
-let text = prompt('escribe algo.');
-let dataValue =data.some(validedName);
-function validedName(values) {
-  values.toLocaleLowerCase()==text.toLocaleLowerCase()
-}
-console.log(dataValue); */ //no me da
+let data = ['Natalia Saavedra', 'Scarlett Platón', 'Andrea Castro', 'Andrea Miranda', 'Daniela Olivares', 'Luis Miranda'];
+let text = prompt('escribe un nombre.');
+const matchName=data.includes(text);
+
+
+console.log(matchName); 
+
+
 
 // 10 Imprimir el arreglo al revés y multiplicado por 3
 /*  let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -272,16 +273,16 @@ console.log(data.slice(1,6)) */
 // 15 Usando el arreglo creado crear una función donde ingresas día y
 // mes y te retorne el acumulado de cantidad días desde el primero de enero
 // hasta la fecha ingresada
-const data = [31, 28.25, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+// const data = [31, 28.25, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 //months.splice(month - 1, months.length - month + 1, day);
 //segun el mes cortar el arreglo sumando hasta mes anterior y sumar los dias
 
-let month = prompt("del 1 al 12 escribe el mes") - 1;
-let days = prompt("ingresa el dia");
-let totaldays = Math.round(
-  data.slice(0, month).reduce((a, b) => a + b) + parseInt(days)
-);
-console.log("total de dias", totaldays);
+// let month = prompt("del 1 al 12 escribe el mes") - 1;
+// let days = prompt("ingresa el dia");
+// let totaldays = Math.round(
+//   data.slice(0, month).reduce((a, b) => a + b) + parseInt(days)
+// );
+// console.log("total de dias", totaldays);
 //faltaria validar la cantidad de dias segun el mes y que el numero del mes fuera entre 1 y 12
 
 //me salen todas menos el ejercicio 9
