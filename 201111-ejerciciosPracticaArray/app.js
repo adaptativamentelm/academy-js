@@ -138,8 +138,9 @@
 //     [7, 8, 9],
 //     [9, 10, 11]
 // ];
-
-
+// console.log('antes*', data);
+// data.forEach((e) => e.pop());
+// console.log('despues*', data);
 
 
 // 7 Agregar al inicio del arreglo un objeto con las siguientes propiedades: Luis Miranda, root, 3
@@ -170,8 +171,13 @@
 //         "energy": 5
 //     }
 // ];
-
-
+// console.log('data antes', data);
+// data.unshift({
+//     "name": 'Luis Miranda',
+//     "nickname": 'root',
+//     "energy": 3
+// });
+// console.log('data despues', data);
 
 
 // 7 Agregar al final del arreglo un objeto con las siguientes propiedades: Luis Miranda, root, 1
@@ -203,9 +209,29 @@
 //     }
 // ];
 
+// data.push({
+//     "name": 'Luis Miranda',
+//     "nickname": 'root',
+//     "energy": 3
+// })
+// console.log('dataaaaaaa', data);
+
+
+
+
+
+
+
+
 
 // 8 Imprimir el índice correspondiente al elemento con valor 7
 // let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// console.log(data.indexOf(7));
+
+
+
+
 
 
 
@@ -213,12 +239,22 @@
 // 9 Solicitar un texto (prompt) e imprimir true si está presente en alguno de los textos en el arreglo, de lo contrario false
 // let data = ['Natalia Saavedra', 'Scarlett Platón', 'Andrea Castro', 'Andrea Miranda', 'Daniela Olivares', 'Luis Miranda'];
 
+// let text = prompt('escribe nombre');
+// const matchName = data.includes(text);
+// console.log('data', matchName);
+
+
+
+
 
 
 
 
 // 10 Imprimir el arreglo al revés y multiplicado por 3
 // let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+
 
 
 
