@@ -1,0 +1,68 @@
+body{
+    background-image: url('img/pink.jpg');
+    background-size: cover;
+}
+#container{
+    width: 30%;
+    height: 25em;
+    margin: auto;
+    padding: 1em;
+    margin-top: 5em;
+    border: 1px solid rgb(221, 118, 175);
+    border-radius: 2em;
+    background-color: rgb(232, 182, 237);
+}
+.css-input { 
+    margin: auto;
+    width: 50%;
+    margin-left: 2em;
+    padding:1em; 
+    font-size:18px; 
+    border-width:3px; 
+    border-radius:8px; 
+    border-style:groove; 
+    border-color:#eb9beb; 
+    color:#570e57; 
+    box-shadow: 0px 0px 5px 0px rgba(33,33,33,.75); 
+    text-shadow:0px 0px 0px rgba(42,42,42,.9); 
+    background-color:#f7e8f7; 
+    font-family:sans-serif;  
+} 
+.css-input:focus { 
+    outline:none; 
+}
+.col-3{
+    width: 20%;
+    padding: 0.3em;
+    display: inline-block;
+}
+.col-12{
+    width: 100%;
+}
+#numbers{
+    margin-top: 2em;
+}
+.myButton {
+	box-shadow: 0px 10px 7px -7px #cf5bb0;
+	background:linear-gradient(to bottom, #d66bcf 5%, #db77ac 100%);
+	background-color:#d66bcf;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:16px;
+	font-weight:bold;
+	padding:8px 20px;
+	text-decoration:none;
+    text-shadow:0px 0px 6px #f0b7e1;
+    border-width: 1px;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #db77ac 5%, #d66bcf 100%);
+	background-color:#db77ac;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
