@@ -24,3 +24,4 @@ const draw = (arr) => {
 };
 
 button.addEventListener('click', init);
+
