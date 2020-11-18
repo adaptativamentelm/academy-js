@@ -1,0 +1,64 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 85%;
+    max-width: 600px;
+}
+.page {
+    width: 100%;
+    min-height: 100vh;
+}
+.row, .col {
+    display: flex;
+}
+.row {
+    flex-direction: row;
+}
+.col {
+    flex-direction: column;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.jyct-center {
+    justify-content: center;
+}
+.jyct-start {
+    justify-content: flex-start;
+}
+.jyct-end {
+    justify-content: flex-end;
+}
+.jyct-around {
+    justify-content: space-around;
+}
+.jyct-between {
+    justify-content: space-between;
+}
+.jyct-evenly {
+    justify-content: space-evenly;
+}
+.center {
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+}
+.block-center {
+    margin: 0 auto;
+}
+.w-100 {
+    width: 100%;
+}
+.txt-center {
+    text-align: center;
+}
+.button {
+    width: 80px;
+    height: 80px;
+}
+
+.calc {
+    border: 1px solid black;
+}
