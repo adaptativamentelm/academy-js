@@ -10,24 +10,33 @@
 <body>
     <section id="inputs">
         <input type="text" id="the_input"><br>
+        <!-- recibe por aca: -->
         <button id="add_btn"> + </button>
+        <!-- acciona funcion sumar, que recibe todo el array -->
         <button id="sub_btn"> - </button>
+        <!-- accion funcion restar, que recibe todo el array -->
         <button id="equal_btn"> = </button>
+        <!-- funcion que recibe lo que viene de las otras funciones e imprime en pantalla -->
         <button id="erase_all_btn"> borrar </button>
+        <!-- funcion que borra el input creado -->
     </section>
     <section id="result">
-        <!-- primero: 2 espacios en memoria para partir -->
-        <!-- usare prototipo del array -->
-        <!-- crear arreglo con inputs y operaciones -->
-        <!-- tal vez usar ... para bajar todo, o sacar cada elemento y hacer una operacion con `${}` -->
-        <!-- recorrerlo e ir armando la operacion -->
-        <!-- append input 1 -->
-
+        <!-- aqui se imprime inicialmente solo el resultado -->   
+        <!-- append input[0] -->
+        <!-- append operacion escogida-->
+        <!-- append input[1] -->
         <!-- append operacion escogida -->
-        <!-- append input 2 -->
-
-        
+        <!-- ... -->
+        <!-- append input[n-1] -->
     </section>
+
+    <!-- opcion 1 -->
+    <!-- opcion primera: 2 espacios en memoria para partir -->
+    
+    <!-- opcion 2 -->
+    <!-- prototipo del array -->
+    <!-- crear arreglo con inputs y operaciones: crear arreglo usando push, que se gatilla al escoger la operacion y luego concatena con la operacion escogida -->
+    <!-- al momento de apretar el igual se ejecuta: recorrerlo con forEach e ir armando la operacion sacando cada elemento y construyendo una operacion con `${}` templates literales -->
     
 </body>
 </html>
