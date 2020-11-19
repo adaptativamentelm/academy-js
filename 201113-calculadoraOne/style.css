@@ -2,13 +2,13 @@ html, body {
     margin: 0;
     padding: 0;
 }
-.container {
-    width: 85%;
-    max-width: 600px;
-}
 .page {
     width: 100%;
     min-height: 100vh;
+}
+.container {
+    width: 85%;
+    max-width: 600px;
 }
 .row, .col {
     display: flex;
@@ -48,17 +48,40 @@ html, body {
 .block-center {
     margin: 0 auto;
 }
-.w-100 {
-    width: 100%;
+.m-5 {
+    margin: 5px;
 }
-.txt-center {
-    text-align: center;
+.m-10 {
+    margin: 10px;
+}
+.p-5 {
+    padding: 5px;
+}
+.h-80 {
+    height: 80px;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.abs-center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+h1 {
+    margin: 0;
+}
+div {
+    border: 1px solid black;
+    user-select: none;
+    border-radius: 5px;
 }
 .button {
     width: 80px;
     height: 80px;
-}
-
-.calc {
-    border: 1px solid black;
+    cursor: pointer;
 }
