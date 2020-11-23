@@ -56,7 +56,7 @@ const writeInDisplay = (content) => {
     }
 }
 
-const clear = () => {
+const clearDisplay = () => {
     valueOne = 0;
     valueTwo = 0;
     displayText.innerHTML = '';
@@ -67,7 +67,7 @@ const operation = (symbol) => {
     displayText.innerHTML = '';
     switch (symbol) {
         case 'C':
-            clear();
+            clearDisplay();
             break;
         case '+':
             
