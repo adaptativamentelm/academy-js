@@ -33,6 +33,7 @@ const apply_operation = () => {
     let the_result = eval(final_operation);
     final_result.innerHTML=the_result;
     result_section.appendChild(final_result);
+    operation = [];
 }
 
 const clear_operation = () => {
