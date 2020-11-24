@@ -50,8 +50,25 @@ const calculator = () => {
     case "-":
       cal = before - actually;
       break;
+    case"÷":
+      cal = before/actually;
+      break;
+      case"x":
+      cal = before*actually;
+      break;
+      case"^":
+      cal = Math.pow(before,actually);
+      break;
+      case"√":
+     
+      if (before===before){
+        cal=Math.pow(actually,1/before)
+      }
+      break;
+
     default:
       return;
+      
   }
   opActually=cal;
   operation=undefined;
@@ -59,6 +76,9 @@ const calculator = () => {
 };
 
 const addNumber = (num) => {
+  if(num==="- / +"){
+    num="-"
+  }
   opActually = opActually.toString() + num.toString();
   actuallyScreen();
   console.log(opActually);
