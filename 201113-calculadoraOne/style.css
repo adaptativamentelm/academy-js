@@ -3,7 +3,9 @@ body{
     background-size: cover;
 }
 #container{
-    width: 30%;
+    background-image: url('img/pink6.jpg');
+    background-size: contain;
+    width:300px ;
     height: 25em;
     margin: auto;
     padding: 1em;
@@ -14,8 +16,8 @@ body{
 }
 .css-input { 
     margin: auto;
-    width: 50%;
-    margin-left: 2em;
+    width: 200px;
+    margin-left: 1.5em;
     padding:1em; 
     font-size:18px; 
     border-width:3px; 
@@ -36,15 +38,22 @@ body{
     padding: 0.3em;
     display: inline-block;
 }
+.col-9{
+    width: 55%;
+    padding: 0.3em;
+    display: inline-block;
+
+}
 .col-12{
     width: 100%;
 }
 #numbers{
-    margin-top: 2em;
+    margin-top: 3em;
+    position: relative;
 }
 .myButton {
-	box-shadow: 0px 10px 7px -7px #cf5bb0;
-	background:linear-gradient(to bottom, #d66bcf 5%, #db77ac 100%);
+	box-shadow: 0px 10px 7px -7px #fba4e4;
+	background:linear-gradient(to bottom, #e6b5dc 5%, #cf80d0 100%);
 	background-color:#d66bcf;
 	border-radius:8px;
 	display:inline-block;
@@ -57,12 +66,16 @@ body{
 	text-decoration:none;
     text-shadow:0px 0px 6px #f0b7e1;
     border-width: 1px;
+    width: 60px;
 }
 .myButton:hover {
-	background:linear-gradient(to bottom, #db77ac 5%, #d66bcf 100%);
-	background-color:#db77ac;
+	background:linear-gradient(to bottom, #db77ac 5%, #801479 100%);
+	background-color:#540e4f;
 }
 .myButton:active {
 	position:relative;
-	top:1px;
+    top:1px;   
+}
+.myButton:focus { 
+    outline:none; 
 }
