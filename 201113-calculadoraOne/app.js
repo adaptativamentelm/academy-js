@@ -79,6 +79,7 @@ const addNumber = (num) => {
   if(num==="- / +"){
     num="-"
   }
+ 
   opActually = opActually.toString() + num.toString();
   actuallyScreen();
   console.log(opActually);
