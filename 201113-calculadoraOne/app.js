@@ -69,8 +69,14 @@ btnDelete.addEventListener('click', () => {
              calculo = anterior * actual;
              break;
         case '/':
-            calcular = anterior / actual;
+            calculo = anterior / actual;
             break;
+        case'^':
+            calculo = anterior ** actual ;
+            break;
+        /*case'raiz':
+            calculo = math.pow(anterior, actual);
+        break;*/
         default:
             return;
 
