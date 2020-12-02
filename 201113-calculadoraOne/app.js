@@ -1,29 +1,15 @@
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 const others = [
-    {
-        "name": 'Change sign',
-        "symbol": '+/-'
-    },
-    {
-        "name": 'Decimal dot',
-        "symbol": '.'
-    },
-    {
-        "name": 'Clear',
-        "symbol": 'C'
-    },
-    {
-        "name": 'Add',
-        "symbol": '+'
-    },
-    {
-        "name": 'Subtract',
-        "symbol": '-'
-    },
-    {
-        "name": 'Equal',
-        "symbol": '='
-    }
+    { "name": 'Change sign', "symbol": '+/-' },
+    { "name": 'Decimal dot', "symbol": '.' },
+    { "name": 'Clear', "symbol": 'AC' },
+    { "name": 'Add', "symbol": '+' },
+    { "name": 'Subtract', "symbol": '-' },
+    { "name": 'Multiply', "symbol": 'x' },
+    { "name": 'Divide', "symbol": '÷' },
+    { "name": 'Power', "symbol": '^' },
+    { "name": 'Root', "symbol": '√' },
+    { "name": 'Equal', "symbol": '=' }
 ];
 let display = document.getElementById('display');
 let displayText = display.getElementsByTagName('h1')[0];
@@ -70,14 +56,14 @@ const writeInDisplay = (content) => {
 }
 
 const clearDisplay = () => {
-    valueOne = '';
-    valueTwo = '';
+    data.valueOne = '';
+    data.valueTwo = '';
     displayText.innerHTML = '';
 }
 
 const fillOperation = (symbol) => {
     switch (symbol) {
-        case 'C':
+        case 'AC':
             clearDisplay();
             break;
         case '=':
@@ -85,7 +71,7 @@ const fillOperation = (symbol) => {
                 data.valueTwo = displayText.innerHTML;
             }
             if (data.valueOne && data.valueTwo) {
-                displayText.innerHTML = operate();    
+                displayText.innerHTML = operate();
             }
             break;
         default:
@@ -96,11 +82,20 @@ const fillOperation = (symbol) => {
 };
 
 const operate = () => {
+    console.log('data', data);
     switch (data.operation) {
         case '+':
             return Number(data.valueOne) + Number(data.valueTwo);
         case '-':
             return Number(data.valueOne) - Number(data.valueTwo);
+        case 'x':
+            return Number(data.valueOne) * Number(data.valueTwo);
+        case '÷':
+            return Number(data.valueOne) / Number(data.valueTwo);
+        case '^':
+            return Math.pow(Number(data.valueOne), Number(data.valueTwo));
+        case '√':
+            return Math.pow(Number(data.valueOne), 1 / Number(data.valueTwo));
     }
 };
 
