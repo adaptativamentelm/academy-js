@@ -40,21 +40,21 @@ const addNumber = (num) => {
     inputC.value = total;
     arrayResult = [total];
   } else if (num == 'pow') {
-    if (inputC.value === '') {
-      total = 0;
-      inputC.value = '';
-    } else {
-      total = arrayToNumber(arrayResult);
-      total = Math.pow(total, 2);
-      inputC.value = total;
-      arrayResult = [total];
-    }
-
+      if (inputC.value  === '' ) {
+        total = 0;
+        inputC.value = '';
+      }else{
+        total = arrayToNumber(arrayResult);
+        total = Math.pow(total, 2);
+        inputC.value = total;
+        arrayResult = [total];
+      }
+    
   } else if (num == 'root') {
-    if (inputC.value === '') {
+    if (inputC.value  === '' ) {
       total = 0;
       inputC.value = '';
-    } else {
+    }else{
       total = arrayToNumber(arrayResult);
       total = Math.sqrt(total);
       inputC.value = total;
