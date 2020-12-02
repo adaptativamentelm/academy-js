@@ -76,6 +76,16 @@ function addNumber(num){
     actualizarDisplay()
 }
 
+//funcion calcular potencia pow!
+
+
+function CalcularExponencial(){
+    const nBase = document.getElementById("Base").value;
+    const nExponente = document.getElementById("Exponente").value;
+    const exponencial = Math.pow(nBase,nExponente);
+    alert ("el valor total seria:" + exponencial);
+    }
+    //funcion raiz sqrt
 
 function clear(){
 currentOperation = "";
