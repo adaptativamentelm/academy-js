@@ -40,15 +40,26 @@ const addNumber = (num) => {
     inputC.value = total;
     arrayResult = [total];
   } else if (num == 'pow') {
-    total = arrayToNumber(arrayResult);
-    total = Math.pow(total, 2);
-    inputC.value = total;
-    arrayResult = [total];
+    if (inputC.value === '') {
+      total = 0;
+      inputC.value = '';
+    } else {
+      total = arrayToNumber(arrayResult);
+      total = Math.pow(total, 2);
+      inputC.value = total;
+      arrayResult = [total];
+    }
+
   } else if (num == 'root') {
-    total = arrayToNumber(arrayResult);
-    total = Math.sqrt(total);
-    inputC.value = total;
-    arrayResult = [total];
+    if (inputC.value === '') {
+      total = 0;
+      inputC.value = '';
+    } else {
+      total = arrayToNumber(arrayResult);
+      total = Math.sqrt(total);
+      inputC.value = total;
+      arrayResult = [total];
+    }
   } else {
     inputC.value += num;
     arrayResult.push(num);
