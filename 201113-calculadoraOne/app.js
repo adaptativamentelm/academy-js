@@ -87,12 +87,13 @@ const resultFunction = () => {
       console.log('FUNCIONA');
     } else if (arrayResult[n] == '-') {
       structureResult(n, '-');
-    } else if (arrayResult[n] == '&divide;') {
-      structureResult(n, '&divide;');
+      return structureResult(n, '-')
+    } else if (arrayResult[n] == '/') {
+      structureResult(n, '/');
     } else if (arrayResult[n] == 'x') {
       structureResult(n, 'x');
     } else {
-      console.log('esta wea no funciona');
+      console.log('no funciona');
     }
   }
 }
@@ -109,7 +110,7 @@ const structureResult = (indice, operador) => {
     case '-':
       total = num1 - num2;
       break;
-    case '&divide;':
+    case '/':
       total = num1 / num2;
       break;
     case 'x':
