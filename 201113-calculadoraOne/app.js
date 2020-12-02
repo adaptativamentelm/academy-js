@@ -3,23 +3,26 @@ let operationA = [];
 let operationB = [];
 let operation = [];
 
-let screen = document.getElementById("screen");
-let seven = document.getElementById("seven");
-let eigth = document.getElementById("eigth");
-let nine = document.getElementById("nine");
-let division = document.getElementById("division");
-let four = document.getElementById("four");
-let five = document.getElementById("five");
-let six = document.getElementById("six");
-let multiplication = document.getElementById("multiplication");
-let one = document.getElementById("one");
-let two = document.getElementById("two");
-let three = document.getElementById("three");
-let subtraction = document.getElementById("subtraction");
-let same = document.getElementById("same");
-let reset = document.getElementById("reset");
-let zero = document.getElementById("zero");
-let addition = document.getElementById("addition");
+let screen = document.getElementById('screen');
+let seven = document.getElementById('seven');
+let eigth = document.getElementById('eigth');
+let nine = document.getElementById('nine');
+let division = document.getElementById('division');
+let four = document.getElementById('four');
+let five = document.getElementById('five');
+let six = document.getElementById('six');
+let multiplication = document.getElementById('multiplication');
+let one = document.getElementById('one');
+let two = document.getElementById('two');
+let three = document.getElementById('three');
+let subtraction = document.getElementById('subtraction');
+let same = document.getElementById('same');
+let reset = document.getElementById('reset');
+let zero = document.getElementById('zero');
+let addition = document.getElementById('addition');
+let dot = document.getElementById('dot');
+let square = document.getElementById('square');
+let potency = document.getElementById('potency');
 
 
 one.addEventListener('click', function () {
@@ -52,11 +55,14 @@ nine.addEventListener('click', function () {
 zero.addEventListener('click', function () {
     screen.textContent = screen.textContent + "0";
 });
+dot.addEventListener('click', function () {
+    screen.textContent = screen.textContent + '.';
+});
 reset.addEventListener('click', function () {
     clean();
 });
 addition.addEventListener('click', function () {
-    operationA = screen.textContent;
+    operationA = screen.textContent + "+";
     operation = "+";
     clean();
 });
