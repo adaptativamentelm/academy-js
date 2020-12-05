@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="calc.css" type="text/css" rel="stylesheet">
+    <script src="calculadora2.js" defer></script>
+    <title>Calculadora</title>
+</head>
+
+<body style="background-color: chocolate;">
+
+    <main>
+        <div id="gridCalc">
+            <div id="gridVisual">
+                <input id="inputNum" value="">
+                <input id="resultado" value="" disabled>
+            </div>
+
+            <div class="colfun">
+                <div class="Fun" id="CE" onclick="clearevery()">CE</div>
+                <div class="Fun" id="del" onclick="del()">&#8592</div>
+                <div class="Fun" id="div" onclick="calculate(this)" value="/">/</div>
+                <div class="Fun" id="prod" onclick="calculate(this)" value="**">^</div>
+            </div>
+            <div class="col">
+                <div class="Num" id="7" onclick="calculate(this)" value=7>7</div>
+                <div class="Num" id="8" onclick="calculate(this)" value=8>8</div>
+                <div class="Num" id="9" onclick="calculate(this)" value=9>9</div>
+
+                <div class="Fun" id="plus" onclick="calculate(this)" value="+">+</div>
+            </div>
+
+            <div class="col">
+                <div class="Num" id="4" onclick="calculate(this)" value=4>4</div>
+                <div class="Num" id="5" onclick="calculate(this)" value=5>5</div>
+                <div class="Num" id="6" onclick="calculate(this)" value=6>6</div>
+                <div class="Fun" id="minus" onclick="calculate(this)" value="-">-</div>
+            </div>
+
+            <div class="col">
+                <div class="Num" id="1" onclick="calculate(this)" value=1>1</div>
+                <div class="Num" id="2" onclick="calculate(this)" value=2>2</div>
+                <div class="Num" id="3" onclick="calculate(this)" value=3>3</div>
+                <div class="Fun" id="root" onclick="calculate(this)" value="*">*</div>
+            </div>
+
+            <div class="col">
+                <div class="Num" id="0" onclick="calculate(this)" value=0>0</div>
+                <div class="Fun" id="dec" onclick="calculate(this)" value=",">,</div>
+                <div class="Fun" id="root" onclick="calculate(this)" value="√">√</div>
+                <div class="Fun " id="equal " onclick="result()" value="=">=</div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

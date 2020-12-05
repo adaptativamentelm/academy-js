@@ -1,0 +1,66 @@
+#gridCalc {
+    background: pink;
+    border: 3px solid black;
+    margin: 50px;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+}
+
+.col {
+    background: gray;
+}
+
+.colfun {
+    background-color: gray;
+}
+
+#resultado {
+    border: 3px solid black;
+    text-align: right;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#inputNum {
+    border: 3px solid green;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.Fun {
+    background-color: rgb(12, 188, 211);
+    border: 1px solid crimson;
+    margin: 10px;
+    width: 30px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+}
+
+.Num {
+    background-color: powderblue;
+    border: 1px solid crimson;
+    margin: 10px;
+    width: 30px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+}
+
+.fun2 {
+    display: hidden;
+}
