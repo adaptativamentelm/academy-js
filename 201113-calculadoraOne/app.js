@@ -3,13 +3,14 @@ const buttonOperation = document.getElementsByName("op");
 const buttonEqual = document.getElementsByName("equal");
 const buttonClear = document.getElementsByName("clean");
 const screen = document.getElementById("screen");
+const buttonSing=document.getElementsByName("sign");
 let opActually = "";
 let opBefore = "";
 let operation = undefined;
 //console.log(buttonClear[0])
 buttonNumber.forEach((button) => {
   button.addEventListener("click", () => {
-
+ 
     addNumber(button.textContent);
 
   });
@@ -75,14 +76,25 @@ const calculator = () => {
   opBefore = "";
 };
 
+
 const addNumber = (num) => {
-  if (num === "- / +") {
-    num = "-";
+
+ if(num==="- / +"){
+  num="-"
   }
   
+
+console.log(opActually)
+console.log(opActually.search('..'));
   opActually = opActually.toString() + num.toString();
-  actuallyScreen();
-  console.log(opActually);
+ if(opActually.search('--')===0){
+  opActually="-"
+ }
+
+  console.log(opActually.toString().search('..'));
+ 
+    actuallyScreen();
+
 };
 
 const clear = () => {
