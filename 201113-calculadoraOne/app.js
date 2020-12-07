@@ -3,16 +3,14 @@ const buttonOperation = document.getElementsByName("op");
 const buttonEqual = document.getElementsByName("equal");
 const buttonClear = document.getElementsByName("clean");
 const screen = document.getElementById("screen");
-const buttonSing=document.getElementsByName("sign");
+const buttonSing = document.getElementsByName("sign");
 let opActually = "";
 let opBefore = "";
 let operation = undefined;
 //console.log(buttonClear[0])
 buttonNumber.forEach((button) => {
   button.addEventListener("click", () => {
- 
     addNumber(button.textContent);
-
   });
 });
 
@@ -76,25 +74,27 @@ const calculator = () => {
   opBefore = "";
 };
 
-
 const addNumber = (num) => {
-
- if(num==="- / +"){
-  num="-"
+  const alt = "";
+  if (num === "- / +") {
+    num = "-";
   }
-  
 
-console.log(opActually)
-console.log(opActually.search('..'));
+  console.log(opActually);
+  console.log(opActually.search(".."));
+  console.log(opActually.toString());
   opActually = opActually.toString() + num.toString();
- if(opActually.search('--')===0){
-  opActually="-"
- }
+  if (opActually.search("--") === 0) {
+    opActually = "-";
+  }
+  if (opActually.startsWith("..") === true) {
+    opActually = ".";
+  } else if (opActually.endsWith("..") === true) {
+    opActually = opActually.replace("..", ".");
+  }
 
-  console.log(opActually.toString().search('..'));
- 
-    actuallyScreen();
 
+  actuallyScreen();
 };
 
 const clear = () => {
