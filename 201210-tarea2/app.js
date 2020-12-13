@@ -11,9 +11,7 @@ const init = async () => {
     data.push(user[0]);
     }
 
- // let mapEx5 = mapEx3.map((data) => ({ "value": data.value }));
-/*  const data1= data.map(e =>({'name':e.name,'id':e.id,'user':e.user,'img':e.img }));
-  console.log(data1) */
+
  print(data)
 };
 
@@ -33,7 +31,6 @@ const print = (a) => {
     let h3 = document.createElement("h3");
     let h4 = document.createElement("h4");
     let imagen=document.createElement("img")
-   // let src=document.createAttribute(imagen,src)
     let button=document.createElement("button")
     h2.textContent = data1[i].name;
     h4.textContent = 'Id:'+data1[i].id;
