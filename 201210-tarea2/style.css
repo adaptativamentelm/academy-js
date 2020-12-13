@@ -1,0 +1,22 @@
+body{
+  background-attachment: fixed;
+  background-color: rgba(212,228,239,1);
+}
+button.delete{
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #971666;
+  border-radius: 6px;
+  border: 2px solid #464961;
+}
+button.delete:hover{
+  color: #0f3041;
+  background-color: #ffffff;
+}
+div.user{
+  border-color: #971666;
+  margin: 10px;
+}
