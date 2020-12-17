@@ -1,0 +1,21 @@
+*{
+    background-color: #fac2da;
+    color: #854d1d;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius: 1.5em;
+    
+}
+#divContainer{
+    text-align: center;
+}
+button{
+    margin: 2em 1em 4em 1em;
+    border-radius: 0.3em;
+    font-size: 1em;
+    padding: 0.5em;
+}
