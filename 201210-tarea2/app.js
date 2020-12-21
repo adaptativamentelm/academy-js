@@ -46,8 +46,11 @@ const print = (a) => {
     sections.appendChild(imagen)
     sections.appendChild(button)
     let botton=document.querySelectorAll('button')
-    console.log(botton)
-    botton[i].addEventListener('click', () => { console.log('click') })
+   /*  console.log(botton) */
+    botton[i].addEventListener('click', () => {
+      a.splice(i,1);
+      print(a)
+    })
   } 
 
 
