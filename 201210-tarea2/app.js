@@ -1,7 +1,6 @@
 let urlGet = 'https://portal-be.adaptativamente.cl/reporteria/academy/get-user/id/';
 let qty = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let main = document.getElementsByTagName('main')[0];
-let data = [];
 
 const getData = async (url) => {
     const response = await fetch(url);
@@ -12,7 +11,6 @@ const init = async () => {
     for (let x = 0; x < qty.length; x++) {
         let resp = await getData(`${urlGet}${qty[x]}`);
         draw(resp[0]);
-        data.push(resp[0]);
     }
 };
 
