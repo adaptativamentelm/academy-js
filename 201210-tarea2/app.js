@@ -2,6 +2,7 @@ let urlGet = 'https://portal-be.adaptativamente.cl/reporteria/academy/get-user/i
 let qty = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let button = document.getElementById('button');
 let divContainer = document.getElementById('divContainer');
+let divButton = document.getElementById('divButton');
 let data = [];
 
 const show = async () => {
@@ -20,6 +21,8 @@ const getData = async (url) => {
 
 const draw = (arr) => {
     for (let i = 0; i < arr.length; i++) {
+            let containerUser = document.createElement('div');
+            divContainer.appendChild(containerUser);
             let h2 = document.createElement('h2');
             let h3 = document.createElement('h3');
             let user = document.createElement('h3');
@@ -29,13 +32,24 @@ const draw = (arr) => {
             h2.innerHTML = arr[i].name;
             h3.innerHTML = arr[i].id;
             user.innerHTML = `User: ${arr[i].user}`;
+            containerUser.id = `divId${arr[i]}`;
             buttonDiv.innerHTML = 'borrar';
-            divContainer.appendChild(h2);
-            divContainer.appendChild(h3);
-            divContainer.appendChild(user);
-            divContainer.appendChild(img);
-            divContainer.appendChild(buttonDiv);
+            containerUser.appendChild(h2);
+            containerUser.appendChild(h3);
+            containerUser.appendChild(user);
+            containerUser.appendChild(img);
+            containerUser.appendChild(buttonDiv);
+            buttonDiv.addEventListener('click', deleteDiv.bind(null, containerUser));
+
     }
+    
+    
 };
 
-button.addEventListener('click', show);
+function deleteDiv(div) {
+    console.log('div borrado', div);
+    div.innerHTML = '';
+    
+}
+
+show();
