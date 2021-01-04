@@ -1,7 +1,3 @@
-html, body {
-  margin: 0;
-  padding: 0;
-}
 .yellow {
   background: yellow;
 }
@@ -26,12 +22,46 @@ html, body {
 .height {
   height: 30px;
 }
-.div-container {
-  border: 5px solid black;
+html, body {
+  margin: 0;
+  padding: 0;
 }
+/* .contenedor {
+  position: relative;
+  border: 5px solid black;
+  height: 400px;
+}
+.div-container {
+  width: 100px;
+  padding: 10px;
+  position: absolute;
+}
+.yellow1 {
+  border: 5px solid yellow;
+  top: 10px;
+  left: 10px;
+}
+.green1 {
+  border: 5px solid green;
+  right: 10px;
+  top: 10px;
+}
+.purple1 {
+  border: 5px solid purple;
+  bottom: 10px;
+  left: 10px;
+}
+.pink {
+  border: 5px solid pink;
+  bottom: 10px;
+  right: 10px;
+}
+
 .div-one {
   border: 5px solid red;
+  margin: 0 0 10px 0;
 }
 .div-two {
   border: 5px solid blue;
-}
+  margin: 10px 0 0 0;
+} */
