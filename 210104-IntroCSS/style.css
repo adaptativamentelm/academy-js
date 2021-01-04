@@ -1,0 +1,37 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.yellow {
+  background: yellow;
+}
+.orange {
+  background: orange;
+}
+.red {
+  background: red;
+}
+.purple {
+  background: purple;
+}
+.blue {
+  background: blue;
+}
+.cadetblue {
+  background: cadetblue;
+}
+.green {
+  background: green;
+}
+.height {
+  height: 30px;
+}
+.div-container {
+  border: 5px solid black;
+}
+.div-one {
+  border: 5px solid red;
+}
+.div-two {
+  border: 5px solid blue;
+}
