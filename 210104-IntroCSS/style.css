@@ -1,4 +1,9 @@
-.yellow {
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* .yellow {
   background: yellow;
 }
 .orange {
@@ -18,50 +23,50 @@
 }
 .green {
   background: green;
-}
-.height {
+} */
+
+
+
+/* .height {
   height: 30px;
-}
-html, body {
-  margin: 0;
-  padding: 0;
-}
-/* .contenedor {
+} */
+
+/*
+.contenedor {
   position: relative;
   border: 5px solid black;
   height: 400px;
 }
-.div-container {
+.blue-container {
   width: 100px;
   padding: 10px;
-  position: absolute;
-}
-.yellow1 {
-  border: 5px solid yellow;
-  top: 10px;
-  left: 10px;
-}
-.green1 {
-  border: 5px solid green;
-  right: 10px;
-  top: 10px;
-}
-.purple1 {
-  border: 5px solid purple;
-  bottom: 10px;
-  left: 10px;
-}
-.pink {
-  border: 5px solid pink;
-  bottom: 10px;
-  right: 10px;
-}
-
-.div-one {
-  border: 5px solid red;
-  margin: 0 0 10px 0;
-}
-.div-two {
   border: 5px solid blue;
-  margin: 10px 0 0 0;
+}
+.one {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.two {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.red {
+  border: 5px solid red;
+  margin: 10px;
 } */
+
+* {
+  box-sizing: border-box;
+}
+.father {
+  height: 500px;
+  width: 400px;
+  background: red;
+}
+.child {
+  height: 50vh;
+  width: 100px;
+  background: blue;
+}

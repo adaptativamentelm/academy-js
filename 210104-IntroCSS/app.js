@@ -8,9 +8,7 @@ let main = document.getElementsByTagName('main')[0];
 //   main.appendChild(div);
 // }
 
-
-// let users = ['Andrea', 'Scar', 'Chinchilla', 'Daniela', 'Natalia', 'Igor', 'Dharma', 'Paola'];
-let users = ['Scar', 'Natalia', 'Paola'];
+let users = ['Andrea', 'Scar', 'Chinchilla', 'Daniela', 'Natalia', 'Igor', 'Dharma', 'Paola'];
 
 let arr = [
 'https://www.primevideo.com/',
@@ -55,4 +53,4 @@ const draw = (user, page) => {
   main.appendChild(div);
 }
 
-random();
+// random();
