@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+}
+#btn-nav{
+    display:flex;
+    justify-content: right;
+}
+main{
+   color: white;
+   width:50vw;
+   height: 100vh;
+}
+#slogan{
+    width: 23vw;
+}
+#logo{
+    width: 15vw;
+}
+#price{
+    display:flex;
+    flex-direction: row;
+}
+#price-type{
+    width: 50vw;
+    margin-right: 10px;
+   
+}
+#btn-price{
+    width: 24vw;
+    color:white;
+    background-color: blue;
+    height: 40%;
+    margin-block-end: 30px;
+}
+section, img{
+    width: 50vw;
+    margin-top: 2em;
+}
+
