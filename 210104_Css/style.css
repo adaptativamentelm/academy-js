@@ -1,0 +1,115 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  background-color: #0f171e;
+  color: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+.container{
+  position: relative;
+  margin:0px;
+}
+.header{ 
+  position: fixed;
+  width:100%;
+  height: 15%;
+  background-color: #0f171e;
+ 
+}
+nav.nav ul{
+  position: absolute;
+  top:1vw;
+}
+nav.nav a{
+ 
+  color:white
+  
+}
+nav.nav li{
+  display: flex;
+  display: inline;
+  position: relative;
+  padding:1vw;
+}
+
+nav.nav input{
+position: absolute;
+top:2vw;
+right: 15vW;
+}
+nav.nav select{
+  position: absolute;
+  top: 2vw;
+  right: 5vw;
+}
+figure.perfil img{
+  position: absolute;
+  top: 2vh;
+  right: 7vw;
+  width: 4%;
+  border-radius: 90%;
+}
+.main{
+  padding-top: 13vh;
+}
+.carrusel img{
+  width: 100vw;
+  height: 45vh;
+  
+}
+.container_list_movie{
+  display: block;
+  
+}
+
+.listmovies ul{
+ 
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-left: 0px;
+  
+}
+ .listmovies li{
+  margin-right: 2vw;
+ }
+ .titlelistmovies{
+   margin-top:auto;
+   position: relative;
+ }
+ .titlelistmovies h4{
+  display: inline;
+
+ }
+ .titlelistmovies a{
+   position: absolute;
+  right: 1vw;
+ }
+
+ 
+
+.listmovies li{
+  display:inline;
+  
+}
+
+
+
+.footer{ 
+ 
+  width:100%;
+  height: 10%;
+  bottom: 0;
+  display: flex; 
+  justify-content: center;
+ 
+  }
+.footer li{
+  display: inline;
+  flex-grow: 1;
+  padding: 1vw;
+}
