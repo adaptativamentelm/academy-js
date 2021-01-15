@@ -1,0 +1,23 @@
+/* espacio */
+/* div.container p {
+  color: violet;
+  font-size: 40px;
+} */
+
+/* > */
+/* div.container > p {
+  color: violet;
+  font-size: 40px;
+} */
+
+/* + */
+/* div + p {
+  color: violet;
+  font-size: 40px;
+} */
+
+/* ~ */
+div ~ p {
+  color: violet;
+  font-size: 40px;
+}
