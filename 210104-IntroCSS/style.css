@@ -1,8 +1,3 @@
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
 /* .yellow {
   background: yellow;
 }
@@ -25,16 +20,23 @@ html, body {
   background: green;
 } */
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
 
 
-/* .height {
+.height {
   height: 30px;
-} */
+}
 
-/*
+
 .contenedor {
   position: relative;
-  border: 5px solid black;
+  border: 5px solid green;
   height: 400px;
 }
 .blue-container {
@@ -55,18 +57,16 @@ html, body {
 .red {
   border: 5px solid red;
   margin: 10px;
-} */
-
-* {
-  box-sizing: border-box;
 }
-.father {
-  height: 500px;
-  width: 400px;
+
+/* .father {
+  width: 700px;
+  height: 600px;
   background: red;
 }
 .child {
-  height: 50vh;
-  width: 100px;
+  height: 400px;
+  width: 400px;
+  padding: 50px;
   background: blue;
-}
+} */
