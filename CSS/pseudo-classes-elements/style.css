@@ -1,0 +1,62 @@
+main {
+  padding: 40px;
+}
+
+
+/* Pseudo classes */
+div {
+  height: 150px;
+  width: 200px;
+  border: 2px solid black;
+  margin: 10px;
+}
+.hover:hover {
+  background: blueviolet;
+}
+.active:active {
+  background: cadetblue;
+}
+.checked input:checked {
+  height: 30px;
+  width: 30px;
+}
+.focus input:focus {
+  background: crimson;
+}
+.enableddisabled {
+  background: linear-gradient(to right, #90288d, #2e358f);
+  font-size: 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+.enableddisabled:enabled {
+  color: yellow;
+}
+.enableddisabled:disabled {
+  opacity: 0.5;
+}
+.nth-child p:nth-child(2) {
+  color: red;
+}
+.nth-last-child p:nth-last-child(2) {
+  color: blue;
+}
+
+/* Pseudo elementos */
+.placeholder input::placeholder {
+  color: green;
+  font-size: 15px;
+}
+.before p::before {
+  content: '"';
+  background: green;
+}
+.after p::after {
+  content: '"';
+  background: red;
+}
+.selection p::selection {
+  color: red;
+  background: yellow;
+}
