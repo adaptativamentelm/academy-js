@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: #ccc4c4;
+  padding: 10px;
+  border: 2px solid black;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header,
+.areaUno {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+header {
+  background: #695151;
+}
+
+header .logo {
+  color: cornsilk;
+  font-size: 30px;
+}
+
+header .logo img {
+  width: 50px;
+  vertical-align: top;
+}
+
+header .logo a {
+  color: #fcfcfc;
+  text-decoration: none;
+  line-height: 50px;
+}
+
+header nav {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+header nav a {
+  background: #da0505;
+  color: #fcfcfc;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  flex-grow: 1;
+  margin-right: 3px;
+}
+
+header nav a:hover {
+  background: #e62525;
+}
+
+.areaUno {
+  background: #4b3939;
+}
+
+.areaUno p {
+  width: 50%;
+  color: #fcfcfc;
+  font-size: 20px;
+}
+
+.areaUno img {
+  width: 50%;
+}
+
+.areaDos, footer{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.areaDos {
+  background: #725050;
+}
+
+.areaDos img {
+  margin-right: 20px;
+}
+
+.areaTres {
+  background: #da7c7c;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.areaTresDivParrafo {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fcfcfc;
+  font-size: 20px;
+}
+
+.areaTresDivImagenes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  background: #636161;
+}
