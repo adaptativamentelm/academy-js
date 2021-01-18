@@ -11,15 +11,15 @@
 
 <body>
   <header>
-    <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">selectors</a>
+    <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Pseudo-clases_y_pseudo-elementos">Ayuda</a>
   </header>
   <main>
     <section>
       <h1>Pseudo clases</h1>
-      <div class="hover">:hover</div>
-      <div class="active">:active</div>
+      <div class="hover">One</div>
+      <div class="active">Two</div>
       <div class="checked">
-        <span>:checked</span>
+        <span>Three</span>
         <br>
         <input type="radio" id="r1" name="radio">
         <label for="r1">R 1</label>
@@ -34,47 +34,49 @@
         <label for="c2">C 2</label>
       </div>
       <div class="focus">
-        <span>:focus</span>
+        <span>Four</span>
         <br>
         <input type="text">
       </div>
       <button class="enableddisabled">
-        <p>:enabled</p>
+        <p>Five</p>
       </button>
       <button class="enableddisabled" disabled>
-        <p>:disabled</p>
+        <p>Six</p>
       </button>
       <div class="nth-child">
-        <p>p:nth-child(1)</p>
-        <p>p:nth-child(2)</p>
-        <p>p:nth-child(3)</p>
-        <p>p:nth-child(4)</p>
+        <p>nth-1</p>
+        <p>nth-2</p>
+        <p>nth-3</p>
+        <p>nth-4</p>
       </div>
       <div class="nth-last-child">
-        <p>p:nth-last-child(4)</p>
-        <p>p:nth-last-child(3)</p>
-        <p>p:nth-last-child(2)</p>
-        <p>p:nth-last-child(1)</p>
+        <p>nth-4</p>
+        <p>nth-3</p>
+        <p>nth-2</p>
+        <p>nth-1</p>
       </div>
     </section>
 
     <section>
       <h1>Pseudo elementos</h1>
       <div class="placeholder">
-        <span>::placeholder</span>
+        <span>One</span>
         <br>
         <input type="text" placeholder="placeholder de prueba">
       </div>
       <div class="before">
-        <p>::before</p>
+        <span>Two</span>
+        <p>Text</p>
       </div>
       <div class="after">
-        <p>::after</p>
+        <span>Three</span>
+        <p>Text</p>
       </div>
-      <div class="selection">
-        <p>::selection 1</p>
-        <p>::selection 1</p>
-        <p>::selection 1</p>
+      <div>
+        <span>Four</span>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+        <p class="selection">Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
       </div>
     </section>
   </main>
