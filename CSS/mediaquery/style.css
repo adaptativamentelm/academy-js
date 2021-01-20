@@ -1,0 +1,16 @@
+section {
+    width: 100%;
+    height: 500px;
+    border: 2px solid black;
+    background: violet;
+}
+@media screen and (max-width: 600px) {
+    section {
+        background: turquoise;
+    }
+}
+@media screen and (max-width: 300px) {
+    section {
+        background: cornflowerblue;
+    }
+}
