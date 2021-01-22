@@ -1,0 +1,136 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: boder-box 0
+}
+
+section div {
+    width: 170px;
+    height: 170px;
+    border: 5px solid green;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+#mouseoverDiv:hover {
+    background-color: hotpink;
+}
+
+#clickDiv:active {
+    background-color: red;
+}
+
+.threeInput:checked {
+    height: 30px;
+    width: 30px;
+    background-color: red;
+}
+
+#redInput:focus {
+    background-color: saddlebrown;
+}
+
+.buttonOnOff {
+    border-radius: 20px;
+    height: 100px;
+    width: auto;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+.buttonOnOff:enabled {
+    color: yellow;
+    background-color: purple;
+}
+
+.buttonOnOff:disabled {
+    color: white;
+    background-color: purple;
+    opacity: 0.3;
+}
+
+#nthDown p:nth-child(2) {
+    color: red;
+}
+
+#nthUp p:nth-child(3) {
+    color: blue
+}
+
+#placeholderColour::placeholder {
+    color: green;
+}
+
+#greenBefore h2::before {
+    background-color: green;
+    content: ";";
+}
+
+#redAfter h2::after {
+    background-color: red;
+    content: ";"
+}
+
+#textSelectColour p:nth-child(2)::selection {
+    color: red;
+    background-color: yellow;
+}
+
+
+/* #pseudoClass div {
+    width: 150px;
+    height: 150px;
+    border: 5px solid green;
+    margin: 10px;
+    margin-left: 30px;
+} */
+
+
+/* #pseudoClass div:nth-child(1):hover {
+    background-color: hotpink;
+}
+
+#pseudoClass div:nth-child(2):active {
+    background-color: red;
+}
+
+div input:nth-child(2):checked {
+    height: 30px;
+    width: 30px;
+    background-color: red;
+}
+
+#pseudoClass div:nth-child(4):focus {
+    background-color: saddlebrown;
+}
+
+.buttonOnOff {
+    border-radius: 20px;
+    height: 100px;
+    width: auto;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+#pseudoClass div:nth-child(5):enabled {
+    color: yellow;
+    background-color: purple;
+}
+
+.buttonOnOff:disabled {
+    color: white;
+    background-color: purple;
+    opacity: 0.3;
+}
+
+.nthDown:nth-child(2) {
+    color: red;
+}
+
+.nthUp:nth-child(2) {
+    color: blue
+} */
