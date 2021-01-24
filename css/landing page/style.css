@@ -9,11 +9,12 @@ li {
     font-size: 27px;
 }
 
-a {
+#menu ul a {
     text-decoration: none;
     color: white;
     padding: 10px;
 }
+
 header {
     
     background-color: #FFD400;
@@ -21,6 +22,11 @@ header {
     display: block;
     text-align: center;
     font-size: 22px;
+}
+
+header .socialmedia {
+    margin-left: 30px;
+
 }
 
 .carrusel img{
@@ -37,6 +43,12 @@ header {
     
 }
 
+.baner1 img {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
 .fecha .fecha_nombre {
     display: flex;
     justify-content: space-between ;
@@ -44,6 +56,19 @@ header {
     padding: 30px;
 }
 
+.footer {
+    background-color: black;
+    padding: 20px;
+
+}
+.footer ul li a {   
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;        
+    font-family: 'Roboto',sans-serif;
+}
 
 #peanuts {
     font-size: 50px;
@@ -55,9 +80,4 @@ header {
     padding: 20px;
     font-family: 'Roboto',sans-serif;
     
-}
-
-#socialmedia {
-    margin-right: 30px;
-
 }
