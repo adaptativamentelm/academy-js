@@ -1,0 +1,15 @@
+body {
+  background: #fff111;
+}
+
+@media (max-width: 600px) {
+  body {
+    background: #4110f1;
+  }
+}
+
+@media (max-width: 300px) {
+    body {
+      background: #10bcf1;
+    }
+  }
