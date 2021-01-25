@@ -34,7 +34,7 @@ div {
 .nth-child p:nth-child(2) {
   color: red;
 }
-.nth-last-child p:nth-last-child(2) {
+.nth-last-child p:nth-last-child(3) {
   color: blue;
 }
 
@@ -54,4 +54,8 @@ div {
 .selection::selection {
   color: red;
   background: yellow;
+}
+/* Agregado recientemente, sirve para no permitir al usuario seleccionar un texto o imagen */
+.no-select {
+  user-select: none;
 }
