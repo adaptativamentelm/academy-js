@@ -1,0 +1,41 @@
+// SCSS
+// $y: #ebd5be;
+// .back-green {
+//     background: green;
+//     margin: 10px;
+//     padding: 10px;
+// }
+// div.container {
+//     border: 1px solid $y;
+//     @extend .back-green;
+//     p {
+//         color: violet;
+//         font-size: 40px;
+//     }
+//     h1 {
+//         color: $y;
+//     }
+// }
+// div.container2 {
+//     @extend .back-green;
+// }
+
+// CSS
+div.container {
+    background: green;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ebd5be;
+}
+div.container p {
+    color: violet;
+    font-size: 40px;
+}
+div.container h1 {
+    color: #ebd5be;
+}
+div.container2 {
+    background: green;
+    margin: 10px;
+    padding: 10px;
+}

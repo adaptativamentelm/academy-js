@@ -1,0 +1,31 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    background: violet;
+    padding: 10px;
+    border: 2px solid blue;
+    height: 700px;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row; /* default */
+    flex-wrap: wrap; /* default */
+
+    justify-content: center;
+    align-items: center;
+}
+.container div {
+    background: cadetblue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 40px;
+    border: 2px solid black;
+}

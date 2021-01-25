@@ -1,0 +1,31 @@
+/* espacio Permite agregar estilo a todos los elementos con respecto a uno o más elementos específicos */
+/* div.container p {
+  color: violet;
+  font-size: 40px;
+} */
+
+/* > Permite agregar estilo a los elementos hijos directos de mayor nivel con respecto a uno o más elementos específicos */
+/* div.container > p {
+  color: violet;
+  font-size: 40px;
+} */
+
+/* + Permiter agregar estilo al siguiente elemento después de uno o más elementos específicos */
+/* div + p {
+  color: violet;
+  font-size: 40px;
+} */
+
+/* ~  Permite agrear estilo a todos los elementos después de uno o más elementos específicos */
+/* div ~ p {
+  color: violet;
+  font-size: 40px;
+} */
+
+button.yellow {
+  background: yellow;
+  border-radius: 7px;
+}
+button.blue {
+  background: blue;
+}
