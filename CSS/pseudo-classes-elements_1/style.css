@@ -1,0 +1,78 @@
+.one:hover {
+  background: #f07474;
+}
+
+.two:active {
+  background: #f07324;
+}
+
+.checkmark:checked {
+  height: 25px;
+  width: 25px;
+}
+.inputFocus:focus {
+  background: #f02bdf;
+}
+
+.btn {
+  width: 50px;
+  height: 100px;
+  background: #f02bdf;
+  color: #541dec;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.btn:active {
+  width: 53px;
+  height: 103px;
+  background: #ee54e1;
+}
+
+.buttonDos:disabled {
+  width: 50px;
+  height: 100px;
+  background: #aaa7aa;
+  color: #fafafa;
+  font-size: 20px;
+}
+
+.seven span,
+.eight span {
+  display: block;
+  margin: 15px;
+}
+
+.seven span:nth-child(2) {
+  color: #ac0707;
+}
+
+.eight span:nth-child(3) {
+  color: #5313e9;
+}
+
+.inputPlace::placeholder {
+  color: #459df0;
+}
+
+.txtUno::before {
+  content: open-quote;
+  background: #217c05;
+  color: #fafafa;
+}
+
+.txtDos::after {
+  content: close-quote;
+  background: #af2a09;
+  color: #fafafa;
+}
+
+.txtTres::selection {
+  background: #5aa8e7;
+  color: #fafafa;
+}
+
+.txtCuatro::selection {
+  background: #b2e42a;
+  color: #ac0707;
+}

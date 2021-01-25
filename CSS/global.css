@@ -1,0 +1,17 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background: #d3caca;
+  border: 2px solid #000000;
+  margin-bottom: 5px;
+}
+
+.container {
+  display: block;
+  position: relative;
+}
+
+
+
+
+
