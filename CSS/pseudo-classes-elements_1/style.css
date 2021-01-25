@@ -70,6 +70,7 @@
 .txtTres::selection {
   background: #5aa8e7;
   color: #fafafa;
+  /*user-select: none*/;
 }
 
 .txtCuatro::selection {
