@@ -23,7 +23,7 @@ html, body {
   width: 25px;
   top: 60px;
   left: 37.5px;
-  /* animation: rebotar 5s infinite, difuminar 5s infinite; */
+  animation: rebotar 5s infinite, difuminar 5s infinite;
 }
 @keyframes rebotar {
   0% {
