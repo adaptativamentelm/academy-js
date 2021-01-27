@@ -15,7 +15,6 @@ html, body {
   position: relative;
 }
 .pelota {
-  /* transition: all 5s ease-out; */
   position: absolute;
   background: red;
   border-radius: 50%;
