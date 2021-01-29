@@ -1,50 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../global.css" />
+    <title>selectores</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../global.css">
-  <title>selectores</title>
-</head>
+  <body>
+    <header>
+      <a
+        href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Pseudo-clases_y_pseudo-elementos"
+        >Ayuda</a
+      >
+    </header>
+    <main>
+      <section class="pseudoclass">
+        <h1>Pseudo clases</h1>
+        <div class="pseudoclass_one"><h3 class="one">one</h3></div>
+        <div class="pseudoclass_two"><h3>two</h3></div>
+        <div class="pseudoclass_three">
+          <h3>three</h3>
+          <input type="radio" id="r1" name="radio" class="check" />
+          <label for="r_1">R 1</label><br />
+          <input type="radio" id="r2" name="radio" class="check" />
+          <label for="r_2">R 2</label><br />
+          <input type="checkbox" id="c1" class="check" />
+          <label for="c1"> C 1</label><br />
+          <input type="checkbox" id="c2" class="check" />
+          <label for="c2"> C 2</label>
+        </div>
+        <div class="pseudoclass_four">
+          <h3>four</h3>
+          <input type="text" class="backgroun_input" />
+        </div>
+        <div class="pseudoclass_five">
+          <button id="active">Five</button><button id="enable">Six</button>
+        </div>
+        <div class="nth_one">
+          <p class="nth">nth-1</p>
+          <p class="nth">nth-2</p>
+          <p class="nth">nth-3</p>
+          <p class="nth">nth-4</p>
+        </div>
+        <div class="nth_two">
+          <p class="nth">nth-1</p>
+          <p class="nth">nth-2</p>
+          <p class="nth">nth-3</p>
+          <p class="nth">nth-4</p>
+        </div>
+      </section>
 
-<body>
-  <header>
-    <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Pseudo-clases_y_pseudo-elementos">Ayuda</a>
-  </header>
-  <main>
-    <section class="pseudoclass">
-      <h1>Pseudo clases</h1>
-      <div class="pseudoclass_one"><h3 class="one">one</h3> </div>
-      <div class="pseudoclass_two"><h3>two</h3></div>
-      <div class="pseudoclass_three"><h3>three</h3>  <input type="radio" id="r1" class="check" >
-        <label for="r_1">R 1</label><br>
-        <input type="radio" id="r2" class="check" >
-        <label for="r_2">R 2</label><br>
-        <input type="checkbox" id="c1" class="check" >
-        <label for="c1"> C 1</label><br>
-        <input type="checkbox" id="c2" class="check">
-        <label for="c2"> C 2</label>
-       </div>
-       <div class="pseudoclass_four"><h3>four</h3> <input type="text" class="backgroun_input"></div>
-       <div class="pseudoclass_five" > <button id="active">Five</button><button id="enable">Six</button></div>
-       <div class="nth_one"><p class="nth">nth-1</p><p class="nth">nth-2</p><p class="nth">nth-3</p><p class="nth">nth-4</p></div>
-       <div class="nth_two"><p class="nth">nth-1</p><p class="nth">nth-2</p><p class="nth">nth-3</p><p class="nth">nth-4</p></div>
-    </section>
-
-    <section class="pseudoelement">
-      <h1>Pseudo elementos</h1>
-      <div class="pseudoelement_one"><h3>One</h3> <input type="text" placeholder="placeholder de prueba"></div>
-      <div  class="pseudoelement_two"><h3>Two</h3> <p>Text</p></div>
-      <div  class="pseudoelement_three"><h3>Three</h3>  <p>Text</p></div>
-      <div  class="pseudoelement_four">
-        <h3>Four</h3>  
-        <p class="paragraph_one" >Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <p class="paragraph_two">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-      </div>
-    </section>
-  </main>
-</body>
-
+      <section class="pseudoelement">
+        <h1>Pseudo elementos</h1>
+        <div class="pseudoelement_one">
+          <h3>One</h3>
+          <input type="text" placeholder="placeholder de prueba" />
+        </div>
+        <div class="pseudoelement_two">
+          <h3>Two</h3>
+          <p>Text</p>
+        </div>
+        <div class="pseudoelement_three">
+          <h3>Three</h3>
+          <p>Text</p>
+        </div>
+        <div class="pseudoelement_four">
+          <h3>Four</h3>
+          <p class="paragraph_one">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <p class="paragraph_two">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
