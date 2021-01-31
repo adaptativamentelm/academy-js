@@ -1,63 +1,79 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-html, body {
-  margin: 0;
-  padding: 0;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-  display: block;
-  margin: 0 auto;
-  height: 100px;
-  width: 100px;
-  border: 2px solid black;
-  position: relative;
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    position: relative;
 }
+
 .pelota {
-  position: absolute;
-  background: red;
-  border-radius: 50%;
-  height: 25px;
-  width: 25px;
-  top: 60px;
-  left: 37.5px;
-  animation: rebotar 5s infinite, difuminar 5s infinite;
+    position: absolute;
+    background: red;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    top: 10.5px;
+    left: 10.5px;
+    transform-origin: 37.5px 37.5px;
+    animation: rotar 5s infinite linear, colorChange 5s infinite linear;
 }
-@keyframes rebotar {
-  0% {
-    top: 60px;
-  }
-  50% {
-    top: 10px;
-  }
-  100% {
-    top: 60px;
-  }
+
+@keyframes colorChange {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: red;
+    }
 }
-@keyframes difuminar {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* @keyframes rotar {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+/* @keyframes rebotar {
+    0% {
+        top: 60px;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 60px;
+    }
 } */
 
+@keyframes difuminar {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
-
-
+@keyframes rotar {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(405deg);
+    }
+}
 
 
 /* .containerf {
