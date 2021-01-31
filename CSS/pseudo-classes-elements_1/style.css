@@ -24,7 +24,7 @@ section div {
     background-color: red;
 }
 
-.threeInput:checked {
+#optionsDiv input:checked {
     height: 30px;
     width: 30px;
     background-color: red;
