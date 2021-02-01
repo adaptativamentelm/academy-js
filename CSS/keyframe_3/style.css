@@ -1,7 +1,8 @@
 * {
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -11,20 +12,70 @@ html, body {
   margin: 0 auto;
   height: 100px;
   width: 100px;
-  border: 2px solid black;
+  border: 5px solid rgb(236, 12, 162);
   position: relative;
 }
 .pelota {
   position: absolute;
-  background: red;
+  background: rgb(248, 139, 139);
   border-radius: 50%;
-  height: 25px;
-  width: 25px;
-  top: 60px;
-  left: 37.5px;
-  animation: rebotar 5s infinite, difuminar 5s infinite;
+  height: 5px;
+  width: 5px;
+  top: 42.5px;
+  left: 42.5px;
+  /*  animation:traslatecube 5s infinite; */
+  animation: rotcircle 0.6s infinite;
+/*   animation: rotcircle_two 1s infinite; */
 }
-@keyframes rebotar {
+/* @keyframes traslatecube {
+  0%   {top: 0px; left: 0px; background: rgb(173, 32, 212);}
+  25%  {top: 0px; left: 65px; background: rgb(228, 156, 250);}
+  50%  {top: 65px; left: 65px; background: rgb(134, 20, 165);}
+  75%  {top: 65px; left: 0px; background:rgb(173, 32, 212);}
+  100% {top: 0px; left: 0px; background:rgb(134, 20, 165);}
+} */
+
+/* @keyframes rotcircle_two {
+  from { transform: rotate(0deg)  translate(42.5px) rotate(0deg); }
+  to { transform: rotate(360deg) translate(42.5px) rotate(-360deg); }
+}
+ */
+
+@keyframes rotcircle {
+ 0% {top: 0px;left: 42.5px;}
+ 12.5% {top:10px;left:75px;}
+ 25% {top:42.5px;left: 85px;}
+ 37.5% {top:75px;left: 75px;} 
+ 50% {top: 85px;left: 42.5px;}
+ 62.5% {top: 75px;left: 10px;}
+ 75% { top: 42.5px;left: 0px;}
+ 87.5% {top: 10px;left: 10px;}
+ 100% {top: 0px;left: 42.5px;}
+} 
+ 
+
+/* @keyframes rotcircle {
+  0% {top: 0px;left: 42.5px;}
+/*   6.25%{top:0px;left: 70px;} */
+/*   12.5% {top:10px;left:75px;}
+/*   18.75% {top:10px;left:80px;} */
+ /*  25% {top:42.5px;left: 85px;} */
+ /*  31.25% {top:70px;left: 85px;} */
+ /*  37.5% {top:75px;left: 75px;}  */
+ /*  43.75% {top: 60px;left: 80px;} */
+/*   50% {top: 85px;left: 42.5px;} */
+ /*  56.25% {top: 65px;left: 35px;} */
+/*   62.5% {top: 75px;left: 10px;} */
+/*   68.75% {top: 60px;left: 7.5px;} */
+/*   75% { top: 42.5px;left: 0px;} */
+  /* 81.25% {top: 7.5px;left: 7.5px;} */
+ /*  87.5% {top: 10px;left: 10px;} */
+ /*  93.75% {top:0px;left: 35px;} */
+ /*  100% {top: 0px;left: 42.5px;} */
+/* } */ 
+
+
+/* @keyframes rebotar {
   0% {
     top: 60px;
   }
@@ -34,8 +85,8 @@ html, body {
   100% {
     top: 60px;
   }
-}
-@keyframes difuminar {
+} */
+/* @keyframes difuminar {
   0% {
     opacity: 1;
   }
@@ -45,7 +96,7 @@ html, body {
   100% {
     opacity: 1;
   }
-}
+} */
 /* @keyframes rotar {
   from {
     transform: rotate(0deg);
@@ -54,11 +105,6 @@ html, body {
     transform: rotate(360deg);
   }
 } */
-
-
-
-
-
 
 /* .containerf {
   margin: 0 auto;
