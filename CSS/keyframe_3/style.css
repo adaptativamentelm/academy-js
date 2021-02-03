@@ -29,6 +29,85 @@ body {
     animation: rotar 5s infinite linear, colorChange 5s infinite linear;
 }
 
+.sec,
+.min {
+    display: block;
+    position: absolute;
+    width: 1px;
+    left: 48px;
+    top: 48px;
+    transform-origin: 0 0;
+}
+
+.point {
+    background: pink;
+    position: absolute;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    top: 45px;
+    left: 45px;
+}
+
+.sec {
+    background: black;
+    height: 30px;
+    animation: rotar 10s infinite linear;
+}
+
+.min {
+    background: orange;
+    height: 48px;
+    animation: rotar 5s infinite linear;
+}
+
+.pelotaPuntero {
+    position: absolute;
+    background: green;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    top: 10.5px;
+    left: 10.5px;
+    transform-origin: 37.5px 37.5px;
+    animation: rotar 5s infinite linear;
+}
+
+.bloque1,
+.bloque2,
+.bloque3,
+.bloque4 {
+    position: absolute;
+    background: green;
+    border-radius: 0%;
+    height: 25px;
+    width: 25px;
+    top: 0px;
+    left: 0px;
+}
+
+.bloque2 {
+    background: red;
+    top: 0px;
+    left: 35.5px;
+    transform-origin: 37.5px 37.5px;
+    animation: rotar 5s infinite linear, colorChange 5s infinite linear;
+}
+
+.bloque3 {
+    background: yellow;
+    top: 0px;
+    left: 71px;
+}
+
+.bloque4 {
+    background: teal;
+    height: 25px;
+    width: 96px;
+    top: 50px;
+    left: 0px;
+}
+
 @keyframes colorChange {
     0% {
         background-color: red;
