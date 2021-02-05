@@ -4,6 +4,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  text-align: center;
+  color: rgb(41, 10, 70);
 }
 
 .container {
@@ -11,76 +13,42 @@ html, body {
   margin: 0 auto;
   height: 100px;
   width: 100px;
-  border: 2px solid black;
+  border-radius: 5%;
+  border: 2px solid rgb(55 17 125);
+  background-color: rgb(144 28 214);
   position: relative;
 }
+
 .pelota {
   position: absolute;
-  background: red;
-  border-radius: 50%;
+  /* background: orchid; */
+  /* border-radius: 50%; */
   height: 25px;
-  width: 25px;
-  top: 60px;
-  left: 37.5px;
-  animation: rebotar 5s infinite, difuminar 5s infinite;
+  width: auto;
+  top: 10px;
+  right: 35px;
+  animation: chinchiAnimacion 4s infinite linear alternate;
 }
-@keyframes rebotar {
-  0% {
-    top: 60px;
-  }
-  50% {
-    top: 10px;
-  }
-  100% {
-    top: 60px;
-  }
+@keyframes chinchiAnimacion {
+  0%{ right: 35px; top:0px; }
+  5%{ right: 42px; top:7px; }
+  10%{ right: 49px; top:14px; }
+  15%{ right: 56px; top: 21px; }
+  20%{ right: 63px; top: 28px; }
+  25%{ right: 68px; top: 35px; }
+  30%{ right: 63px; top: 42px; }
+  35%{ right: 56px; top: 49px; }
+  40%{ right: 49px; top: 56px; }
+  45%{ right: 42px; top: 63px; }
+  50%{ right: 35px; top: 70px; }
+  55%{ top: 63px; }
+  60%{ top: 56px; }
+  65%{ top: 49px; }
+  70%{ top: 42px; }
+  75%{ right: -2px; top: 35px; }
+  80%{ top: 28px; }
+  85%{ top: 21px; }
+  90%{ top: 14px; }
+  95%{ top: 7px; }
+  100% { right: 35px; top: 0px; } 
 }
-@keyframes difuminar {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* @keyframes rotar {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
-
-
-
-
-/* .containerf {
-  margin: 0 auto;
-  height: 100px;
-  width: 100px;
-  border: 2px solid black;
-  display: flex;
-  justify-content: flex-start;
-  animation: trasladar 2s infinite;
-}
-.cuadrado {
-  background: blue;
-  height: 25px;
-  width: 25px;
-  opacity: 1;
-  transition: all 5s ease-out;
-}
-@keyframes trasladar {
-  from {
-    justify-content: flex-start;
-  }
-  to {
-    justify-content: flex-end;
-  }
-} */
