@@ -1,36 +1,37 @@
-html, body {
-    padding: 0;
-    margin: 0;
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .border {
-    border: 2px solid #333;
-    margin: 10px;
+  border: 2px solid #333;
+  margin: 10px;
 }
 .grid-col-2 {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 300px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 200px;
 }
 .grid-col-3 {
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
-    grid-template-rows: 100px 300px;
+  display: grid;
+  /* grid-template-columns: 33.3% 33.3% 33.3%; */
+  grid-template-columns: 20% auto auto;
+  grid-template-rows: 100px 300px;
 }
 .grid-col-4 {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 100px 300px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 100px 300px;
 }
 .grid-col-5 {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 100px 300px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
 }
 .grid-col-6 {
-    display: grid;
-    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
-    grid-template-rows: 100px 300px;
+  display: grid;
+  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+  grid-template-rows: 100px 300px;
 }
