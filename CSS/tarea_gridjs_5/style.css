@@ -1,0 +1,41 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  
+}
+.grid-col-3 {
+    display: grid;
+    /* grid-template-columns: 33.3% 33.3% 33.3%; */
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 5em 1em;
+}
+
+.magic-button{
+    width: 10em;
+    text-align: center;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+.red{
+    background-color: #ef5350;
+    
+}
+.green{
+    background-color: #2dad33;
+    
+}
+.blue{
+    background-color: #3b54dd;
+    
+}
+.red:active{
+    border: 1px solid #ef5350;
+    background-color: whitesmoke;
+    color:#ef5350;
+}
