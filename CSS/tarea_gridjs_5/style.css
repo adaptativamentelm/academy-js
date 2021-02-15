@@ -11,9 +11,9 @@ body {
 }
 .grid-col-3 {
     display: grid;
-    /* grid-template-columns: 33.3% 33.3% 33.3%; */
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 5em 1em;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    /* grid-template-columns: auto auto auto; */
+    grid-template-rows: 5em 0.6em;
 }
 
 .magic-button{
@@ -21,6 +21,7 @@ body {
     text-align: center;
     border-radius: 5px;
     color: whitesmoke;
+    margin:0 auto;
 }
 .red{
     background-color: #ef5350;
@@ -34,8 +35,18 @@ body {
     background-color: #3b54dd;
     
 }
-.red:active{
-    border: 1px solid #ef5350;
+.red2{
+    border: 0.5em solid #ef5350;
     background-color: whitesmoke;
-    color:#ef5350;
+    color: #ef5350;
+}
+.green2{
+    border: 0.5em solid #2dad33;
+    background-color: whitesmoke;
+    color: #2dad33;
+}
+.blue2{
+    border: 0.5em solid #3b54dd;
+    background-color: whitesmoke;
+    color: #3b54dd;
 }
