@@ -1,9 +1,8 @@
 .border {
-    border: 1px solid black;
-    height: 300px;
+  border: 1px solid black;
+  height: 300px;
 }
-
 .grid-col-3 {
-    display: grid;
-    grid-template-columns: auto auto auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
