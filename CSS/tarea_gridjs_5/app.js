@@ -1,21 +1,16 @@
 const div = document.getElementById('container');
 const columns = 3;
 const rows = 3;
-let arrElements = [];
 
 const init = () => {
   let row = 0;
   let count = 0;
-  let ids = [];
   for (let x = 0; x < columns * rows; x++) {
     count++;
     createButton(`Button ${x + 1}`, row);
-    ids.push(row);
     if (count === columns) {
-      arrElements.push(ids);
       count = 0;
       row++;
-      ids = [];
     }
   }
 }
@@ -26,7 +21,7 @@ const createButton = (bname, row) => {
   b.innerHTML = bname;
   b = stylingOne(b, row);
   b.addEventListener('click', () => {
-    changeRow(row);
+    changeRowsStyle(row);
   });
   div.appendChild(b);
 }
@@ -42,6 +37,9 @@ const stylingOne = (button, row) => {
       break;
     case 2:
       button.style.background = 'green';
+      break;
+    default:
+      button.style.background = 'purple';
   }
   return button;
 }
@@ -60,11 +58,14 @@ const stylingTwo = (button, row) => {
     case 2:
       button.style.border = '1px solid green';
       button.style.color = 'green';
+      break;
+    default:
+      button.style.border = '1px solid purple';
+      button.style.color = 'purple';
   }
-  return button;
 }
 
-const changeRow = (row) => {
+const changeRowsStyle = (row) => {
   let buttons = document.getElementsByName(row);
   for (let x = 0; x < buttons.length; x++) {
     stylingTwo(buttons[x], row);
