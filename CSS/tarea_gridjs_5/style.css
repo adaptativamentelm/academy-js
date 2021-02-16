@@ -1,0 +1,27 @@
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 1%;
+}
+.one{
+  background-color: rgb(245, 248, 45);
+  color: rgb(1, 1, 14);
+}
+
+.two{
+  background-color: rgb(8, 8, 8);
+  color: rgb(54, 252, 5);
+}
+.three{
+  background-color:  rgb(255, 2, 192);
+  color: rgb(8, 8, 8);
+}
