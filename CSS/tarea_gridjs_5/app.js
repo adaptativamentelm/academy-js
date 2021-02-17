@@ -1,6 +1,5 @@
 const div= document.querySelector('.container')
 let classButton=[{class:'one',text:'boton 1'},
-
 {class:'one',text:'boton 1'},
 {class:'one',text:'boton 1'},
 {class:'two',text:'boton 2'},
@@ -17,13 +16,23 @@ classButton.forEach(e=>{
   butons.innerHTML=`${e.text}`;
   butons.className=`${e.class}`;
   div.appendChild(butons)
-  console.log(butons)
-/* const change=(b, class)=>{
-  if(b.class=='one'){
-  
+ const change =()=>{
+  if(butons.className=='one'){
+    butons.style.background='black'
+    butons.style.color='yellow'
   }
+  if(butons.className=='two'){
+    butons.style.background='greenyellow'
+    butons.style.color='black'
   }
-  butons.addEventListener('click',change); */
+  if(butons.className=='three'){
+    butons.style.background='white'
+    butons.style.color='deeppink'
+  }
+ }
+
+
+  butons.addEventListener('click',change); 
 })
 
 
